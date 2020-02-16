@@ -2,5 +2,8 @@
 /wp/
 /wp-config.php
 
-content/*
+content/languages
+
+content/themes/*
 !content/themes/myCV
+content/plugins/*
