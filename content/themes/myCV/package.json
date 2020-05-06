@@ -31,8 +31,9 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "browser-sync": "^2.26.5",
     "bootstrap": "^4.4.1",
+    "browser-sync": "^2.26.5",
+    "favicon": "0.0.2",
     "font-awesome": "^4.7.0",
     "jquery": "^3.4.1",
     "rellax": "^1.12.1",
