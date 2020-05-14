@@ -11,15 +11,15 @@
     <!-- HEADER -->
 
     <header class="header">
-        <nav class="menu">
-            <ul class="menuList">
-                <li class="menuList__item"><a href="#" class="menuList__item--linkHome" id=""><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                <li class="menuList__item"><a href="#" class="menuList__item--linkProfile" id="">Profil</a></li>
-                <li class="menuList__item"><a href="#" class="menuList__item--linkSkills" id="">Skills</a></li>
-                <li class="menuList__item"><a href="#" class="menuList__item--linkEducation" id="">Education</a></li>
-                <li class="menuList__item"><a href="#" class="menuList__item--linkFormation" id="">Parcours</a></li>
-                <li class="menuList__item"><a href="#" class="menuList__item--linkPortfolio" id="">Portfolio</a></li>
-                <li class="menuList__item"><a href="#" class="menuList__item--linkContact" id="">Contact</a></li>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item nav__list--item-home"><a href="#" class="nav__link nav__link--Home" id=""><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                <li class="nav__item nav__list--item-profile"><a href="#" class="nav__link nav__link--Profile" id="">Profil</a></li>
+                <li class="nav__item nav__list--item-skills"><a href="#" class="nav__link nav__link--Skills" id="">Skills</a></li>
+                <li class="nav__item nav__list--item-education"><a href="#" class="nav__link nav__link--Education" id="">Education</a></li>
+                <li class="nav__item nav__list--item-formation"><a href="#" class="nav__link nav__link--Formation" id="">Parcours</a></li>
+                <li class="nav__item nav__list--item-portfolio"><a href="#" class="nav__link nav__link--Portfolio" id="">Portfolio</a></li>
+                <li class="nav__item nav__list--item-contact"><a href="#" class="nav__link nav__link--Contact" id="">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -27,74 +27,120 @@
     
     <!-- MAIN -->
     <!-- PART 1 - PROFILE -->
-    
-    <div class="profileContainer">
+    <main class="main">
+        <section class="profile">
 
-        <div class="profileContainer__home">
+            <div class="profile-container__home container">
 
-            <div class="profileWrapper">
-                <img src="" alt="" class="profileWrapper__background">
-                <div class="IDWrapper">
-                    <h2 class="IDWrapper__myName">Angélina Lorieux-Machova</h2>
-                    <h3 class="IDWrapper__jobTitle">Développeuse web Fullstack</h3>
+                <div class="profile-wrapper">
+                    <img src="" alt="" class="profile-wrapper__background">
+                    <div class="ID-wrapper">
+                        <h2 class="ID-wrapper__my-name">Angélina Lorieux-Machova</h2>
+                        <h3 class="ID-wrapper__job-title">Développeuse web Fullstack</h3>
+                    </div>
+                    <div class="picture-wrapper">
+                        <img src="" alt="" class="picture-wrapper__img">
+                    </div>
+                    <p class="profile-wrapper__text">Hello World!</p>
+                    <h1 class="profile-wrapper__title-section titles-section">Profil</h1>
                 </div>
-                <div class="pictureWrapper">
-                    <img src="" alt="" class="pictureWrapper__img">
+            </div>
+
+            <div class="profile-container__content container">
+                <article class="article-about-me">
+                    <h4 class="article-about-me__title"></h4>
+                    <p class="article-about-me__text"></p>
+                </article>
+                <article class="article-goals">
+                    <h4 class="article-goals__title"></h4>
+                    <p class="article-goals__text"></p>
+                </article>
+                <div class="profile-wrapper-links">
+                    <a href="" class="profile-wrapper-links__linkedin"><i class="fa fa-linkedin"></i></a>
+                    <a href="" class="profile-wrapper-links__github"><i class="fa fa-github"></i></a>
+                    <a href="" class="profile-wrapper-links__download"><i class="fa fa-download"></i>CV</a>
                 </div>
-                <p class="profileWrapper__text">Hello World!</p>
-                <h1 class="profileWrapper__sectionTitle sectionTitles">Profil</h1>
             </div>
-        </div>
 
-        <div class="profileContainer__content">
-            <div class="profileWrapperAboutMe">
-                <h4 class="profileWrapperAboutMe__title"></h4>
-                <p class="profileWrapperAboutMe__text"></p>
-            </div>
-            <div class="profileWrapperGoals">
-                <h4 class="profileWrapperGoals__title"></h4>
-                <p class="profileWrapperGoals__text"></p>
-            </div>
-            <div class="profileWrapperLinks">
-                <a href="" class="profileWrapperLinks__linkedin"><i class="fa fa-linkedin"></i></a>
-                <a href="" class="profileWrapperLinks__github"><i class="fa fa-github"></i></a>
-                <a href="" class="profileWrapperLinks__download"><i class="fa fa-download"></i>CV</a>
-            </div>
-        </div>
-
-    </div>
+        </section>
 
     <!-- PART 2 - SKILLS -->
+        <section class="skills">
 
+            <div class="skills-container container">
 
+                <section class="skills-section hard-skills">
+                    <h1 class="skills-section__title hard-skills__title titles-section">Hard skills</h1>
+                    
+                    <div class="hard-skills__list">
+                        <div class="hard-skills__item-container">
+                            <p class="hard-skills-list__title hard-skills__list--title-wp">Wordpress &hearts;</p>
+                        </div>
+                        <div class="hard-skills__item-container">
+                            <p class="hard-skills-list__title hard-skills__list--title-html-css">HTML & CSS</p>
+                        </div>
+                        <div class="hard-skills__item-container">
+                            <p class="hard-skills-list__title hard-skills__list--title-sass">SASS</p>
+                        </div>
+                        <div class="hard-skills__item-container">
+                            <p class="hard-skills-list__title hard-skills__list--title-sql">SQL</p>
+                        </div>
+                        <div class="hard-skills__item-container">
+                            <p class="hard-skills-list__title hard-skills__list--title-php">POO (PHP Orienté Objet)</p>
+                        </div>
+                        <div class="hard-skills__item-container">
+                            <p class="hard-skills-list__title hard-skills__list--title-javascript">JavaScript</p>
+                        </div>
+                        <div class="hard-skills__item-container">
+                            <p class="hard-skills-list__title hard-skills__list--title-github">GitHub</p>
+                        </div>
+                        <div class="hard-skills__item-container">
+                            <p class="hard-skills-list__title hard-skills__list--title-photoshop">Photoshop</p>
+                        </div>
+                    </div>
 
+                </section>
+
+                <section class="skills-section soft-skills">
+                    <h1 class="skills-section__title soft-skills__title titles-section">Soft skills</h1>
+                </section>
+
+                <section class="skills-section mad-skills">
+                    <h1 class="skills-section__title mad-skills__title titles-section">Mad skills</h1>
+                </section>
+                
+            </div>
+
+        </section>
 
     <!-- PART 3 - EDUCATION -->
-
-
-
+        <section class="education">
+            
+        </section>
 
     <!-- PART 4 - FORMATION -->
-
-
-
+        <section class="formation">
+                
+        </section>
 
     <!-- PART 5 - PORTFOLIO -->
-
-
-
+        <section class="portfolio">
+                
+        </section>
 
     <!-- PART 6 - CONTACT -->
+        <section class="contact">
+                
+        </section>
 
-
-
+    </main>
 <!-- FOOTER -->
     <!-- PART 7 - INFO -->
+    <footer class="footer">
 
 
 
-
-
+    </footer>
     <!-- <p class="fa fa-search"></p> -->
     <script src="js/app.js"></script>
 </body>
