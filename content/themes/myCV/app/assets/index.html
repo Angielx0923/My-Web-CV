@@ -13,13 +13,13 @@
     <header class="header">
         <nav class="nav">
             <ul class="nav__list">
-                <li class="nav__item nav__list--item-home"><a href="#" class="nav__link nav__link--Home" id=""><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                <li class="nav__item nav__list--item-profile"><a href="#" class="nav__link nav__link--Profile" id="">Profil</a></li>
-                <li class="nav__item nav__list--item-skills"><a href="#" class="nav__link nav__link--Skills" id="">Skills</a></li>
-                <li class="nav__item nav__list--item-education"><a href="#" class="nav__link nav__link--Education" id="">Education</a></li>
-                <li class="nav__item nav__list--item-formation"><a href="#" class="nav__link nav__link--Formation" id="">Parcours</a></li>
-                <li class="nav__item nav__list--item-portfolio"><a href="#" class="nav__link nav__link--Portfolio" id="">Portfolio</a></li>
-                <li class="nav__item nav__list--item-contact"><a href="#" class="nav__link nav__link--Contact" id="">Contact</a></li>
+                <li class="nav__item nav__item--home"><a href="#" class="nav__link nav__link--home" id=""><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                <li class="nav__item nav__item--profile"><a href="#" class="nav__link nav__link--profile" id="">Profil</a></li>
+                <li class="nav__item nav__item--skills"><a href="#" class="nav__link nav__link--skills" id="">Skills</a></li>
+                <li class="nav__item nav__item--education"><a href="#" class="nav__link nav__link--education" id="">Education</a></li>
+                <li class="nav__item nav__item--formation"><a href="#" class="nav__link nav__link--formation" id="">Parcours</a></li>
+                <li class="nav__item nav__item--portfolio"><a href="#" class="nav__link nav__link--portfolio" id="">Portfolio</a></li>
+                <li class="nav__item nav__item--contact"><a href="#" class="nav__link nav__link--contact" id="">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -30,6 +30,7 @@
     <main class="main">
         <section class="profile">
 
+            <!-- HOME PICTURE - NAME - JOB TITLE -->
             <div class="profile-container__home container">
 
                 <div class="profile-wrapper">
@@ -46,6 +47,7 @@
                 </div>
             </div>
 
+            <!-- PRESENTATION & GOALS -->
             <div class="profile-container__content container">
                 <article class="article-about-me">
                     <h4 class="article-about-me__title"></h4>
@@ -69,44 +71,87 @@
 
             <div class="skills-container container">
 
+                <!-- HARD SKILLS -->
                 <section class="skills-section hard-skills">
+
                     <h1 class="skills-section__title hard-skills__title titles-section">Hard skills</h1>
                     
+                    <!-- PROGRESS BAR HARD SKILL LIST (Animated) -->
                     <div class="hard-skills__list">
+
                         <div class="hard-skills__item-container">
-                            <p class="hard-skills-list__title hard-skills__list--title-wp">Wordpress &hearts;</p>
+                            <label class="hard-skills-list__title hard-skills__list--title-wp" for="file">Wordpress &hearts;</label>
+                            <progress class="progress-bar progress-bar--wp" max="100" value="45"> 45% </progress>
                         </div>
                         <div class="hard-skills__item-container">
-                            <p class="hard-skills-list__title hard-skills__list--title-html-css">HTML & CSS</p>
+                            <label class="hard-skills-list__title hard-skills__list--title-css" for="file">HTML & CSS</label>
+                            <progress class="progress-bar progress-bar--css" max="100" value="75"> 75% </progress>
                         </div>
                         <div class="hard-skills__item-container">
-                            <p class="hard-skills-list__title hard-skills__list--title-sass">SASS</p>
+                            <label class="hard-skills-list__title hard-skills__list--title-sass" for="file">SASS</label>
+                            <progress class="progress-bar progress-bar--sass" max="100" value="70"> 70% </progress>
                         </div>
                         <div class="hard-skills__item-container">
-                            <p class="hard-skills-list__title hard-skills__list--title-sql">SQL</p>
+                            <label class="hard-skills-list__title hard-skills__list--title-sql" for="file">SQL</label>
+                            <progress class="progress-bar progress-bar--sql" max="100" value="35"> 35% </progress>
                         </div>
                         <div class="hard-skills__item-container">
-                            <p class="hard-skills-list__title hard-skills__list--title-php">POO (PHP Orienté Objet)</p>
+                            <label class="hard-skills-list__title hard-skills__list--title-php" for="file">POO (PHP Orienté Objet</label>
+                            <progress class="progress-bar progress-bar--php" max="100" value="30"> 30% </progress>
                         </div>
                         <div class="hard-skills__item-container">
-                            <p class="hard-skills-list__title hard-skills__list--title-javascript">JavaScript</p>
+                            <label class="hard-skills-list__title hard-skills__list--title-js" for="file">JavaScript</label>
+                            <progress class="progress-bar progress-bar--js" max="100" value="25"> 25% </progress>
                         </div>
                         <div class="hard-skills__item-container">
-                            <p class="hard-skills-list__title hard-skills__list--title-github">GitHub</p>
+                            <label class="hard-skills-list__title hard-skills__list--title-github" for="file">GitHub</label>
+                            <progress class="progress-bar progress-bar--github" max="100" value="55"> 55% </progress>
                         </div>
                         <div class="hard-skills__item-container">
-                            <p class="hard-skills-list__title hard-skills__list--title-photoshop">Photoshop</p>
+                            <label class="hard-skills-list__title hard-skills__list--title-photoshop" for="file">Photoshop</label>
+                            <progress class="progress-bar progress-bar--photoshop" max="100" value="85"> 85% </progress>
                         </div>
+
                     </div>
 
                 </section>
 
+                <!-- SOFT SKILLS -->
                 <section class="skills-section soft-skills">
                     <h1 class="skills-section__title soft-skills__title titles-section">Soft skills</h1>
+                    <div class="soft-skills__container skills-container">
+                        <div class="skills-wrapper">
+                            <img src="" alt="" class="soft-skills__img--creativity skills__img">
+                            <p class="soft-skills__text skills__text">Esprit créatif</p>
+                        </div>
+                        <div class="skills-wrapper">
+                            <img src="" alt="" class="soft-skills__img--learning skills__img">
+                            <p class="soft-skills__text skills__text">Soif d'apprendre</p>
+                        </div>
+                        <div class="skills-wrapper">
+                            <img src="" alt="" class="soft-skills__img--communication skills__img">
+                            <p class="soft-skills__text skills__text">Bonne communiquante</p>
+                        </div>
+                    </div>
                 </section>
 
+                <!-- MAD SKILLS -->
                 <section class="skills-section mad-skills">
                     <h1 class="skills-section__title mad-skills__title titles-section">Mad skills</h1>
+                    <div class="mad-skills__container skills-container">
+                        <div class="skills-wrapper">
+                            <img src="" alt="" class="mad-skills__img--usa skills__img">
+                            <p class="mad-skills__text skills__text">American Dream<br>Les USA n'ont aucun secret pour moi</p>
+                        </div>
+                        <div class="skills-wrapper">
+                            <img src="" alt="" class="mad-skills__img--cinema skills__img">
+                            <p class="mad-skills__text skills__text">Pratique intensive du 7ème Art</p>
+                        </div>
+                        <div class="skills-wrapper">
+                            <img src="" alt="" class="mad-skills__img--piano skills__img">
+                            <p class="mad-skills__text skills__text">Piano<br>(en cours d'apprentissage)</p>
+                        </div>
+                    </div>
                 </section>
                 
             </div>
