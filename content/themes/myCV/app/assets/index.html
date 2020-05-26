@@ -43,7 +43,7 @@
                         <img src="" alt="" class="picture-wrapper__img">
                     </div>
                     <p class="profile-wrapper__text">Hello World!</p>
-                    <h1 class="profile__main-title titles-section">Profil</h1>
+                    <h1 class="profile-main-title titles-section">Profil</h1>
                 </div>
             </div>
 
@@ -160,7 +160,7 @@
 
     <!-- PART 3 - EDUCATION -->
         <section class="education">
-            <h1 class="education__main-title titles-section">Mon <span class="colored-title">éducation</span></h1>
+            <h1 class="education-main-title titles-section">Mon <span class="colored-title">éducation</span></h1>
 
             <!-- MOBILE VERSION -->
             <div class="education__container">
@@ -174,7 +174,7 @@
                             <p class="education__date--formation">2019</p>
                         </div>
                         <h3 class="education-oclock__title education__title--oclock">Formation Développeur web<br>Spécialisation Wordpress</h3>
-                        <p class="education-oclock__content education__content--oclock">700h avec O'Clock - Labélisée Grande École du Numérique</p>
+                        <p class="education-oclock__content education__content--oclock">700h avec <strong>O'Clock</strong> - Labélisée Grande École du Numérique</p>
                         <div class="education__date-container--formation">
                             <p class="education__date--formation">2018</p>
                         </div>
@@ -215,7 +215,7 @@
 
     <!-- PART 4 - FORMATION -->
         <section class="formation">
-            <h1 class="formation__main-title titles-section">Mon <span class="colored-title">parcours</span></h1>
+            <h1 class="formation-main-title titles-section">Mon <span class="colored-title">parcours</span></h1>
 
             <section class="formation-timeline">
                 <div class="formation-timeline__container container">
@@ -269,7 +269,7 @@
                         <li class="formation-timeline-list__item">v>
                             <div class="formation-timeline-panel-container formation-timeline-panel-container--intermittence">
                                 <div class="formation-timeline-panel-date-block">
-                                    <p class="formation-timeline-panel-date">Sept. 2016 &#8594 Mai 2019</p>
+                                    <p class="formation-timeline-panel-date">Sept. 2016 &rarr; Mai 2019</p>
                                 </div>
                                 <div class="formation-timeline-panel-content">
                                     <h3 class="formation-timeline-panel-content__job-title">Intermittente du spectacle : Monteuse vidéo / assistante de post-production</h3>
@@ -286,7 +286,7 @@
                             </div>
                             <div class="formation-timeline-panel-container formation-timeline-panel-container--editor">
                                 <div class="formation-timeline-panel-date-block">
-                                    <p class="formation-timeline-panel-date">Fév. 2016 &#8594 Août 2016</p>
+                                    <p class="formation-timeline-panel-date">Fév. 2016 &rarr; Août 2016</p>
                                 </div>
                                 <div class="formation-timeline-panel-content">
                                     <h3 class="formation-timeline-panel-content__job-title">Monteuse vidéo</h3>
@@ -305,7 +305,7 @@
                             </div>
                             <div class="formation-timeline-panel-container formation-timeline-panel-container--editing-internship">
                                 <div class="formation-timeline-panel-date-block">
-                                    <p class="formation-timeline-panel-date">Juin 2015 &#8594 Déc. 2015</p>
+                                    <p class="formation-timeline-panel-date">Juin 2015 &rarr; Déc. 2015</p>
                                 </div>
                                 <div class="formation-timeline-panel-content">
                                     <h3 class="formation-timeline-panel-content__job-title">Stage Montage vidéo / assistante de post-production</h3>
@@ -324,7 +324,7 @@
                             </div>
                             <div class="formation-timeline-panel-container formation-timeline-panel-container--monoprix">
                                 <div class="formation-timeline-panel-date-block">
-                                    <p class="formation-timeline-panel-date">2012 &#8594 2014</p>
+                                    <p class="formation-timeline-panel-date">2012 &rarr; 2014</p>
                                 </div>
                                 <div class="formation-timeline-panel-content">
                                     <h3 class="formation-timeline-panel-content__job-title">Responsable adjointe vente</h3>
@@ -345,7 +345,7 @@
         <section class="portfolio">
 
             <div class="portfolio-container container">
-                <h1 class="portfolio__main-title titles-section"><span class="colored-title--white">Mon </span><span class="colored-title">portfolio</span></h1>
+                <h1 class="portfolio-main-title titles-section"><span class="colored-title--white">Mon </span><span class="colored-title">portfolio</span></h1>
 
                 <!-- FIRST ROW -->
                 <div class="portfolio-row row">
@@ -374,9 +374,42 @@
 
     <!-- PART 6 - CONTACT -->
         <!-- V2 -->
-        <!-- <section class="contact">
+        <section class="contact">
             
-        </section> -->
+            <h1 class="contact-main-title titles-section">Contact</h1>
+            <aside class="contact-aside">
+                <p class="contact-aside__content">Un commentaire ? Un conseil ? Une question ? Toute suggestion est la bienvenue !</p>
+            </aside>
+            <!-- Page de renvoi et méthode à définir -->
+            <form action="/" method="" class="contact-form">
+
+                <!-- NAME -->
+                <div class="contact-form__block">
+                    <label for="name" class="contact-form__label">Nom</label>
+                    <input type="text" id="name" name="user-name" placeholder="Ross Geller" class="contact-form__input">
+                </div>
+
+                <!-- EMAIL -->
+                <div class="contact-form__block">
+                    <label for="mail" class="contact-form__label">Email</label>
+                    <input type="email" id="mail" name="user-mail" placeholder="gellorosor@paleontologist.com" class="contact-form__input">
+                </div>
+
+                <!-- SUBJECT -->
+                <div class="contact-form__block">
+                    <label for="subject" class="contact-form__label">Sujet</label>
+                    <input type="text" id="subject" name="user-subject" placeholder="Who ate my sandwich?" class="contact-form__input">
+                </div>
+
+                <!-- MESSAGE -->
+                <div class="contact-form__block">
+                    <label for="msg" class="contact-form__label">Message</label>
+                    <textarea id="msg" name="user-message" class="contact-form__input contact-form__textarea"></textarea>
+                </div>
+                <button type="submit" value="submit" class="contact-form__button btn">Envoyer</button>
+            </form>
+
+        </section>
 
     </main>
 
@@ -386,13 +419,13 @@
 
         <section class="info">
             <div class="info-container">
-                <h1 class="info__main-title titles-section">Mes informations</h1>
+                <h1 class="info-main-title titles-section">Mes informations</h1>
                 
                 <!-- PARTIE INFORMATIONS -->
                 <div class="info-container-panel">
 
                     <!-- INFORMATIONS PERSONNELLES -->
-                    <div class="info-contact">
+                    <address class="info-contact">
                         <div class="info-contact-block">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                             <p class="info-contact__localisation">Localisation :</p>
@@ -401,14 +434,14 @@
                         <div class="info-contact-block">
                             <i class="fa fa-paper-plane" aria-hidden="true"></i>
                             <p class="info-contact__email">Email :</p>
-                            <p class="info-contact__email-adress">lorieux.angelina@gmail.com</p>
+                            <a href="mailto:lorieux.angelina@gmail.com" class="info-contact__email-adress">lorieux.angelina@gmail.com</a>
                         </div>
                         <div class="info-contact-block">
                             <i class="fa fa-phone" aria-hidden="true"></i>
                             <p class="info-contact__phone">Tel :</p>
-                            <p class="info-contact__number-phone">07 84 32 62 49</p>
+                            <a href="tel:+33794326249" class="info-contact__number-phone">07 84 32 62 49</a>
                         </div>
-                    </div>
+                    </address>
 
                     <!-- INFORMATIONS PROFESSIONNELLES (LIENS) -->
                     <div class="info-links">
