@@ -1,19 +1,47 @@
 @charset 'UTF-8';
 
-// 1- ABSTRACTS
-
-@import 'abstracts/variables';
-
-// 2- VENDORS
+// 1- VENDORS
 
 @import '~reset-css/sass/reset',
         '~font-awesome/scss/font-awesome';
 
+// 2- ABSTRACTS
+
+@import 'abstracts/variables',
+        'abstracts/mixins',
+        'abstracts/functions';
+
+
 // 3- BASE
 
-// 4- COMPONENTS
+@import 'base/base',
+        'base/fonts',
+        'base/typography';
+        
+// 4- LAYOUT
 
-// 5- LAYOUT
+@import 'layout/header',
+        'layout/profile',
+        'layout/skills',
+        'layout/education',
+        'layout/experience',
+        'layout/portfolio',
+        'layout/contact',
+        'layout/info',
+        'layout/footer';
+        
+// 5- COMPONENTS
+
+@import 'components/nav',
+        'components/buttons',
+        'components/menu',
+        'components/icons';
+
 
 // 6- PAGES 
 
+@import 'pages/onepage';
+
+// 7- SHAME
+
+@import 'shame';

@@ -1,0 +1,22 @@
+body {
+    font-family: $font-family-primary;
+    font-size: $default-font-size;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-alt;
+    text-transform: uppercase;
+    // font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav ul li {
+    text-transform: uppercase;
+}
+
+.colored-title {
+    color: $special-color;
+}
