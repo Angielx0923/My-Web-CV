@@ -5,3 +5,11 @@ var app = {
 };
 
 $(app.init);
+
+// BURGER
+
+$(document).ready(function(){
+	$('.burger-nav').click(function(){
+		$(this).toggleClass('open');
+	});
+});

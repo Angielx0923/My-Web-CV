@@ -1,15 +1,15 @@
 @charset 'UTF-8';
 
-// 1- VENDORS
-
-@import '~reset-css/sass/reset',
-        '~font-awesome/scss/font-awesome';
-
-// 2- ABSTRACTS
+// 1- ABSTRACTS
 
 @import 'abstracts/variables',
         'abstracts/mixins',
         'abstracts/functions';
+
+// 2- VENDORS
+
+@import '~reset-css/sass/reset',
+        '~font-awesome/scss/font-awesome';
 
 
 // 3- BASE
@@ -32,9 +32,9 @@
         
 // 5- COMPONENTS
 
-@import 'components/nav',
-        'components/buttons',
+@import 'components/buttons',
         'components/menu',
+        'components/scrollbar',
         'components/icons';
 
 
