@@ -19,6 +19,7 @@ $background-color-secondary: #A3A3A3;
 $duration: .5s;
 $duration-fast: .25s;
 $duration-slow: 1s;
+$duration-very-slow: 2s;
 
 $gutter-thin: .25rem;
 $gutter-small: .5rem;
@@ -27,4 +28,4 @@ $gutter-large: 2rem;
 $gutter-very-large: 3rem;
 $gutter-extra-large: 5rem;
 
-$breakpoint: 767px;
+$breakpoint-sm: 768px;

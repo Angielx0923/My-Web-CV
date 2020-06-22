@@ -1,64 +1,78 @@
-.nav__link {
-    color: $font-color-secondary;
-    font-weight: bold;
-    font-size: 1.2rem;
+.header__container {
+  position: relative;
+
+   @media (min-width: $breakpoint-sm) {
+       display: flex;
+       justify-content: flex-end;
+   }
 }
 
-.is-language {
+/*--------------- LANGUAGES ICON ---------------*/
+
+.languages-nav {
     position: absolute;
     top: 0;
     right: 0;
-    width: 1rem;
-    // filter: invert(100%);
+    width: 25px;
+
+    &__link {
+      width: 100%;
+    }
+
+    @media (min-width: $breakpoint-sm) {
+        position: static;
+        margin: -1px 0 0 1.5rem;
+        width: 1.5rem;
+    }
 }
 
-// BURGER
+/*--------------- LINKS ---------------*/
 
-  .burger-nav {
-    width: 1.8rem;
-    height: 1.8rem;
-    position: relative;
-    // transform: rotate(0deg);
-    transition: .5s ease-in-out;
-    cursor: pointer; 
-    
-    &__content {
-        display: block;
-        position: absolute;
-        height: .3rem;
-        width: 100%;
-        background: #000;
-        border-radius: 9px;
-        opacity: 1;
-        left: 0;
-        transform: rotate(0deg);
-        transition: .25s ease-in-out;
-        transform-origin: left center;
+.icon--home {
+    width: 1rem;
+    margin-top: 4rem;
+
+
+    @media (min-width: $breakpoint-sm) {
+        width: 14px;
+        margin-top: 0;
     }
-    
-    &__content:nth-child(2) {
-      top: 9px;
+}
+
+.nav__list__item {
+  margin-bottom: 2rem;
+}
+
+/*--------------- BURGER ---------------*/
+
+// NAV - DESKTOP
+@media (min-width: $breakpoint-sm) {
+    .burger-nav {
+        display: none;
     }
-    
-    &__content:nth-child(3) {
-      top: 18px;
+
+    .nav__list {
+        display: flex;
+
+        &__item {
+            padding-left: 1rem;
+        }
     }
-  }
-  
-  
-  .burger-nav.open span:nth-child(1) {
-    transform: rotate(45deg);
-    top: -3px;
-    left: 5px;
-  }
-  
-  .burger-nav.open span:nth-child(2) {
-    width: 0%;
-    opacity: 0;
-  }
-  
-  .burger-nav.open span:nth-child(3) {
-    transform: rotate(-45deg);
-    left: 5px;
-  }
+}
+
+// SIDEBAR
+#burger-sidebar {
+    display: none;
+    position: fixed;
+    padding: 1.5rem;
+    width: 25%;
+    z-index: 1;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $special-color;
+
+    transform: translateX(-100%);
+    transition: transform $duration-fast ease-out;
+}
 

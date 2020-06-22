@@ -20,3 +20,27 @@ nav ul li {
 .colored-title {
     color: $special-color;
 }
+
+.nav__list__item__link {
+    color: $font-color-secondary;
+    font-weight: bold;
+    font-size: 1rem;
+
+    @media (min-width: $breakpoint-sm) {
+        font-size: 1.2rem;
+    }
+
+    transition: all $duration-fast ease-in-out;
+
+    &:hover {
+        color: $color-primary;
+
+        @media (min-width: $breakpoint-sm) {
+            font-size: 1.2rem;
+    
+            &:hover {
+                color: $special-color;
+            }
+        }
+      }
+}

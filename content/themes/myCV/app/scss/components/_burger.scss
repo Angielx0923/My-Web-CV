@@ -1,0 +1,61 @@
+
+// 1- Création bars
+.burger-nav {
+    width: 26px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+  
+    // 1- Creating bars
+    &__content {
+      display: block;
+      width: 100%;
+      height: 4px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $font-color-secondary;
+  
+      transition: background-color $duration ease-in-out;
+    }
+  
+    &__content::before, ::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background-color: $font-color-secondary;
+  
+      transition: all $duration ease-in-out;
+    }
+    
+    &__content::before {
+      transform: translateY(-8px);
+    }
+    
+    &__content::after {
+      transform: translateY(8px);
+    }
+  }
+  
+  // 2- Animations
+  .open {
+    &__content {
+      background-color: transparent;
+    }
+    
+    &__content::before {
+      transform: translateY(0) rotateZ(45deg);
+      height: 5px;
+    }
+  
+    &__content::after {
+      transform: translateY(0) rotateZ(-45deg);
+      height: 5px;
+    }
+  }
+  
+  
+  
+  
+  
