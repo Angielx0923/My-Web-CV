@@ -47,7 +47,7 @@
 
 // NAV - DESKTOP
 @media (min-width: $breakpoint-sm) {
-    .burger-nav {
+    .burger__nav {
         display: none;
     }
 
@@ -61,12 +61,12 @@
 }
 
 // SIDEBAR
-#burger-sidebar {
+#burger__sidebar {
     display: none;
     position: fixed;
     padding: 1.5rem;
     width: 25%;
-    z-index: 1;
+    // z-index: 0;
     height: 100%;
     top: 0;
     left: 0;
@@ -76,3 +76,31 @@
     transition: transform $duration-fast ease-out;
 }
 
+#burger__content {
+    display: none;
+    position: relative;
+
+    &.is-open {
+        display: inline;
+    }
+
+    @media (min-width: $breakpoint-sm) {
+        display: block;
+    }
+}
+
+#burger__sidebar{
+    display: none;
+
+    &.is-open {
+        display: inline;
+    }
+
+    @media (min-width: $breakpoint-sm) {
+        display: none;
+    }
+}
+
+#burger__sidebar {
+    transform: translateX(0);
+}
