@@ -30,7 +30,13 @@
 
 .icon--home {
     width: 1rem;
-    margin-top: 4rem;
+    margin-top: 5rem;
+    
+    transition: filter $duration-fast ease-in-out;
+
+    &:hover {
+        filter: invert(100%);
+    }
 
 
     @media (min-width: $breakpoint-sm) {
@@ -64,40 +70,19 @@
 .burger__sidebar {
     display: none;
     position: fixed;
-    padding: 1.5rem;
-    width: 40%;
+    width: 180px;
     height: 100%;
     top: 0;
     left: 0;
     background-color: $special-color;
-    // transform: translateX(-100%);
-    
+
     transition: transform $duration ease-out;
 
     @media (min-width: $breakpoint-sm) {
         display: none;
     }
-    &.is-open {
-        @media (min-width: $breakpoint-sm) {
-            display: none;
-        }
-    }
 }
-
 .burger__content {
     display: none;
     position: relative;
-    // transform: translateX(-100%);
-
-    transition: transform $duration ease-out;
-
-    @media (min-width: $breakpoint-sm) {
-        display: block;
-        transform: none;
-    }
-}
-
-.is-open {
-    display: block;
-    // transform: translateX(0);
 }

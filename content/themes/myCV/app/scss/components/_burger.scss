@@ -16,7 +16,7 @@
       transform: translateY(-50%);
       background-color: $font-color-secondary;
   
-      transition: background-color $duration ease-in-out;
+      transition: background-color $duration-fast ease-in-out;
     }
   
     &__content::before, ::after {
@@ -26,7 +26,7 @@
       height: 4px;
       background-color: $font-color-secondary;
   
-      transition: all $duration ease-in-out;
+      transition: all $duration-fast ease-in-out;
     }
     
     &__content::before {
