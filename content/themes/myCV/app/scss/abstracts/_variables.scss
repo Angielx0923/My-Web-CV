@@ -7,9 +7,9 @@ $font-family-secondary: 'Oswald', sans-serif;
 $font-family-alt: 'Anton', sans-serif;
 $font-family-opt: 'Krona one', sans-serif;
 
-$font-color-primary: #536E83;
+$font-color-primary: rgb(106, 124, 138);
 $font-color-secondary: #1E1E1E;
-$font-color-quote: rgb(167, 180, 190);
+$font-color-quote: rgba(167, 180, 190, .75);
 
 $special-color: #F4B500;
 
@@ -30,3 +30,4 @@ $gutter-very-large: 3rem;
 $gutter-extra-large: 5rem;
 
 $breakpoint-sm: 768px;
+$breakpoint-md: 996px;
