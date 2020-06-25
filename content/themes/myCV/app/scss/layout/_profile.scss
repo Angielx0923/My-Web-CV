@@ -39,11 +39,11 @@
             letter-spacing: .2rem;
 
             &__my-name {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
                 margin-bottom: 5px;
 
                 @media (min-width: $breakpoint-sm) {
-                    font-size: 3rem;
+                    font-size: 3.2rem;
                 }
             }
 
@@ -145,20 +145,6 @@
     .profile-main {
         margin: 0 1.3rem;
         padding-top: 1rem;
-
-        // DIVIDER MOBILE
-        &::after {
-            content: '';
-            width: 25%;
-            border: 1px solid $special-color;
-            display: block;
-            border-radius: 2px;
-            margin: 0 auto;
-
-            @media (min-width: $breakpoint-sm) {
-                display: none;
-            }
-        }
         
         @media (min-width: $breakpoint-sm) {
             display: grid;
@@ -274,17 +260,30 @@
 }
 
 .profile-footer {
-    margin-top: 2rem;
+    margin: 0rem 1.3rem;
+
+    @media (min-width: $breakpoint-sm) {
+        margin: 2rem 1.3rem;
+    }
+
 
     .social-media-container {
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         
         &__link {
             filter: grayscale(100%);
-            transition: all $duration-fast ease-in-out;
+            margin: 0 .3rem;
+            transition: filter $duration-fast ease-in-out;
             
             &--download {
-                display: inline-block;
+                text-align: center;
+                
+            }
+
+            &:hover {
+                filter: none;
             }
 
             &--text {
@@ -293,14 +292,12 @@
                 font-size: .9rem;
                 font-weight: bold;
                 line-height: 1.1rem;
-            }
-            &:hover {
-                filter: none;
+                padding-bottom: .5rem;
             }
         }
 
         &__logo--download {
-            width: 38px;
+            width: 31px;
         }
     }
 }

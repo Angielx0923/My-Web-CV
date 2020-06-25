@@ -1,0 +1,105 @@
+.skills {
+    margin: 2rem 0;
+
+    @media (min-width: $breakpoint-sm) {
+        margin: 0;
+    }
+
+    .skills-container {
+        background-color: $font-color-secondary;
+        position: relative;
+    }
+}
+
+/*--------------- HARD SKILLS ---------------*/
+.skills-section {
+    padding: 1rem 0;
+
+}
+
+.hard-skills {
+
+    @media (min-width: $breakpoint-sm) {
+        padding-top: 1.5rem;
+    }
+
+    &__list {
+        margin: 1rem auto;
+        color: $color-primary;
+        display: table;
+    }
+
+    &__item-container {
+        max-width: 100%;
+        margin-bottom: 1.7rem;
+        display: flex;
+        flex-direction: column;
+
+        .progress-bar {
+            width: 250px;
+            height: 20px;
+            background-color: $color-primary;  
+            border-radius: 10px;
+            z-index: 0;
+            
+            &__value {
+                width: 50%;
+                height: 100%;
+                background-color: $special-color;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                z-index: 1;
+                font-size: .8rem;
+                text-align: center;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &__label {
+        display: inline;
+        text-align-last: left;
+        margin: 0 0 .3rem 0;
+        font-size: 1rem;
+        font-weight: bold;
+        letter-spacing: .1rem;
+    }
+}
+
+.skills-section {
+    position: relative;
+    padding-bottom: 4rem;
+
+    &__main-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+
+
+        &--hard {
+            color: $color-primary;
+
+        }
+
+        @media (min-width: $breakpoint-sm) {
+            font-size: 2.8rem;
+        }
+        @media (min-width: $breakpoint-md) {
+            font-size: 3rem;
+        }
+    }
+}
+
+/*--------------- SOFT SKILLS ---------------*/
+
+.soft-skills {
+    background-color: $background-color-primary;
+    position: relative;
+
+    &__title {
+        background-color: $background-color-primary;
+        border: 1px solid red;
+        display: inline-block;
+        position: relative;
+    }
+}

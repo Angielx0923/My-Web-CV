@@ -1,0 +1,35 @@
+.btn-download {
+    padding: .5rem .5rem;    
+    
+    &::before {
+        content: '';
+        border-top: 2px solid $special-color;
+        padding-top: .7rem;
+        display: flex;
+        width: 60%;
+        position: relative;
+        right: -40%;
+        transition: right $duration ease-in-out;
+        
+    }
+    
+    &::after {
+        content: '';
+        border-top: 2px solid $special-color;
+        display: flex;
+        width: 60%;
+        position: relative;
+        right: 0;
+
+        transition: right $duration ease-in-out;
+        
+    }
+    
+    &:hover::before {
+        right: 0;
+    }
+    
+    &:hover::after {
+        right: -40%;
+    }
+}
