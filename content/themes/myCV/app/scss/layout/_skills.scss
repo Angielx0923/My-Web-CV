@@ -1,5 +1,6 @@
 .skills {
     margin: 2rem 0;
+    background-color: $font-color-secondary;
 
     @media (min-width: $breakpoint-sm) {
         margin: 0;
@@ -21,7 +22,7 @@
 }
 
 .hard-skills {
-    background-color: $font-color-secondary;
+    // background-color: $font-color-secondary;
 
     @media (min-width: $breakpoint-sm) {
         padding-top: 1.5rem;
@@ -111,13 +112,19 @@
     }
 
     &__container {
-        max-width: 40%;
+        max-width: 150px;
         text-align: center;
         display: inline-block;
-        border: 1px solid red;
 
         .icon {
             width: 100%;
+
+            filter: grayscale(100);
+            transition: all $duration-fast ease-in-out;
+
+            &:hover {
+                filter: grayscale(0);
+            }
         }
 
         .skills-wrapper {
@@ -127,6 +134,7 @@
                 display: inline-block;
                 text-align: center;
                 width: 90%;
+                margin-top: .8rem;
             }
         }
     }
@@ -134,5 +142,46 @@
 
 .skills__text {
     font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    line-height: 1.3rem;
+}
 
+/*--------------- MAD SKILLS ---------------*/
+
+.mad-skills {
+    background-color: $background-color-secondary;
+    position: relative;
+    text-align: center;
+    padding-bottom: 0;
+    
+    // TITLE
+    &__title {
+        background-color: $background-color-secondary;
+        display: inline-block;
+        position: relative;
+        top: -53px;
+        margin-bottom: 0;
+    }
+
+    &__container {
+        max-width: 150px;
+        text-align: center;
+        display: inline-block;
+
+        .icon {
+            width: 100%;
+
+            filter: grayscale(100);
+            transition: all $duration-fast ease-in-out;
+
+            &:hover {
+                filter: grayscale(0);
+            }
+        }
+
+        .skills-wrapper {
+            margin-bottom: 35%;
+        }
+    }
 }
