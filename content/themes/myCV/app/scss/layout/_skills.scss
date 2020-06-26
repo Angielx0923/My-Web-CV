@@ -4,10 +4,6 @@
     margin-top: 1rem;
     font-weight: bold;
     line-height: 1.3rem;
-
-    @media (min-width: $breakpoint-sm) {
-        // width: min-content;
-    }
 }
 
 @media (min-width: $breakpoint-sm) {
@@ -18,10 +14,8 @@
     }
 }
 
-
-
 .skills {
-    margin: 2rem 0;
+    margin-top: 2rem;
     background-color: $font-color-secondary;
 
     @media (min-width: $breakpoint-sm) {
