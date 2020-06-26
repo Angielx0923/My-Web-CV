@@ -1,3 +1,25 @@
+/*--------------- ALL SKILLS ---------------*/
+.skills__text {
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    line-height: 1.3rem;
+
+    @media (min-width: $breakpoint-sm) {
+        // width: min-content;
+    }
+}
+
+@media (min-width: $breakpoint-sm) {
+
+    .skills-text-container {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
 .skills {
     margin: 2rem 0;
     background-color: $font-color-secondary;
@@ -8,30 +30,46 @@
 
     .skills-container {
         position: relative;
+
+        @media (min-width: $breakpoint-sm) {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
     }
 }
 
-.skills-section__main-title {
-    display: block;
-    text-align: center;
-}
-
-/*--------------- HARD SKILLS ---------------*/
 .skills-section {
     padding: 1rem 0;
-}
-
-.hard-skills {
-    // background-color: $font-color-secondary;
+    position: relative;
+    padding-bottom: 4rem;
 
     @media (min-width: $breakpoint-sm) {
-        padding-top: 1.5rem;
+        padding-bottom: 0;
     }
+
+    &__main-title {
+        display: block;
+        text-align: center;
+    }
+}
+
+
+/*--------------- HARD SKILLS ---------------*/
+
+.hard-skills {
 
     &__list {
         margin: 1rem auto;
         color: $color-primary;
         display: table;
+
+        @media (min-width: $breakpoint-lg) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 4rem 2rem 0 2rem;
+            padding: 3rem 0;
+        }
     }
 
     &__item-container {
@@ -46,6 +84,11 @@
             background-color: $color-primary;  
             border-radius: 10px;
             z-index: 0;
+
+            @media (min-width: $breakpoint-lg) {
+                height: 25px;
+
+            }
             
             &__value {
                 width: 50%;
@@ -72,17 +115,19 @@
 }
 
 .skills-section {
-    position: relative;
-    padding-bottom: 4rem;
+    
 
     &__main-title {
         text-align: center;
         font-size: 2.5rem;
         margin-bottom: 3rem;
-
-
+        
         &--hard {
             color: $color-primary;
+
+            @media (min-width: $breakpoint-sm) {
+                margin-bottom: 1.7rem;
+            }
         }
 
         @media (min-width: $breakpoint-sm) {
@@ -101,20 +146,43 @@
     background-color: $background-color-primary;
     position: relative;
     text-align: center;
+
+    @media (min-width: $breakpoint-sm) {
+        margin-top: 1rem;
+    }
     
     // TITLE
+    &__title-container {
+        @media (min-width: $breakpoint-sm) {
+            margin-top: -1rem;
+        }
+    }
+
     &__title {
         background-color: $background-color-primary;
         display: inline-block;
         position: relative;
         top: -53px;
         margin-bottom: 0;
+
+        @media (min-width: $breakpoint-sm) {
+            top: 0;
+        }
     }
 
     &__container {
         max-width: 150px;
         text-align: center;
         display: inline-block;
+
+        @media (min-width: $breakpoint-sm) {
+            max-width: 600px;
+            align-items: baseline;
+            margin: 1.5rem 2rem 1rem 1rem;
+            padding-bottom: 1.5rem;
+            text-align: center;
+            display: inline-flex;
+        }
 
         .icon {
             width: 100%;
@@ -125,26 +193,21 @@
             &:hover {
                 filter: grayscale(0);
             }
+
+            @media (min-width: $breakpoint-sm) {
+                width: 50%;
+            }
         }
+        
 
         .skills-wrapper {
             margin-bottom: 35%;
 
-            &--smiley {
-                display: inline-block;
-                text-align: center;
-                width: 90%;
-                margin-top: .8rem;
+            @media (min-width: $breakpoint-sm) {
+                margin-bottom: 3rem;
             }
         }
     }
-}
-
-.skills__text {
-    font-size: 1rem;
-    margin-top: 1rem;
-    font-weight: bold;
-    line-height: 1.3rem;
 }
 
 /*--------------- MAD SKILLS ---------------*/
@@ -154,6 +217,12 @@
     position: relative;
     text-align: center;
     padding-bottom: 0;
+
+    @media (min-width: $breakpoint-sm) {
+        width: 94%;
+        left: 6%;
+        top: -1.5rem;
+    }
     
     // TITLE
     &__title {
@@ -162,12 +231,27 @@
         position: relative;
         top: -53px;
         margin-bottom: 0;
+
+        @media (min-width: $breakpoint-sm) {
+            background-color: none;
+            top: 0;
+            padding-top: 0;
+        }
     }
 
     &__container {
         max-width: 150px;
         text-align: center;
         display: inline-block;
+
+        @media (min-width: $breakpoint-sm) {
+            max-width: 600px;
+            align-items: baseline;
+            margin: 1.5rem 2rem 1rem 1rem;
+            padding-bottom: 1.5rem;
+            text-align: center;
+            display: inline-flex;
+        }
 
         .icon {
             width: 100%;
@@ -178,10 +262,18 @@
             &:hover {
                 filter: grayscale(0);
             }
+
+            @media (min-width: $breakpoint-sm) {
+                width: 50%;
+            }
         }
 
         .skills-wrapper {
             margin-bottom: 35%;
+
+            @media (min-width: $breakpoint-sm) {
+                margin-bottom: 0rem;
+            }
         }
     }
 }
