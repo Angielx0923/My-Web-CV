@@ -1,0 +1,146 @@
+.info {
+    background-color: $special-color;
+    position: relative;
+    text-align: center;
+    min-width: 100%;
+
+    .info-main-title-container{
+        margin-bottom: 2.5rem;
+
+        &__text {
+            background-color: $color-primary;
+            padding: 1rem 1.5rem;
+        }
+    }
+    
+/*--------------- CONTACT / ADDRESS ---------------*/
+
+.info-container-panel {
+
+    @media (min-width: $breakpoint-sm) {
+        display: flex;
+        justify-content: center;
+
+        &::before {
+            content: '';
+            border: 1.5px solid $color-primary;
+            border-radius: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            position: relative;
+            height: 9.5rem;
+        }
+    }
+}
+
+    .info-contact {
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+
+        @media (min-width: $breakpoint-sm) {
+            width: 100%;
+            right: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        &::after {
+            content: '';
+            border: 1.5px solid $color-primary;
+            border-radius: 2px;
+            display: inline-flex;
+            width: 125px;
+
+            @media (min-width: $breakpoint-sm) {
+                display: none;
+            }
+        }
+
+        &__icon {
+            font-size: 50px;
+
+            @media (min-width: $breakpoint-sm) {
+                font-size: 1.3rem;
+                position: relative;
+                bottom: .1rem;
+                order: 3;
+                margin-left: .5rem;
+            }
+        }
+
+        &__title {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            margin: .3rem 0 .5rem 0;
+
+            @media (min-width: $breakpoint-sm) {
+                font-size: 1.1rem;
+                text-transform: none;
+                margin: unset;
+
+            }
+
+            .double-dot {
+                display: none;
+
+                @media (min-width: $breakpoint-sm) {
+                    display: inline;
+                }
+            }
+        }
+
+        &__content {
+            font-size: 1.1rem;
+            opacity: .8;
+
+            @media (min-width: $breakpoint-sm) {
+                font-size: 1.1rem;
+                opacity: 1;
+            }
+        }
+
+        .info-contact-block {
+            margin-bottom: 2rem;
+
+            @media (min-width: $breakpoint-sm) {
+                display: inline-flex;
+            }
+        }
+    }
+
+/*--------------- SOCIAL MEDIA / LINKS CONTACT ---------------*/
+
+    .info-links {
+        margin: 0 auto;
+        width: 90%;     
+       
+        .info-links-container {
+            margin: 2.5rem 0 3rem 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .info-link__icon {
+            font-size: 45px;
+            margin-bottom: .5rem;
+        }
+
+        .info-link__url {
+            display: none;
+        }
+
+        .info-link__content {
+            font-size: 1.1rem;
+            width: min-content;
+            line-height: 1.3rem;
+        }
+
+        .info-links__link {
+            margin: 0 .8rem;
+        }
+    }
+}

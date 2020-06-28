@@ -38,6 +38,7 @@
         opacity: .5;
         border-radius: 2px;
         margin-left: -.7px;
+        padding: 0;
         z-index: -1;
 
         @media (min-width: $breakpoint-sm) {
@@ -104,11 +105,21 @@
 .education__list-item__content {
     background-color: $font-color-secondary;
     text-align: center;
-    padding: 5rem 1rem;
     position: relative;
     top: -62.5px;
     z-index: -1;
-    border-radius: 4px;
+    
+    &--top {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        padding: 5rem 1rem 0 1rem;
+    }
+
+    &--bottom {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        padding: 0rem 1rem 5rem 1rem;
+    }
 
     .education__item__title {
         color: $color-primary;
@@ -129,59 +140,51 @@
         margin-top: 1rem;
         line-height: 1.2rem;
 
+        &--bottom {
+            margin-top: 0;
+            padding-top: 1rem;
+        }
+
         @media (min-width: $breakpoint-sm) {
             font-size: .9rem;
-            display: none;
         }
     }
 }
 
 /*--------------- DESKTOP VERSION ---------------*/
 
-@media (min-width: $breakpoint-sm) {
+// @media (min-width: $breakpoint-sm) {
+//     .education-desktop-divider {
+//         position: relative;
 
-    .education-desktop-divider {
-        margin-top: 200px;
-        position: relative;
+//         &__content {
+//             width: 100%;
+//             border: 1.5px solid $background-color-secondary;
+//             opacity: .5;
+//             border-radius: 2px;
+//         }
+//     }
 
-        &__content {
-            width: 100%;
-            border: 1.5px solid $background-color-primary;
-            opacity: 1;
-            border-radius: 2px;
-        }
-    }
+//     .education-timeline {
+//         display: flex;
 
-    .education-timeline {
-        display: flex;
+//         .education__list-item {
+//             display: flex;
+//             flex-direction: column;
+//             position: relative;
+//             bottom: 0;
 
-        .education__list-item {
-            bottom: 0;
+//             &__content--top {
+//                 order: 1;
+//             }
 
-            .education__date-container--formation {
-                width: 40px;
-                height: 40px;
-                top: -20px;
-            }
+//             &__content--bottom {
+//                 order: 3;
+//             }
 
-            &__content {
-                padding: 2rem 1rem;
-                top: 0;
-            }
-
-            .education-date-container {
-                position: absolute;
-                top: -27.5px;
-
-                &--2019 {
-                    left: -20px;
-                }
-
-                .education__date--formation {
-                    font-size: .9rem;
-                }
-            }
-        }
-    }
-}
-
+//             .education-date-container {
+//                 order: 2;
+//             }
+//         }
+//     }
+// }

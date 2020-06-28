@@ -1,0 +1,10 @@
+.copyright {
+    background-color: $background-color-primary;
+    padding: 1rem;
+
+    &__content {
+        font-size: .8rem;
+        text-align: center;
+        line-height: 1rem;
+    }
+}
