@@ -18,33 +18,19 @@
 .info-container-panel {
 
     @media (min-width: $breakpoint-sm) {
-        display: flex;
-        justify-content: center;
-
-        &::before {
-            content: '';
-            border: 1.5px solid $color-primary;
-            border-radius: 2px;
-            left: 50%;
-            transform: translateX(-50%);
-            position: relative;
-            height: 9.5rem;
-        }
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-bottom: 3rem;
     }
 }
 
     .info-contact {
         position: relative;
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
 
         @media (min-width: $breakpoint-sm) {
-            width: 100%;
-            right: 3rem;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: center;
+            margin: auto;
         }
 
         &::after {
@@ -55,12 +41,19 @@
             width: 125px;
 
             @media (min-width: $breakpoint-sm) {
-                display: none;
+                display: block;
+                width: 0;
+                top: 0;
+                bottom: 0;
+                position: absolute;
+                right: 0;
+                transform: translateX(50%);
             }
         }
 
         &__icon {
             font-size: 50px;
+            color: $font-color-secondary;
 
             @media (min-width: $breakpoint-sm) {
                 font-size: 1.3rem;
@@ -76,6 +69,7 @@
             text-transform: uppercase;
             font-size: 1.6rem;
             margin: .3rem 0 .5rem 0;
+            color: $font-color-secondary;
 
             @media (min-width: $breakpoint-sm) {
                 font-size: 1.1rem;
@@ -86,9 +80,15 @@
 
             .double-dot {
                 display: none;
+                color: $font-color-secondary;
 
                 @media (min-width: $breakpoint-sm) {
                     display: inline;
+
+                    &::after {
+                        content: '-';
+                        visibility: hidden;
+                    }
                 }
             }
         }
@@ -96,6 +96,7 @@
         &__content {
             font-size: 1.1rem;
             opacity: .8;
+            color: $font-color-secondary;
 
             @media (min-width: $breakpoint-sm) {
                 font-size: 1.1rem;
@@ -107,7 +108,9 @@
             margin-bottom: 2rem;
 
             @media (min-width: $breakpoint-sm) {
-                display: inline-flex;
+                display: flex;
+                justify-content: flex-end;
+                margin: 1rem 1.5rem;
             }
         }
     }
@@ -115,32 +118,85 @@
 /*--------------- SOCIAL MEDIA / LINKS CONTACT ---------------*/
 
     .info-links {
-        margin: 0 auto;
-        width: 90%;     
+        display: flex;
+        justify-content: center;
+        margin: 2.5rem 0 3rem 0;
+
+        @media (min-width: $breakpoint-sm) {
+            display: block;
+            margin: auto 0;
+        }
+
+        .info-link-block {
+            margin: 0 .5rem;
+
+            @media (min-width: $breakpoint-sm) {
+                margin: 1rem 1.5rem;
+            }
+        }
        
         .info-links-container {
             margin: 2.5rem 0 3rem 0;
             display: flex;
             justify-content: center;
+
+            @media (min-width: $breakpoint-sm) {
+                flex-direction: column;
+            }
         }
 
         .info-link__icon {
             font-size: 45px;
             margin-bottom: .5rem;
+            color: $font-color-secondary;
+
+            @media (min-width: $breakpoint-sm) {
+                font-size: 1.3rem;
+                margin-bottom: initial;
+            }
         }
 
         .info-link__url {
             display: none;
+
+            @media (min-width: $breakpoint-sm) {
+                display: block;
+                font-size: 1.1rem;
+            }
         }
 
         .info-link__content {
             font-size: 1.1rem;
             width: min-content;
             line-height: 1.3rem;
+            color: $font-color-secondary;
+
+            @media (min-width: $breakpoint-sm) {
+                width: initial;
+                line-height: unset;
+                margin: 0 .5rem;
+
+                &::after {
+                    content: ' -';
+                }
+            }
         }
 
         .info-links__link {
-            margin: 0 .8rem;
+
+            @media (min-width: $breakpoint-sm) {
+                display: flex;
+                align-items: baseline;
+            }
+            
         }
+    }
+}
+
+@media (min-width: $breakpoint-sm) {
+
+    .info-link-block {
+        display: flex;
+        justify-content: flex-start;
     }
 }

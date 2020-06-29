@@ -1,0 +1,132 @@
+.contact {
+    position: relative;
+    text-align: center;
+
+    .contact-main-title {
+        margin-bottom: 2rem;
+    }
+}
+
+/*--------------- COMMENT BLOCK ---------------*/
+
+.contact-aside {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+    &__block {
+        background-color: $color-mad-skills;
+        padding: .7rem .8rem .7rem 2rem;   
+        position: relative;
+        
+        &::before {
+            content: '';
+            display: inline;
+            position: absolute;
+            left: 0px;
+            top: 0;
+            border-top: 80px solid $color-primary;
+            border-right: 66px solid transparent;
+        }           
+    }
+
+    
+    &__content {
+        text-align: right;
+        color: $color-primary;
+        font-size: .9rem;
+        font-weight: bold;
+        line-height: 1.2rem;
+
+    }
+}
+
+/*--------------- CONTACT FORM ---------------*/
+
+.contact-form {
+    margin: 3rem 1rem 3.5rem 1rem;
+
+    @media (min-width: $breakpoint-sm) {
+        width: 45%;
+        margin: 1.5rem auto 3.5rem auto;
+    }
+    
+    &__block {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: left;
+    }
+
+    &__input {
+        padding: 0 1rem;
+        height: 2.3rem;
+        margin: .3rem 0 1rem 0;
+        border-bottom: 1.5px solid rgba($font-color-quote, .3);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        font-size: .9rem;
+        cursor: pointer;
+        
+        transition: all $duration-fast ease-in-out;
+        
+        &::placeholder {
+            color: $font-color-quote;
+            font-size: .9rem;
+            opacity: 1;
+
+            transition: opacity $duration-fast ease-out;
+        }
+
+        &:focus {
+            outline: none;
+            border-bottom: 4px solid $special-color;
+
+            &::placeholder {
+                opacity: 0;
+            }
+        }
+    }
+
+    &__label {
+        font-family: $font-family-secondary;
+    }
+
+    &__textarea {
+        font-family: $font-family-primary;
+        font-size: .9rem;
+        margin-top: .6rem;
+
+        &:invalid {
+            height: auto;
+        }
+
+        &:focus {
+            height: 12rem;
+        }
+    }
+
+    &__button {
+        color: $color-primary;
+        padding: .7rem 1rem;
+        background-color: $font-color-secondary;
+        border: 2px solid $color-primary;
+        border-radius: 50px;
+        cursor: pointer;
+        margin-top: 1rem;
+        font-weight: bold;
+        font-family: $font-family-secondary;
+        font-size: 1rem;
+        letter-spacing: 0px;
+        margin-left: 60%;
+
+        transition: all $duration-fast ease;
+
+        &:hover, &:focus {
+            background-color: $special-color;
+            color: $font-color-secondary;
+            letter-spacing: 2px;
+            outline: none;
+        }
+    }
+}

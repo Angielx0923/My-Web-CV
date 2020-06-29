@@ -526,33 +526,39 @@
                 
                 <h2 class="contact-main-title titles-section">Contact</h2>
                 <aside class="contact-aside">
-                    <p class="contact-aside__content">Un commentaire ? Un conseil ? Une question ? Toute suggestion est la bienvenue !</p>
+                    <div class="contact-aside__block">
+                        <p class="contact-aside__content">Un commentaire ?</p>
+                        <p class="contact-aside__content">Un conseil ? Une question ?</p>
+                        <p class="contact-aside__content contact-aside__content">Toute suggestion est la bienvenue !</p>
+                    </div>
                 </aside>
+
+                <div class="form-container">
                 <!-- Page de renvoi et méthode à définir -->
                 <form action="/" method="" class="contact-form">
 
                     <!-- NAME -->
                     <div class="contact-form__block">
-                        <label for="name" class="contact-form__label">Nom</label>
                         <input type="text" id="name" name="user-name" placeholder="Ross Geller" class="contact-form__input">
+                        <label for="name" class="contact-form__label">Nom</label>
                     </div>
 
                     <!-- EMAIL -->
                     <div class="contact-form__block">
+                        <input type="email" id="mail" name="user-mail" placeholder="gellerosor@paleontologist.com" class="contact-form__input">
                         <label for="mail" class="contact-form__label">Email</label>
-                        <input type="email" id="mail" name="user-mail" placeholder="gellorosor@paleontologist.com" class="contact-form__input">
                     </div>
 
                     <!-- SUBJECT -->
                     <div class="contact-form__block">
-                        <label for="subject" class="contact-form__label">Sujet</label>
                         <input type="text" id="subject" name="user-subject" placeholder="Who ate my sandwich?" class="contact-form__input">
+                        <label for="subject" class="contact-form__label">Sujet</label>
                     </div>
 
                     <!-- MESSAGE -->
                     <div class="contact-form__block">
-                        <label for="msg" class="contact-form__label">Message</label>
                         <textarea id="msg" name="user-message" class="contact-form__input contact-form__textarea"></textarea>
+                        <label for="msg" class="contact-form__label">Message</label>
                     </div>
                     <button type="submit" value="submit" class="contact-form__button btn">Envoyer</button>
                 </form>
@@ -596,35 +602,32 @@
 
                         <!-- INFORMATIONS PROFESSIONNELLES (LIENS) -->
                         <div class="info-links">
-
-                            <div class="info-links-container">
-
-                                <!-- LINKEDIN -->
+                                
+                            <div class="info-link-block">
+                            <!-- LINKEDIN -->
                                 <a href="http://www.linkedin.com/in/a-lx/" class="info-links__link info-links__link-linkedin">
-                                    <div class="info-link-block">
-                                        <i class="info-link__icon fa fa-linkedin-square" aria-hidden="true"></i>
-                                        <p class="info-link__content info-link__linkedin">LinkedIn</p>
-                                        <!-- Faire disparaitre l'url pour la version mobile -->
-                                        <p class="info-link__url">www.linkedin.com/in/a-lx/</p>
-                                    </div>
+                                    <i class="info-link__icon fa fa-linkedin-square" aria-hidden="true"></i>
+                                    <p class="info-link__content info-link__linkedin">LinkedIn</p>
+                                    <!-- Faire disparaitre l'url pour la version mobile -->
+                                    <p class="info-link__url">www.linkedin.com/in/a-lx/</p>
                                 </a>
+                            </div>
 
-                                <!-- CV à télécharger - CHEMIN A REMPLIR -->
+                            <!-- CV à télécharger - CHEMIN A REMPLIR -->
+                            <div class="info-link-block">
                                 <a href="/chemin/vers/mon/fichier.jpg" download="fichier.jpg" class="info-links__link info-links__link-cv">
-                                    <div class="info-link-block">
-                                        <i class="info-link__icon fa fa-download" aria-hidden="true"></i>
-                                        <p class="info-link__content info-link__cv">Télécharger mon CV</p>
-                                    </div>
+                                    <i class="info-link__icon fa fa-download" aria-hidden="true"></i>
+                                    <p class="info-link__content info-link__cv">Télécharger le CV</p>
                                 </a>
+                            </div>
 
-                                <!-- GITHUB -->
+                            <!-- GITHUB -->
+                            <div class="info-link-block">
                                 <a href="https://github.com/" class="info-links__link info-links__link-github">
-                                    <div class="info-link-block">
-                                        <i class="info-link__icon fa fa-github" aria-hidden="true"></i>
-                                        <p class="info-link__content info-link__github">GitHub</p>
-                                        <!-- Faire disparaitre l'url pour la version mobile -->
-                                        <p class="info-link__url">Angielx0923</p>
-                                    </div>
+                                    <i class="info-link__icon fa fa-github" aria-hidden="true"></i>
+                                    <p class="info-link__content info-link__github">GitHub</p>
+                                    <!-- Faire disparaitre l'url pour la version mobile -->
+                                    <p class="info-link__url">Angielx0923</p>
                                 </a>
                             </div>
                         </div>
