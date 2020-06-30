@@ -47,9 +47,35 @@
     margin: 3rem 1rem 3.5rem 1rem;
 
     @media (min-width: $breakpoint-sm) {
-        width: 45%;
+        width: 55%;
         margin: 1.5rem auto 3.5rem auto;
+        padding: 2rem;
+
+        &::before {
+            content: '';
+            border-top: 2px solid #F4B500;
+            padding-top: 3rem;
+            border-left: 2px solid #F4B500;
+            padding-right: 3rem;
+            display: flex;
+            width: 50%;
+            position: relative;
+            right: 3rem;
+        }
+
+        &::after {
+            content: '';
+            border-bottom: 2px solid #F4B500;
+            padding-bottom: 3rem;
+            border-right: 2px solid #F4B500;
+            padding-left: 3rem;
+            display: flex;
+            width: 50%;
+            position: relative;
+            left: 50%;
+        }
     }
+
     
     &__block {
         display: flex;
@@ -73,7 +99,7 @@
         &::placeholder {
             color: $font-color-quote;
             font-size: .9rem;
-            opacity: 1;
+            opacity: .6;
 
             transition: opacity $duration-fast ease-out;
         }
