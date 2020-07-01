@@ -1,0 +1,72 @@
+/*--------------- GLOBAL ---------------*/
+
+.formation {
+    background-color: $background-color-primary;
+    padding: 0 1rem;
+    
+    &__main-title {
+        display: block;
+        text-align: center;
+        margin: 1rem 0 3.5rem 0;
+    }
+}
+
+/*--------------- "CURRENTLY" BLOCK ---------------*/
+
+.formation-currently {
+    text-align: center;
+    background-color: $color-primary;
+    padding: 1rem;
+    position: relative;
+    max-width: fit-content;
+    margin: 0 auto;
+
+    &__title {
+        position: absolute;
+        background-color: $font-color-secondary;
+        padding: .7rem;
+        color: $color-primary;
+        top: -22px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: $font-family-secondary;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    &__content {
+        display: inline-block;
+        font-size: 1rem;
+        margin: 1.5rem 0 1rem 0;
+        font-weight: bold;
+        line-height: 1.3rem;
+        color: $font-color-secondary;
+        letter-spacing: 1px;
+        max-width: 16rem;
+    }
+
+    &__icon-arrow {
+        transform: rotateZ(-90deg);
+        position: absolute;
+        bottom: -12px;
+        right: calc(50% - 15px);
+    }
+}
+
+/*--------------- DASHED BORDER ---------------*/
+
+.formation-timeline-list {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 1.5px dashed $font-color-secondary;
+        opacity: .5;
+        border-radius: 2px;
+    }
+}

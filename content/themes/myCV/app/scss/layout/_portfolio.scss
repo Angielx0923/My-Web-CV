@@ -57,13 +57,16 @@
             z-index: -1;
         }
 
-        &:hover {
-            filter: grayscale(0);
-            letter-spacing: 2px;
-            
-            &::after {
-                transition: all $duration-fast ease;
-                background: rgba(0,0,0, .2);
+        @media (min-width: $breakpoint-sm) {
+
+            &:hover {
+                filter: grayscale(0);
+                letter-spacing: 2px;
+                
+                &::after {
+                    transition: all $duration-fast ease;
+                    background: rgba(0,0,0, .2);
+                }
             }
         }
     }
