@@ -1,0 +1,97 @@
+/*--------------- GLOBAL ---------------*/
+
+.portfolio {
+    background-color: $font-color-secondary;
+    position: relative;
+    text-align: center;
+    padding-bottom: 4rem;
+
+    // MAIN TITLE
+    &__main-title {
+        padding: 2rem 0;
+        margin-bottom: 1rem;
+    }
+}
+
+/*--------------- PORTFOLIO CONTENT ---------------*/
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    
+    &__link {
+        position: relative;
+        width: 100%;
+        padding: 4rem;
+        z-index: 0;
+        color: $color-primary;
+        text-shadow: 1px 1px 5px #000;
+        filter: grayscale(50%);
+        background: {
+            position: center;
+            size: 100%;
+            repeat: no-repeat;
+        }
+        
+        transition: all $duration-fast ease;
+        
+        @media (min-width: $breakpoint-sm) {
+            width: 50%;
+            flex-grow: 1;
+            padding: 5.4rem;
+        }
+
+        @media (min-width: $breakpoint-lg) {
+            padding: 7rem;
+        }
+
+        // BACKGROUND FILTER 
+        &::after {
+            content: ' ';
+            background: rgba(0,0,0, .6);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+        }
+
+        &:hover {
+            filter: grayscale(0);
+            letter-spacing: 2px;
+            
+            &::after {
+                transition: all $duration-fast ease;
+                background: rgba(0,0,0, .2);
+            }
+        }
+    }
+
+    // TEXT
+    &__title {
+        margin-bottom: .5rem;
+        font: {
+            family: $font-family-secondary;
+            weight: bold;
+            size: 1.5rem;
+        }
+
+        @media (min-width: $breakpoint-sm) {
+            font-size: 2rem;
+        }
+    }
+
+    &__content {
+        font-size: 1rem;
+
+        @media (min-width: $breakpoint-sm) {
+            font-size: 1.15rem;
+        }
+
+        @media (min-width: $breakpoint-lg) {
+            font-size: 1.3rem;
+        }
+    }
+}
+
