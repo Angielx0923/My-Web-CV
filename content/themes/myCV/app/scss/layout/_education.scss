@@ -32,6 +32,11 @@
 .education-timeline {
     position: relative;
 
+    @media (min-width: $breakpoint-sm) {
+        display: flex;
+        justify-content: space-between;
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -46,17 +51,29 @@
         z-index: -1;
 
         @media (min-width: $breakpoint-sm) {
-            display: none;
+            top: 0;
+            bottom: unset;
+            left: unset;
+            width: 100%;
         }
     }
 
     .education-oclock {
         position: relative;
         bottom: -60px;
+
+        @media (min-width: $breakpoint-sm) {
+            bottom: unset;
+        }
     }
 }
 
 /*--------------- DATES ---------------*/
+
+.education-list-item__date--2019, .education-list-item__date--2018 {
+    position: relative;
+    top: 60px;
+}
 
 .education-date-container {
 
@@ -67,13 +84,30 @@
     background-color: $color-circle;
 
     @media (min-width: $breakpoint-sm) {
-        width: 55px;
-        height: 55px;
+
+        &--diploma {
+            width: 55px;
+            height: 55px;
+        }
+
+        &--formation {
+            width: 40px;
+            height: 40px;
+        }
     }
 
     &--formation {
         position: relative;
         top: -125px;
+
+        &--2019, &--2011 {
+            top: 0;
+        }
+
+        @media (min-width: $breakpoint-sm) {
+            position: absolute;
+            top: 0;
+        }
     }
 
     &--diploma {
@@ -81,7 +115,12 @@
     
         &--2010 {
             position: relative;
-            top: -125px;
+            bottom: 15px;
+
+            @media (min-width: $breakpoint-sm) {
+                bottom: unset;
+                top: 0;
+            }
         }
     }
     
@@ -95,6 +134,7 @@
             size: 1.7rem;
             family: $font-family-secondary;
         }
+        
 
         &--formation {
             color: $special-color;
@@ -102,6 +142,10 @@
 
         @media (min-width: $breakpoint-sm) {
             font-size: 1.3rem;
+
+            &--formation {
+                font-size: .9rem;
+            }
         }
     }
 }
@@ -114,6 +158,10 @@
     position: relative;
     top: -62.5px;
     z-index: -1;
+
+    @media (min-width: $breakpoint-sm) {
+        top: 0;
+    }
     
     &--top {
         border-top-left-radius: 4px;
@@ -169,38 +217,17 @@
 
 /*--------------- DESKTOP VERSION ---------------*/
 
-// @media (min-width: $breakpoint-sm) {
-//     .education-desktop-divider {
-//         position: relative;
+@media (min-width: $breakpoint-sm) {
+    .education-list-item__date {
+        position: absolute;
+        top: -27.5px;
 
-//         &__content {
-//             width: 100%;
-//             border: 1.5px solid $background-color-secondary;
-//             opacity: .5;
-//             border-radius: 2px;
-//         }
-//     }
+        &--2019 {
+            right: 0;
+        }
+    }
 
-//     .education-timeline {
-//         display: flex;
-
-//         .education__list-item {
-//             display: flex;
-//             flex-direction: column;
-//             position: relative;
-//             bottom: 0;
-
-//             &__content--top {
-//                 order: 1;
-//             }
-
-//             &__content--bottom {
-//                 order: 3;
-//             }
-
-//             .education-date-container {
-//                 order: 2;
-//             }
-//         }
-//     }
-// }
+    .education__list-item__content {
+        padding: 0;
+    }
+}

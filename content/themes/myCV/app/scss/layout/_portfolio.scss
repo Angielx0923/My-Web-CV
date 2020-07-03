@@ -57,8 +57,6 @@
             z-index: -1;
         }
 
-        @media (min-width: $breakpoint-sm) {
-
             &:hover {
                 filter: grayscale(0);
                 letter-spacing: 2px;
@@ -69,7 +67,7 @@
                 }
             }
         }
-    }
+
 
     // TEXT
     &__title {
