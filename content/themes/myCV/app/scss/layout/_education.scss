@@ -90,9 +90,11 @@
         text-align: center;
         top: 50%;
         transform: translateY(-50%);
-        font-weight: bold;
-        font-size: 1.7rem;
-        font-family: $font-family-secondary;
+        font: {
+            weight: bold;
+            size: 1.7rem;
+            family: $font-family-secondary;
+        }
 
         &--formation {
             color: $special-color;
