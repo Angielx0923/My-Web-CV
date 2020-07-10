@@ -2,14 +2,14 @@
     margin: 1rem;
 
     &__container {
-        margin: 5rem auto;
+        margin: 0 auto;
         max-width: 400px;
         position: relative;
 
 
         @media (min-width: $breakpoint-sm) {
             max-width: 100%;
-            top: initial;
+            margin: 10rem 0;
         }
     }
 
@@ -23,19 +23,17 @@
     }
 }
 
-// CANCELING MARGIN BOTTOM OF THE LAST LIST ITEM
-.education-list-item--bac {
-    margin-bottom: -7rem;
-
-    @media (min-width: $breakpoint-sm) {
-        margin-bottom: 0;
-    }
-}
-
 /*--------------- DIVIDER ---------------*/
 
 .education-timeline {
     position: relative;
+    top: -2rem;
+    margin-bottom: -7rem;
+
+    @media (min-width: $breakpoint-sm) {
+        top: 0;
+        margin-bottom: 0;
+    }
 
     &::before {
         content: '';
@@ -55,6 +53,7 @@
             bottom: unset;
             left: unset;
             width: 100%;
+            z-index: -2;
         }
     }
 
@@ -64,6 +63,7 @@
 
         @media (min-width: $breakpoint-sm) {
             bottom: unset;
+            position: absolute;
         }
     }
 }
@@ -82,24 +82,11 @@
     }
 
     &__date-container {
-        // position: absolute;
         width: 110px;
         height: 110px;
         border-radius: 50%;
         margin: 0 auto;
         background-color: $color-circle;
-
-        // &--top {
-        //     left: 50%;
-        //     transform: translateX(-50%);
-        //     top: -55px;
-        // }
-
-        // &--bottom {
-        //     left: 50%;
-        //     transform: translateX(-50%);
-        //     bottom: 0;
-        // }
 
         &--formation {
             position: relative;
@@ -107,7 +94,7 @@
 
             @media (min-width: $breakpoint-sm) {
                 position: absolute;
-                top: 0;
+                top: initial;
             }  
         }
 
@@ -125,8 +112,8 @@
             top: -110px;
 
             @media (min-width: $breakpoint-sm) {
-                bottom: unset;
-                top: 0;
+                top: initial;
+                position: absolute;
             }
         }
     }
@@ -148,11 +135,7 @@
         }
 
         @media (min-width: $breakpoint-sm) {
-            font-size: 1.3rem;
-
-            &--formation {
-                font-size: .9rem;
-            }
+            font-size: 1rem;
         }
     }
 
@@ -167,7 +150,7 @@
 
         @media (min-width: $breakpoint-sm) {
             top: 0;
-            font-size: .9rem;
+            max-width: 250px;
         }
         
         &--top {
@@ -175,8 +158,18 @@
             border-top-right-radius: 4px;
             padding: 4rem 1rem 1rem 1rem;
 
+            @media (min-width: $breakpoint-sm) {
+                padding: 1rem .2rem 1.7rem .2rem;
+                background-color: rgba($color-mad-skills, .4);
+                color: $font-color-secondary;
+            }
+
             &--bac {
                 padding-top: 2rem;
+
+                @media (min-width: $breakpoint-sm) {
+                    padding: 1rem .2rem 1.7rem .2rem;
+                }
             }
 
         }
@@ -185,9 +178,18 @@
             border-bottom-left-radius: 4px;
             border-bottom-right-radius: 4px;
             padding: 0rem 1rem 4rem 1rem;
+
+            @media (min-width: $breakpoint-sm) {
+                padding: 1.7rem .2rem 1rem .2rem;
+                background-color: transparent;
+            }
             
             &--esec {
                 padding-bottom: 2rem;
+
+                @media (min-width: $breakpoint-sm) {
+                    padding: 1.7rem .2rem 1rem .2rem;
+                }
             }
         }
     }
@@ -198,6 +200,22 @@
         line-height: 1.8rem;
         font-weight: bold;
         letter-spacing: 1px;
+
+        @media (min-width: $breakpoint-sm) {
+            font-size: .8rem;
+            line-height: 1.1rem;
+            color: $font-color-secondary;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            font-size: .9rem;
+            line-height: 1.4;
+        }
+
+        @media (min-width: $breakpoint-lg) {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
     }
 
     &__text {
@@ -208,8 +226,18 @@
         letter-spacing: normal;
 
         @media (min-width: $breakpoint-sm) {
+            font-size: .8rem;
+            line-height: 1.1rem;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            font-size: .9rem;
+            line-height: 1.4;
+        }
+
+        @media (min-width: $breakpoint-lg) {
             font-size: 1rem;
-            line-height: 1.4rem;
+            line-height: 1.5;
         }
     }
 }
@@ -219,84 +247,107 @@
 @media (min-width: $breakpoint-sm) {
 
     .education-timeline {
-
         display: flex;
-        justify-content: space-between;
+        max-width: 100%;
+        margin: 0 auto;
+
+        @media (min-width: $breakpoint-md) {
+            max-width: 90%;
+        }
+
+        @media (min-width: $breakpoint-lg) {
+            max-width: 80%;
+        }
     }
 
         .education-list-item {
-            display: flex;
-            flex-direction: column;
-        
-// ORDRE DE CHAQUE ÉLÉMENT LI RABNGÉS CHRONOLOGIQUEMENT
+            display: inline-block;
+            position: absolute;
+            max-width: 25%;
+            width: 200px;
+
+            @media (min-width: $breakpoint-md) {
+                width: 220px;
+            }
+
+            @media (min-width: $breakpoint-lg) {
+                width: 240px;
+            }
+
+
             &--oclock {
-                order: 4;
+                left: 100%;
+                transform: translateX(-100%);
+
+                &--top {
+                    transform: translate(-100%, -100%);
+                }
             }
 
             &--esec {
-                order: 3
+                left: 50%;
             }
 
             &--ef {
-                order: 2;
+                left: 25%;
             }
 
             &--bac {
-                order: 1;
+                left: 0;
             }
 
-// ORDRE DE CHAQUE ÉLEMENTS CONTENU DANS LES LI
-            &__content--top {
-                order: 1;
+            &--top {
+                bottom: -25%;
+            }
 
-                &--diploma {
-                    &::after {
-                        content: '2015';
-                        width: 100px;
-                        height: 100px;
-                        border-radius: 50%;
-                        background-color: $special-color;
-                        font-family: $font-family-secondary;
-                        color: $font-color-secondary;
-                    }
+            &__dates-panel-container {
+                position: absolute;
+                width: 100%;
+
+                &--top {
+                    bottom: 0;
+                }
+
+                &--bottom {
+                    top: -22.5px;
                 }
             }
 
             &__date-container {
-                order: 2;
-            }
-
-            &__content--bottom {
-                order: 3;
-            }
-
-            &__content {
-                padding: 0;
-            }
-
-
-        &__date-container {
-
-            display: none;
-            // position: relative;
+                position: absolute;
+                width: 45px;
+                height: 45px;
             
-            // &--diploma {
-            //     width: 55px;
-            //     height: 55px;
-            //     // top: -27.5px;
-            // }
+                &--top {
+                    transform: translateY(-50%);
+                }
 
-            // &--formation {
-            //     width: 45px;
-            //     height: 45px;
+                &--2015 {
+                    right: 50%;
+                    transform: translateX(50%);
+                    top: -22.5px;
+                }
 
-            //     // top: -22.5px;
+                &--bottom {
+                    right: 50%;
+                    transform: translateX(50%);
+                }
 
-            // }
+                &--2010-ef, &--2018 {
+                    right: 22.5px;
+                }
+            }
 
-            // &--2019 {
-            //     right: 0;
-            // }
+            &__text-panel-container--formation {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    border: 1.5px dashed $color-primary;
+                    z-index: -1;
+                    width: 90%;
+                    right: 0;
+                    bottom: -3px;
+                }
+            }
         }
     }
-}
