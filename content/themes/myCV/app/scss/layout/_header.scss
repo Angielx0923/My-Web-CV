@@ -9,6 +9,7 @@
 
     @media (min-width: $breakpoint-sm) {
         padding: 1.3rem 2rem;
+        background-color: transparentize($font-color-secondary, 1);
     }
 }
 
