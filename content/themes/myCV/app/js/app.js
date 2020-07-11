@@ -12,8 +12,6 @@ $(document).ready(function(){
   $('.burger__nav').click(function(){
     $(this).toggleClass('open'),
     $('.burger__nav__content').toggleClass('open__content');
-    // $('.burger__sidebar').toggleClass('burger__sidebar--open');
-    // $("#burger__sidebar").animate({width: 'toggle'});
-    // $(".burger__content").fadeToggle(300);
+    $('.burger__content').toggleClass('burger__content--is-open');
 	});
 });

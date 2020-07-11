@@ -1,5 +1,14 @@
 .header{
     display: grid;
     grid-area: header;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+
+    padding: 1.5rem;
+
+    @media (min-width: $breakpoint-sm) {
+        padding: 1.3rem 2rem;
+    }
 }
 

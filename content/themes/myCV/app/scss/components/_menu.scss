@@ -1,0 +1,127 @@
+.header__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  
+     @media (min-width: $breakpoint-sm) {
+         justify-content: flex-end;
+     }
+  }
+
+.burger {
+    position: relative;
+}
+  
+  /*--------------- LANGUAGES ICON ---------------*/
+  
+  .languages-nav {
+      position: relative;
+      top: -2px;
+      width: 25px;
+  
+      &__link {
+        width: 100%;
+      }
+  
+      @media (min-width: $breakpoint-sm) {
+          position: static;
+          margin: -1px 0 0 1.5rem;
+          width: 1.5rem;
+      }
+
+      &__img {
+        filter: invert(1);
+      }
+  }
+  
+  /*--------------- LINKS ---------------*/
+  
+  .icon--home {
+      width: 1rem;
+      margin-top: 5rem;
+      
+      transition: filter $duration-fast ease-in-out;
+  
+      &:hover {
+          filter: invert(100%);
+      }
+    
+      @media (min-width: $breakpoint-sm) {
+        width: 16px;
+        position: relative;
+        top: 2px;
+        margin-top: 0;
+      }
+  }
+  
+  .nav__list__item {
+    margin-bottom: 2rem;
+    
+    &__link {
+      color: $font-color-secondary;
+      font-weight: bold;
+      font-size: 1rem;
+  
+      @media (min-width: $breakpoint-sm) {
+          font-size: 1rem;
+          color: $color-primary;
+      }
+  
+      transition: all $duration ease-in-out;
+  
+      &:hover {
+          color: $color-primary;
+  
+          @media (min-width: $breakpoint-sm) {
+              font-size: 1rem;
+      
+              &:hover {
+                  color: $special-color;
+              }
+          }
+      }
+  }
+  }
+
+
+  
+  /*--------------- BURGER ---------------*/
+
+.burger__content {
+    display: inline-block;
+    position: fixed;
+    background-color: $special-color;
+    height: 100vh;
+    top: 0;
+    padding: 2rem;
+    left: -60%;
+    
+    transition: all $duration ease-out;
+    
+    @media (min-width: $breakpoint-sm) {
+        display: contents;
+    }
+    &--is-open {
+        left: 0;
+    }
+}
+
+
+  // BURGER BUTTON - DESKTOP
+  @media (min-width: $breakpoint-sm) {
+
+    // DOEST APPEAR
+      .burger__nav {
+          display: none;
+      }
+  
+      .nav__list {
+          display: flex;
+  
+          &__item {
+              padding-left: 1rem;
+          }
+      }
+  }
+
+  
