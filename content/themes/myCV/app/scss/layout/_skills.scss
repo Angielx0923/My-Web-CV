@@ -4,6 +4,10 @@
     margin-top: 1rem;
     font-weight: bold;
     line-height: 1.3rem;
+
+    @media (min-width: $breakpoint-lg) {
+        font-size: 1.1rem;
+    }
 }
 
 @media (min-width: $breakpoint-sm) {

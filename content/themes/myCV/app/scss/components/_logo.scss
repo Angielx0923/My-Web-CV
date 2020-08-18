@@ -2,5 +2,12 @@
     width: 80px;
     position: absolute;
     filter: invert(1);
-    margin-left: 0rem;
+    margin-top: 1.3rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    
+    @media (min-width: $breakpoint-sm) {
+        margin-left: 2rem;
+        transform: translateX(0);
+    }
 }

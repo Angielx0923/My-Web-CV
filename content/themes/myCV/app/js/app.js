@@ -7,6 +7,7 @@ var app = {
 $(app.init);
 
 "use strict";
+
 /*--------------- BACKGROUNG IMAGE SIZE ---------------*/
 
 let windowSize = window.innerWidth;
@@ -33,3 +34,24 @@ $(document).ready(function(){
 	});
 });
 
+/*--------------- DESKTOP HEADER ANIMATION ---------------*/
+
+// let checkpoint = 160;
+// let headerAnim = $('#headerAnim');
+
+// $(window).scroll(function(){
+//     let scrollTop = $(this).scrollTop();
+//     let headerAnimHeight = headerAnim.outerHeight();
+//     let offset = headerAnimHeight / 2;
+//     let calc = 1 - (scrollTop - offset + checkpoint) / checkpoint;
+
+//     headerAnim.css({'opacity' : calc });
+
+//     if (calc > '1') {
+//         headerAnim.css({"opacity" : 1})
+//     }
+//     else {
+//         headerAnim.css({"opacity" : 0})
+//     }
+    
+// });

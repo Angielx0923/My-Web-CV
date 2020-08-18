@@ -334,7 +334,14 @@
                 }
 
                 &--2010-ef, &--2018 {
-                    right: 22.5px;
+                    left: -22.5px;
+                    right: 100%;
+                }
+
+                &--2019, &--2011 {
+                    left: 100%;
+                    transform: translate(-100%);
+                    top: -22.5px;
                 }
             }
 

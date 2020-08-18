@@ -39,12 +39,13 @@
     .icon--home {
         width: 1rem;
         margin-top: 5rem;
+        filter: invert(1);
       
         transition: filter $duration-fast ease-in-out;
   
-        &:hover {
-            filter: invert(100%);
-        }
+        // &:hover {
+        //     filter: invert(100%);
+        // }
         
         @media (min-width: $breakpoint-sm) {
             width: 16px;
