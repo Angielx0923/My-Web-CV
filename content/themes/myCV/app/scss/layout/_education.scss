@@ -1,6 +1,10 @@
 .education {
     margin: 1rem;
 
+    @media (min-width: $breakpoint-sm) {
+        margin: 0;
+    }
+
     &__container {
         margin: 0 auto;
         max-width: 400px;
@@ -9,7 +13,7 @@
 
         @media (min-width: $breakpoint-sm) {
             max-width: 100%;
-            margin: 10rem 0;
+            margin: 10rem 1rem;
         }
     }
 
@@ -19,6 +23,7 @@
 
         @media (min-width: $breakpoint-sm) {
             margin-bottom: 2rem;
+            margin-top: 1rem;
         }
     }
 }

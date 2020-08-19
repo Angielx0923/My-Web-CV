@@ -42,10 +42,6 @@
         filter: invert(1);
       
         transition: filter $duration-fast ease-in-out;
-  
-        // &:hover {
-        //     filter: invert(100%);
-        // }
         
         @media (min-width: $breakpoint-sm) {
             width: 16px;
@@ -110,6 +106,25 @@
             }
         }
     }
+
+@media (min-width: $breakpoint-sm) {
+    .active {
+        color: $special-color;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -.5rem;
+            transform: translateX(-50%) scaleX(0);
+            transform-origin: 50% 50%;
+            width: 100%;
+            height: 1px;
+            background-color: $special-color;
+            transition: transform 250ms;
+            transform: translateX(-50%) scaleX(1);
+        }
+    }
+}
 
   /*--------------- BURGER ---------------*/
 
