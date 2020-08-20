@@ -1,5 +1,6 @@
 .education {
     margin: 1rem;
+    margin-top: 0;
 
     @media (min-width: $breakpoint-sm) {
         margin: 0;
@@ -20,6 +21,7 @@
     // MAIN TITLE
     &__main-title-container {
         text-align: center;
+        margin-top: 1rem;
 
         @media (min-width: $breakpoint-sm) {
             margin-bottom: 2rem;

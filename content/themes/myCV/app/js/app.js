@@ -26,12 +26,25 @@ function backgroundSize() {
 
 /*--------------- BURGER BUTTON ---------------*/
 
-$(document).ready(function(){
-  $('.burger__nav').click(function(){
-    $(this).toggleClass('open'),
+function burgerContentToggle() {
+    $('.burger__nav').toggleClass('open');
     $('.burger__nav__content').toggleClass('open__content');
     $('.burger__content').toggleClass('burger__content--is-open');
+    $('.dark-overlay').toggleClass('dark-overlay--active');
+}
+
+// Au click sur le menu burger
+$(document).ready(function(){
+    $('.burger__nav').click(function(){
+        burgerContentToggle();
 	});
+});
+
+// Au clic sur les liens contenus dans le menu burger
+$('.nav__list__item').click(function() {
+    if($('.burger__nav').hasClass('open')) {
+        burgerContentToggle();
+    }
 });
 
 /*--------------- DESKTOP HEADER ANIMATION ---------------*/
