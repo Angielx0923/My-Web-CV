@@ -50,10 +50,14 @@ $('.nav__list__item').click(function() {
 /*--------------- DESKTOP HEADER ANIMATION ---------------*/
 
 let headerAnim = $('#headerAnim');
+let socialMedia = $('#socialMediaNav');
 
 $(window).scroll(function(){
     let scrollTop = $(this).scrollTop();
-    headerAnim.css({'opacity' : (0 + scrollTop / 250)})    
+    if (windowSize >= 767) {
+        socialMedia.css({'opacity' : (0 + scrollTop / 250)})
+    }
+    headerAnim.css({'opacity' : (0 + scrollTop / 250)})
 });
 
 /*--------------- DESKTOP MENU LINKS ANIMATION WHEN ACTIVE ---------------*/
@@ -86,4 +90,11 @@ link.click(function() {
     $('body, html').animate({
         scrollTop: scrollPoint
     }, 800);
+});
+
+/*--------------- PROGRESS BAR ANIMATION ---------------*/
+
+$('.progress-bar__value').each(function() {
+    var value = $(this).attr('value');
+   $(this).animate({width: value}, 1500);    
 });

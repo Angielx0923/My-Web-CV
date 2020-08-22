@@ -176,11 +176,13 @@
             }
 
             &--inner {
-                margin-bottom: 0;
-                font-size: .9rem;
+                font-size: 1rem;
                 margin-left: 0;
-                letter-spacing: 1px;
+                margin-bottom: .3rem;
+                letter-spacing: 0.5px;
                 color: $font-color-inner;
+                text-transform: initial;
+                display: inline-block;
 
                 .colored-title--plus {
                     font-size: 1.3rem;
@@ -189,6 +191,10 @@
                 @media (min-width: $breakpoint-sm) {
                     font-size: 1.05rem;
                 }
+            }
+
+            &--inner-goals {
+                margin-right: 0;
             }
         }
 
@@ -204,6 +210,22 @@
                 margin-bottom: 1.3rem;
             }
         }
+
+        .colored-friends {
+            font-weight: bold;
+
+            &--red {
+                color: #E91A14;
+            }
+
+            &--blue {
+                color: #00ABEE;
+            }
+
+            &--yellow {
+                color: #FCBF00;
+            }
+        }
     }
 
 .profile-divider {
@@ -211,7 +233,6 @@
     display: flex;
     
     @media (min-width: $breakpoint-sm) {
-        // position: relative;
         justify-content: center;
 
         &__divider::before {
@@ -223,23 +244,7 @@
             position: relative;
             border-radius: 2px;
             display: inline-flex;
-        }
-
-        // &__divider::after {
-        //     content: "";
-        //     display: flex;
-        //     position: relative;
-        //     top: -50%;
-        //     z-index: 1;
-        //     left: 1.5px;
-        //     width: 10px;
-        //     height: 10px;
-        //     background-color: $background-color-primary;
-        //     border: 1px solid rgba($color: #000000, $alpha: .1);
-        //     border-radius: 50%;
-        //     box-shadow: inset 0 0 0 2px white,
-        //                     0 0 0 4px white;
-        // }        
+        }       
     }
 }
 
@@ -301,4 +306,3 @@
         }
     }
 }
-

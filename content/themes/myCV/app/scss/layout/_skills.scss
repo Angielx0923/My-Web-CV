@@ -82,6 +82,7 @@
             background-color: $color-primary;  
             border-radius: 10px;
             z-index: 0;
+            overflow: hidden;
 
             @media (min-width: $breakpoint-lg) {
                 height: 25px;
@@ -89,7 +90,7 @@
             }
             
             &__value {
-                width: 50%;
+                width: 0px;
                 height: 100%;
                 background-color: $special-color;
                 border-top-left-radius: 10px;
@@ -196,6 +197,10 @@
                 width: 50%;
             }
         }
+
+        .soft-skills__img--learning {
+            filter: none;
+        }
         
 
         .skills-wrapper {
@@ -264,6 +269,10 @@
             @media (min-width: $breakpoint-sm) {
                 width: 50%;
             }
+        }
+
+        .mad-skills__img--cinema  {
+            filter: none;
         }
 
         .skills-wrapper {
