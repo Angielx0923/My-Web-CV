@@ -94,7 +94,18 @@ link.click(function() {
 
 /*--------------- PROGRESS BAR ANIMATION ---------------*/
 
-$('.progress-bar__value').each(function() {
-    var value = $(this).attr('value');
-   $(this).animate({width: value}, 1500);    
+function loadTheBars() {
+    $('.progress-bar__value').each(function() {
+        var element = $(this);
+        var value = element.attr('value');
+        element.animate({width: value}, 1800);    
+    });
+}
+
+$(document).scroll(function() {
+    let scrollTop = $(document).scrollTop();
+    let skillsOffset = $('#skills').offset().top - window.innerHeight;
+    if (scrollTop > skillsOffset) {
+        loadTheBars();
+    }
 });
