@@ -109,3 +109,35 @@ $(document).scroll(function() {
         loadTheBars();
     }
 });
+
+/*--------------- HOME ANIMATION - HELLO WORLD & PROFIL TITLE ---------------*/
+
+let helloWorld = $('#helloWorld');
+let profilTitle = $('#profilTitle');
+
+helloWorld.css({'opacity' : 0});
+profilTitle.css({'opacity' : 0});
+
+$(document).scroll(function() {
+    let scrollTop = $(document).scrollTop();
+    if (scrollTop > 50) {
+        helloWorld.animate({opacity : 1}, 300)
+        profilTitle.animate({opacity : 1}, 300)
+    }
+});
+
+/*--------------- EDUCATION SECTION ANIMATION ---------------*/
+
+$('#educationList').css({'opacity' : 0});
+
+function education() {
+    $('#educationList').animate({opacity : 1}, 1000)
+}
+
+$(document).scroll(function() {
+    let scrollTop = $(document).scrollTop();
+    let educationSection = $('#educationList').offset().top - window.innerHeight;
+    if (scrollTop > educationSection) {
+        education();
+    }
+});
