@@ -40,8 +40,14 @@
                     </div>
                 </div>
 
-                <div class="languages-nav">
-                    <a href="#" class="languages-nav__link" id=""><img class="languages-nav__img icon" src="img/Icons/flag-EN.png" alt="switch language icon"></a>
+                <div class="languages-nav" id="dropdown">
+                    <span href="#" class="languages-nav__link" id=""><img class="languages-nav__img icon" src="img/Icons/flag-EN.png" alt="switch language icon"></span>
+                    <div class="dropdown-content">
+                        <a href="" class="dropdown-content__link">
+                            <p class="dropdown-content__language">FR</p>
+                            <img src="img/Icons/flag-FR.png" alt="flag" class="dropdown-content__icon">
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -60,7 +66,8 @@
                     <div class="profile-content">
 
                         <div class="bg-container" id="bg-profile" style="background-image:url(img/6-desktop.jpg);">
-                            <div id="idContainer" class="ID-container">
+                            <div id="idContainer" class="ID-container rellax" data-rellax-speed="-1.5"
+                            data-rellax-percentage=".8">
                                 <h1 class="section-part ID-container__my-name">Angélina Lorieux-Machova</h1>
                                 <p class="ID-container__job-title">Développeuse web fullstack</p>
                             </div>
@@ -88,22 +95,22 @@
                     <!-- PROFILE MAIN / PRESENTATION & GOALS -->
                     <section data-anchor="section-part-profile" class="profile-main">
                         <article class="article article--about">
-                            <h4 class="article__title article__title--about">Qui es-<span class="colored-title">tu ?</span></h4>
-                            <p class="article__text article__text--about">Développeuse cinéphile & créative, amatrice d’explorations urbaines, passionnée de technologie et à la poursuite du rêve Américain.
+                            <h4 class="show article__title article__title--about">Qui es-<span class="colored-title">tu ?</span></h4>
+                            <p class="show article__text article__text--about">Développeuse cinéphile & créative, amatrice d’explorations urbaines, passionnée de technologie et à la poursuite du rêve Américain.
                             </p>
 
-                            <h6 class="article__title article__title--inner">Quand as-tu commencé à développer ?</h6>
-                            <p class="article__text article__text--about">
+                            <h6 class="show article__title article__title--inner">Quand as-tu commencé à développer ?</h6>
+                            <p class="show article__text article__text--about">
                                 En 2018, j’aide une amie à concevoir le design de son futur site web. C’est à ce moment là que je découvre le développement web et décide d’entamer une reconversion ! J’ai donc rejoint l’école O’Clock qui m’a permis d’apprendre à apprendre et d’acquérir toutes les bases nécessaire (et plus !).
                             </p>
 
-                            <h6 class="article__title article__title--inner">Avant, tu faisais quoi ?</h6>
-                            <p class="article__text article__text--inner">
+                            <h6 class="show article__title article__title--inner">Avant, tu faisais quoi ?</h6>
+                            <p class="show article__text article__text--inner">
                                 En 2014, je décroche mon diplôme de montage vidéo et effets-spéciaux. Je jongle ensuite entre divers projets : films publicitaires, courts-métrages, projets graphiques et films institutionnels.
                             </p>
 
-                            <h6 class="article__title article__title--inner">Ton petit <span class="colored-title--plus">+</span> ?</h6>
-                            <p class="article__text article__text--inner">
+                            <h6 class="show article__title article__title--inner">Ton petit <span class="colored-title--plus">+</span> ?</h6>
+                            <p class="show article__text article__text--inner">
                                 Jamais à court d’idées, de bonne humeur 98% du temps et toujours en quête de solutions ! 
                             </p>
                         </article>
@@ -114,22 +121,22 @@
                         </div>
 
                         <article class="article article--goals">
-                            <h4 class="article__title article__title--goals">Tes <span class="colored-title">objectifs ?</span></h4>
-                            <p class="article__text article__text--goals">Apprendre plus et toujours plus afin de monter en compétences et gagner en liberté d'action.
+                            <h4 class="show article__title article__title--goals">Tes <span class="colored-title">objectifs ?</span></h4>
+                            <p class="show article__text article__text--goals">Apprendre plus et toujours plus afin de monter en compétences et gagner en liberté d'action.
 
-                            <p class="article__quote quote">" 'I don't know' has become 'I don't know yet'. " <br> <span class="article__quote__author quote__author">– Bill Gates</span></p>
+                            <p class="show article__quote quote">" 'I don't know' has become 'I don't know yet'. " <br> <span class="article__quote__author quote__author">– Bill Gates</span></p>
 
-                            <p class="article__text article__text--goals">Très ambitieuse et bienveillante, j'aspire à aller toujours plus loin, en évoluant dans un esprit d'équipe et de partage.</p>
-                            <h6 class="article__title article__title--inner article__title--inner-goals">Actuellement ?</h6>
+                            <p class="show article__text article__text--goals">Très ambitieuse et bienveillante, j'aspire à aller toujours plus loin, en évoluant dans un esprit d'équipe et de partage.</p>
+                            <h6 class="show article__title article__title--inner article__title--inner-goals">Actuellement ?</h6>
 
-                            <p class="article__text article__text--now">Je cherche le job de mes rêves, tout en continuant à développer mes compétences !</p>
+                            <p class="show article__text article__text--now">Je cherche le job de mes rêves, tout en continuant à développer mes compétences !</p>
 
-                            <h6 class="article__title article__title--inner article__title--inner-goals">Et c'est quoi le job de tes rêves ?</h6>
-                            <p class="article__text article__text--dream-job">
+                            <h6 class="show article__title article__title--inner article__title--inner-goals">Et c'est quoi le job de tes rêves ?</h6>
+                            <p class="show article__text article__text--dream-job">
                             Intégrer une équipe de superhéro du web, ayant la sagesse de Maître Yoda, les compétences des Experts, dans une ambiance à la F<span class="colored-friends colored-friends--red">.</span>R<span class="colored-friends colored-friends--blue">.</span>I<span class="colored-friends colored-friends--yellow">.</span>E<span class="colored-friends colored-friends--red">.</span>N<span class="colored-friends colored-friends--blue">.</span>D<span class="colored-friends colored-friends--yellow">.</span>S !
                             </p>
 
-                            <p class="article__quote quote">"Je connais mes limites, c'est pourquoi je vais au-delà."<br> <span class="article__quote__author quote__author">– Serge Gainsbourg</span></p>
+                            <p class="show article__quote quote">"Je connais mes limites, c'est pourquoi je vais au-delà."<br> <span class="article__quote__author quote__author">– Serge Gainsbourg</span></p>
                             </p>
                         </article>
                     </section>
@@ -138,14 +145,14 @@
                     <div class="profile-footer">
                         <div class="social-media-container">
                             <a href="http://www.linkedin.com/in/a-lx/" class="social-media-container__link social-media-container__link--linkedin">
-                                <img class="icon social-media-container__logo social-media-container__logo--linkedin" src="img/Icons/linkedin.png" alt="LinkedIn logo">
+                                <a href="http://www.linkedin.com/in/a-lx/" class="fa fa-linkedin-square icon social-media-container__logo social-media-container__logo--linkedin"></a>
                             </a>
                             <a href="/chemin/vers/mon/fichier.jpg" class="social-media-container__link social-media-container__link--download btn-download">
                                 <img class="icon social-media-container__logo social-media-container__logo--download" src="img/Icons/download2.png" alt="Download CV icon">
                                 <p class="social-media-container__link--text">Télécharger CV</p>
                             </a>
                             <a href="https://github.com/" class="social-media-container__link social-media-container__link--github">
-                                <img class="icon social-media-container__logo social-media-container__logo--github" src="img/Icons/gitgub.png" alt="GitHub icon">
+                                <a href="https://github.com/" class="fa fa-github icon social-media-container__logo social-media-container__logo--github"></a>
                             </a>
                         </div>
                     </div>
@@ -304,7 +311,7 @@
                         <!-- 2018 - 2019 / OCLOCK -->
     
                         <!-- TEXT TOP -->
-                        <li class="education-list-item education-list-item--top education-list-item--oclock education-list-item--oclock--top">
+                        <li class="show education-list-item education-list-item--top education-list-item--oclock education-list-item--oclock--top">
                             <div class="education-list-item__dates-panel-container education-list-item__dates-panel-container--top">
                                 <div class="education-list-item__date-container education-list-item__date-container--top education-list-item__date-container--2019 education-list-item__date-container--formation">
                                     <p class="education-list-item__date-content education-list-item__date-content--formation">2019</p>
@@ -318,7 +325,7 @@
                         </li>
 
                         <!-- TEXT BOTTOM -->
-                        <li class="education-list-item education-list-item--bottom education-list-item--oclock">
+                        <li class="show education-list-item education-list-item--bottom education-list-item--oclock">
                             <div class="education-list-item__text-panel-container education-list-item__text-panel-container--bottom">
                                 <div class="education-list-item__content education-list-item__content--bottom education-list-item__content--bottom--formation">
                                     <p class="education-list-item__text">700h avec <strong>O'Clock</strong> <br>Labélisée Grande École du Numérique</p>
@@ -335,7 +342,7 @@
                         
                         
                         <!-- TEXT TOP -->
-                        <li class="education-list-item education-list-item--top education-list-item--esec">
+                        <li class="show education-list-item education-list-item--top education-list-item--esec">
                             <div class="education-list-item__dates-panel-container education-list-item__dates-panel-container--top">
                                 <div class="education-list-item__date-container education-list-item__date-container--top education-list-item__date-container--2015 education-list-item__date-container--diploma">
                                     <p class="education-list-item__date-content education-list-item__date-content--diploma">2015</p>
@@ -349,7 +356,7 @@
                         </li>
 
                         <!-- TEXT BOTTOM -->
-                        <li class="education-list-item education-list-item--bottom education-list-item--esec">
+                        <li class="show education-list-item education-list-item--bottom education-list-item--esec">
                             <div class="education-list-item__text-panel-container education-list-item__text-panel-container--bottom">
                                 <div class="education-list-item__content education-list-item__content--bottom education-list-item__content--bottom--esec education-list-item__content--bottom--diploma">
                                     <p class="education-list-item__text">École de cinéma ESEC - Paris<br>Mention Bien</p>
@@ -360,7 +367,7 @@
                         <!-- 2010 - 2011 / EF NY -->
                         
                         <!-- TEXT TOP -->
-                        <li class="education-list-item education-list-item--top education-list-item--ef">
+                        <li class="show education-list-item education-list-item--top education-list-item--ef">
                             <div class="education-list-item__dates-panel-container education-list-item__dates-panel-container--top">
                                 <div class="education-list-item__date-container education-list-item__date-container--top education-list-item__date-container--2011 education-list-item__date-container--formation">
                                     <p class="education-list-item__date-content education-list-item__date-content--formation">2011</p>
@@ -374,7 +381,7 @@
                         </li>
 
                         <!-- TEXT BOTTOM -->
-                        <li class="education-list-item education-list-item--bottom education-list-item--ef">
+                        <li class="show education-list-item education-list-item--bottom education-list-item--ef">
                             <div class="education-list-item__text-panel-container education-list-item__text-panel-container--bottom">
                                 <div class="education-list-item__content education-list-item__content--bottom education-list-item__content--bottom--formation">
                                     <p class="education-list-item__text">9 mois à EF New York<br>Anglais niveau C2</p>
@@ -390,7 +397,7 @@
                     <!-- 2010 / BAC - HIGH SCHOOL DIPLOMA -->
                         
                         <!-- TEXT TOP -->
-                        <li class="education-list-item education-list-item--top education-list-item--bac">
+                        <li class="show education-list-item education-list-item--top education-list-item--bac">
                             <div class="education-list-item__text-panel-container education-list-item__text-panel-container--top">
                                 <div class="education-list-item__content education-list-item__content--top education-list-item__content--top--bac education-list-item__date-content--top--diploma">
                                     <p class="education-list-item__title">BAC Professionnel<br>Commerce</p>
@@ -399,7 +406,7 @@
                         </li>
 
                         <!-- TEXT BOTTOM -->
-                        <li class="education-list-item education-list-item--bottom education-list-item--bac">
+                        <li class="show education-list-item education-list-item--bottom education-list-item--bac">
                             <div class="education-list-item__text-panel-container education-list-item__text-panel-container--bottom">
                                 <div class="education-list-item__content education-list-item__content--bottom education-list-item__content--bottom--diploma">
                                     <p class="education-list-item__text">Mention Bien</p>
@@ -424,8 +431,8 @@
 
                         <!-- CURRENTLY -->
                         <div class="formation-currently">
-                            <h4 class="formation-currently__title">Actuellement</h4>
-                            <p class="formation-currently__content">En recherche active d'un super job dans le dev !</p>
+                            <h4 class="show formation-currently__title">Actuellement</h4>
+                            <p class="show formation-currently__content">En recherche active d'un super job dans le dev !</p>
                             <img src="img/Icons/arrow-head.png" alt="" class="formation-currently__icon-arrow icon">
                         </div>
 
@@ -435,12 +442,12 @@
                             <!-- 2020 -->
                             <li class="formation-timeline-list__item formation-timeline-list__item--date">
                                 <div class="formation-timeline-date-block formation-timeline-date-block--2020">
-                                    <time class="formation-timeline-date-block__content formation-timeline-date-block__content--2020" datetime="2020">2020</time>
+                                    <time class="show formation-timeline-date-block__content formation-timeline-date-block__content--2020" datetime="2020">2020</time>
                                 </div>
                             </li>
 
                             <!-- RIGHT -->
-                            <li class="formation-timeline-list__item formation-timeline-list__item">
+                            <li class="show formation-timeline-list__item formation-timeline-list__item">
                                 <div class="formation-timeline-panel-container formation-timeline-panel-container--right formation-timeline-panel-container--mycv">
                                     <div class="formation-timeline-panel-date-block">
                                         <p class="formation-timeline-panel-date-block__content">Juin 2020</p>
@@ -456,14 +463,14 @@
                             </li>
 
                             <!-- 2019 -->
-                            <li class="formation-timeline-list__item formation-timeline-list__item--date">
+                            <li class="show formation-timeline-list__item formation-timeline-list__item--date">
                                 <div class="formation-timeline-date-block formation-timeline-date-block--2019">
                                     <time class="formation-timeline-date-block__content formation-timeline-date-block__content--2020" datetime="2019">2019</time>
                                 </div>
                             </li>
 
                             <!-- LEFT -->
-                            <li class="formation-timeline-list__item formation-timeline-list__item">
+                            <li class="show formation-timeline-list__item formation-timeline-list__item">
                                 <div class="formation-timeline-panel-container formation-timeline-panel-container--left formation-timeline-panel-container--oroadtrip">
                                     <div class="formation-timeline-panel-date-block">
                                         <p class="formation-timeline-panel-date-block__content">Mai 2019</p>
@@ -481,7 +488,7 @@
                             </li>
 
                             <!-- RIGHT -->
-                            <li class="formation-timeline-list__item formation-timeline-list__item">
+                            <li class="show formation-timeline-list__item formation-timeline-list__item">
                                 <div class="formation-timeline-panel-container formation-timeline-panel-container--right formation-timeline-panel-container--intermittence">
                                     <div class="formation-timeline-panel-date-block">
                                         <p class="formation-timeline-panel-date-block__content">Sept. 2016 &rarr; Mai 2019</p>
@@ -497,14 +504,14 @@
                             </li>
 
                             <!-- 2016 -->
-                            <li class="formation-timeline-list__item formation-timeline-list__item--date">
+                            <li class="show formation-timeline-list__item formation-timeline-list__item--date">
                                 <div class="formation-timeline-date-block formation-timeline-date-block--2016">
                                     <time class="formation-timeline-date-block__content formation-timeline-date-block__content--2016" datetime="2016">2016</time>
                                 </div>
                             </li>
 
                             <!-- LEFT -->
-                            <li class="formation-timeline-list__item formation-timeline-list__item">
+                            <li class="show formation-timeline-list__item formation-timeline-list__item">
                                 <div class="formation-timeline-panel-container formation-timeline-panel-container--left formation-timeline-panel-container--editor">
                                     <div class="formation-timeline-panel-date-block">
                                         <p class="formation-timeline-panel-date-block__content">Fév. 2016 &rarr; Août 2016</p>
@@ -522,14 +529,14 @@
                             </li>
 
                             <!-- 2015 -->
-                            <li class="formation-timeline-list__item formation-timeline-list__item--date">
+                            <li class="show formation-timeline-list__item formation-timeline-list__item--date">
                                 <div class="formation-timeline-date-block formation-timeline-date-block--2015">
                                     <time class="formation-timeline-date-block__content formation-timeline-date-block__content--2015" datetime="2015">2015</time>
                                 </div>
                             </li>
 
                             <!-- RIGHT -->
-                            <li class="formation-timeline-list__item formation-timeline-list__item">
+                            <li class="show formation-timeline-list__item formation-timeline-list__item">
                                 <div class="formation-timeline-panel-container formation-timeline-panel-container--right formation-timeline-panel-container--editing-internship">
                                     <div class="formation-timeline-panel-date-block">
                                         <p class="formation-timeline-panel-date-block__content">Juin 2015 &rarr; Déc. 2015</p>
@@ -547,14 +554,14 @@
                             </li>
 
                             <!-- 2014 -->  
-                            <li class="formation-timeline-list__item formation-timeline-list__item--date">
+                            <li class="show formation-timeline-list__item formation-timeline-list__item--date">
                                 <div class="formation-timeline-date-block formation-timeline-date-block--2014">
                                     <time class="formation-timeline-date-block__content formation-timeline-date-block__content--2014" datetime="2014">2014</time>
                                 </div>
                             </li>
 
                             <!-- LEFT -->
-                            <li class="formation-timeline-list__item formation-timeline-list__item">
+                            <li class="show formation-timeline-list__item formation-timeline-list__item">
                                 <div class="formation-timeline-panel-container formation-timeline-panel-container--left formation-timeline-panel-container--monoprix">
                                     <div class="formation-timeline-panel-date-block">
                                         <p class="formation-timeline-panel-date-block__content">2012 &rarr; 2014</p>

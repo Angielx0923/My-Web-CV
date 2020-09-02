@@ -8,6 +8,11 @@ $(app.init);
 
 "use strict";
 
+/*--------------- PARALAX ON BACKGROUNG IMG ---------------*/
+
+let Rellax = require('rellax');
+let rellax = new Rellax('.rellax');
+
 /*--------------- BACKGROUNG IMAGE SIZE ---------------*/
 
 let windowSize = window.innerWidth;
@@ -98,16 +103,23 @@ function loadTheBars() {
     $('.progress-bar__value').each(function() {
         var element = $(this);
         var value = element.attr('value');
-        element.animate({width: value}, 1800);    
+        var elementBottom = $(this).offset().top + $(this).outerHeight();
+        var windowBottom = $(window).scrollTop() + $(window).height();
+
+        if(windowBottom > elementBottom){
+            $(this).animate({width: value}, 1800);
+        }
     });
 }
 
 $(document).scroll(function() {
-    let scrollTop = $(document).scrollTop();
-    let skillsOffset = $('#skills').offset().top - window.innerHeight;
-    if (scrollTop > skillsOffset) {
-        loadTheBars();
-    }
+    var scrollTop = $(document).scrollTop();
+    let skillsOffset = $('.progress-bar').offset().top - window.innerHeight;
+    $('.progress-bar').each(function() {
+        if (scrollTop > skillsOffset) {
+            loadTheBars();
+        }
+    });
 });
 
 /*--------------- HOME ANIMATION - HELLO WORLD & PROFIL TITLE ---------------*/
@@ -126,18 +138,25 @@ $(document).scroll(function() {
     }
 });
 
-/*--------------- EDUCATION SECTION ANIMATION ---------------*/
+/*--------------- PROFIL, EDUCATION & FORMATION SECTION ANIMATION ---------------*/
 
-$('#educationList').css({'opacity' : 0});
+if (windowSize >= 768) {
 
-function education() {
-    $('#educationList').animate({opacity : 1}, 1000)
-}
+    $('.show').css({'opacity' : 0});
 
-$(document).scroll(function() {
-    let scrollTop = $(document).scrollTop();
-    let educationSection = $('#educationList').offset().top - window.innerHeight;
-    if (scrollTop > educationSection) {
-        education();
-    }
-});
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+        
+        /* Check the location of each desired element */
+        $('.show').each( function(i){
+            var bottom_of_object = $(this).offset().top + ($(this).outerHeight() - 25);
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            /* If the object is completely visible in the window, fade it it */
+            if(bottom_of_window > bottom_of_object){
+                $(this).animate({'opacity':'1'},500);
+            }
+        });
+    });
+};
+        
+        

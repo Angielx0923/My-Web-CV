@@ -305,6 +305,20 @@
             }
         }
 
+        &__logo--github,
+        &__logo--linkedin {
+            font-size: 31px;
+            color: #808080;
+            margin-bottom: 14px;
+            padding: 1rem 0;
+
+            transition: color $duration-fast ease-in-out;
+
+            &:hover {
+                color: $font-color-secondary;
+            }
+        }
+
         &__logo--download {
             width: 31px;
         }

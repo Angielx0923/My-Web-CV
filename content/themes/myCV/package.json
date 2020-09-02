@@ -13,7 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.8.2",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.12",
     "browser-sync-webpack-plugin": "^2.2.2",
     "chokidar": "^2.1.8",
     "copy-webpack-plugin": "^4.6.0",
@@ -32,7 +32,6 @@
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
-    "browser-sync": "^2.26.5",
     "favicon": "0.0.2",
     "font-awesome": "^4.7.0",
     "jquery": "^3.5.1",
