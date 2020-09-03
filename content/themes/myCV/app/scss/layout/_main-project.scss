@@ -1,0 +1,43 @@
+.main-project {
+    position: relative;
+    top: 53px;
+
+    @media (min-width: $breakpoint-sm) {
+        top: 67.6px;
+    }
+}
+
+.project-header {
+    position: fixed;
+
+    &__title-block {
+        background-color: rgba(0, 0, 0, .8);
+        color: #fff;
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 1rem 3rem 1rem 3rem;
+    }
+
+    &__title {
+        position: relative;
+        top: -.7rem;
+    }
+
+    &__project-title-block {
+        text-align: center;
+        margin-top: 4rem;
+    }
+
+    &__project-title {
+        position: relative;
+        background-color: white;
+        display: inline-block;
+        padding: 1rem 3rem;
+        margin-top: -1rem;
+        z-index: 1;
+        color: #f4b500;
+        border-bottom: 2px solid rgba(0, 0, 0, .8);
+    }
+}

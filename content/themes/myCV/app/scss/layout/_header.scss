@@ -1,4 +1,4 @@
-.header{
+.header {
     display: grid;
     grid-area: header;
     z-index: 1;
@@ -21,4 +21,8 @@
     background-color: rgba(30, 30, 30, .9);
     opacity: 0;
     z-index: -1;
+
+    &--project {
+        opacity: 1;
+    }
 }
