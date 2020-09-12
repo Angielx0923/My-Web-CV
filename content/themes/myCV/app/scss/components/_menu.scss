@@ -55,6 +55,10 @@
             margin-left: .6rem;
             margin-bottom: 0;
 
+            &--hidden {
+                display: none;
+            }
+
             &:first-child {
                 margin-left: 1rem;
             }

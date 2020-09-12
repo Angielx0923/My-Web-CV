@@ -11,8 +11,8 @@
     <div class="project__container">
 
         <!-- HEADER -->
-        <header class="header" id="header">
-            <div class="logo__container">
+        <header class="header header-project-page" id="header">
+            <div class="logo__container logo__container--project">
                 <img src="img/logo/Logo-simple-trait.png" alt="Logo">
             </div>
             <div class="header__container">
@@ -25,12 +25,12 @@
                         <nav class="nav">
                             <ul class="nav__list">
                                 <li class="nav__list__item is-home active"><a href="#" class="nav__list__item__link nav__link--home" id="" data-scroll="section-part-home"><img class="nav__list__item__img icon icon--home" src="img/Icons/home.svg" alt="home button icon"></a></li>
-                                <li class="nav__list__item is-profile"><a href="#" class="nav__list__item__link nav__link--profile" id="" data-scroll="section-part-profile">Profil</a></li>
-                                <li class="nav__list__item is-skills"><a href="#" class="nav__list__item__link nav__link--skills" id="" data-scroll="section-part-skills">Skills</a></li>
-                                <li class="nav__list__item is-education"><a href="#" class="nav__list__item__link nav__link--education" id="" data-scroll="section-part-education">Formations</a></li>
-                                <li class="nav__list__item is-formation"><a href="#" class="nav__list__item__link nav__link--formation" id="" data-scroll="section-part-formation">Parcours</a></li>
-                                <li class="nav__list__item is-portfolio"><a href="#" class="nav__list__item__link nav__link--portfolio" id="" data-scroll="section-part-portfolio">Portfolio</a></li>
-                                <li class="nav__list__item is-contact"><a href="#" class="nav__list__item__link nav__link--contact" id="" data-scroll="section-part-contact">Contact</a></li>
+                                <li class="nav__list__item nav__list__item--hidden is-profile"><a href="#" class="nav__list__item__link nav__link--profile" id="" data-scroll="section-part-profile">Profil</a></li>
+                                <li class="nav__list__item nav__list__item--hidden is-skills"><a href="#" class="nav__list__item__link nav__link--skills" id="" data-scroll="section-part-skills">Skills</a></li>
+                                <li class="nav__list__item nav__list__item--hidden is-education"><a href="#" class="nav__list__item__link nav__link--education" id="" data-scroll="section-part-education">Formations</a></li>
+                                <li class="nav__list__item nav__list__item--hidden is-formation"><a href="#" class="nav__list__item__link nav__link--formation" id="" data-scroll="section-part-formation">Parcours</a></li>
+                                <li class="nav__list__item nav__list__item--hidden is-portfolio"><a href="#" class="nav__list__item__link nav__link--portfolio" id="" data-scroll="section-part-portfolio">Portfolio</a></li>
+                                <li class="nav__list__item nav__list__item--hidden is-contact"><a href="#" class="nav__list__item__link nav__link--contact" id="" data-scroll="section-part-contact">Contact</a></li>
                             </ul>
                             <div id="socialMediaNav" class="nav__social-media">
                                 <a href="http://www.linkedin.com/in/a-lx/" class="fa fa-linkedin-square nav__social-media__link nav__social-media__link--linkedin"></a>
@@ -60,73 +60,63 @@
         <main id="project" class="main-project">
             <header class="project-header">
                 <!-- PROJECT HEADER -->
-                <div class="project-header">
+                <div class="project-header__container">
                     <button id="backBtn" class="project-header__back-btn">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="project-header__back-btn__text">Retour</span>
                     </button>
-                    <div class="project-header__title-block">
-                        <h2 class="project-header__title titles-section">Projet</h2>
+
+                    <div class="project-header__title-container">
+                        <div class="project-header__title-block">
+                            <h2 class="project-header__title titles-section">Projet</h2>
+                        </div>
+                        <div class="project-header__project-title-block">
+                            <h3 class="project-header__project-title">O'Roadtrip</h3>
+                        </div>
                     </div>
-                    <div class="project-header__project-title-block">
-                        <h3 class="project-header__project-title">Mon titre</h3>
-                    </div>
+
                     <div class="project-header__quote-container">
-                        <p class="project-header__quote-container__content">Hello World!</p>
+                        <p class="project-header__quote-container__content quote">"Seul on va plus vite, ensemble on va plus loin"</p>
                     </div>
                 </div>
             </header>
 
-            <main class="project-main">
+            <main class="project-articles">
                 <!-- PROFILE MAIN / PRESENTATION & GOALS -->
-                <section data-anchor="section-part-profile" class="profile-main">
-                    <article class="article article--about">
-                        <h4 class="article__title article__title--about">Qui es-<span class="colored-title">tu ?</span></h4>
-                        <p class="article__text article__text--about">Développeuse cinéphile & créative, amatrice d’explorations urbaines, passionnée de technologie et à la poursuite du rêve Américain.
-                        </p>
+                <section class="profile-main project-articles__block">
+                    <article class="article">
+                        <h4 class="project-article__title">A quoi ça ressemble ?</h4>
+                        <div class="article-project__img-container">
+                            <img src="img/portfolio/Capture d’écran 2020-09-12 à 19.37.19.png" alt="illustrations du projet" class="article-project__img">
+                        </div>
 
-                        <h6 class="article__title article__title--inner">Quand as-tu commencé à développer ?</h6>
-                        <p class="article__text article__text--about">
-                            En 2018, j’aide une amie à concevoir le design de son futur site web. C’est à ce moment là que je découvre le développement web et décide d’entamer une reconversion ! J’ai donc rejoint l’école O’Clock qui m’a permis d’apprendre à apprendre et d’acquérir toutes les bases nécessaire (et plus !).
-                        </p>
-
-                        <h6 class="article__title article__title--inner">Avant, tu faisais quoi ?</h6>
-                        <p class="article__text article__text--inner">
-                            En 2014, je décroche mon diplôme de montage vidéo et effets-spéciaux. Je jongle ensuite entre divers projets : films publicitaires, courts-métrages, projets graphiques et films institutionnels.
-                        </p>
-
-                        <h6 class="article__title article__title--inner">Ton petit <span class="colored-title--plus">+</span> ?</h6>
-                        <p class="article__text article__text--inner">
-                            Jamais à court d’idées, de bonne humeur 98% du temps et toujours en quête de solutions ! 
+                        <h4 class="project-article__title project-article__title--what">C'est quoi ?</h4>
+                        <p class="article__text project-article__text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, culpa exercitationem quos aspernatur fuga reprehenderit fugit suscipit illo in modi amet? Ut nostrum rerum qui ex eveniet ea vero, natus sint, quae quod sed sit.
                         </p>
                     </article>
 
                     <!-- DIVIDER -->
-                    <div class="profile-divider">
+                    <div class="profile-divider project-divider">
                         <div class="profile-divider__divider"></div>
                     </div>
 
-                    <article class="article article--goals">
-                        <h4 class="article__title article__title--goals">Tes <span class="colored-title">objectifs ?</span></h4>
-                        <p class="article__text article__text--goals">Apprendre plus et toujours plus afin de monter en compétences et gagner en liberté d'action.
-
-                        <p class="article__quote quote">" 'I don't know' has become 'I don't know yet'. " <br> <span class="article__quote__author quote__author">– Bill Gates</span></p>
-
-                        <p class="article__text article__text--goals">Très ambitieuse et bienveillante, j'aspire à aller toujours plus loin, en évoluant dans un esprit d'équipe et de partage.</p>
-                        <h6 class="article__title article__title--inner article__title--inner-goals">Actuellement ?</h6>
-
-                        <p class="article__text article__text--now">Je cherche le job de mes rêves, tout en continuant à développer mes compétences !</p>
-
-                        <h6 class="article__title article__title--inner article__title--inner-goals">Et c'est quoi le job de tes rêves ?</h6>
-                        <p class="article__text article__text--dream-job">
-                        Intégrer une équipe de superhéro du web, ayant la sagesse de Maître Yoda, les compétences des Experts, dans une ambiance à la F<span class="colored-friends colored-friends--red">.</span>R<span class="colored-friends colored-friends--blue">.</span>I<span class="colored-friends colored-friends--yellow">.</span>E<span class="colored-friends colored-friends--red">.</span>N<span class="colored-friends colored-friends--blue">.</span>D<span class="colored-friends colored-friends--yellow">.</span>S !
+                    <article class="article">
+                        <h4 class="project-article__title">T'as fait comment ?</h4>
+                        <p class="article__text project-article__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae minus ut id, tempora eaque dolorum eligendi, sint ullam saepe dolore rem officia pariatur iste vitae. Nobis iste aliquam velit corrupti fugit harum laboriosam, eum, inventore voluptate obcaecati similique perferendis omnis animi eos autem nisi recusandae. Dignissimos esse dicta libero omnis voluptates aperiam voluptas. Eveniet, ea?
                         </p>
 
-                        <p class="article__quote quote">"Je connais mes limites, c'est pourquoi je vais au-delà."<br> <span class="article__quote__author quote__author">– Serge Gainsbourg</span></p>
+                        <h4 class="project-article__title">Tes inspirations ?</h4>
+                        <p class="article__text project-article__text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse corporis commodi incidunt perferendis odio facere vero accusantium in, aliquid quaerat explicabo molestiae quam suscipit tempora odit fugiat, soluta praesentium! Minima atque est qui assumenda, quam porro corrupti earum delectus saepe.
                         </p>
                     </article>
                 </section>
+            </main>
 
-                <!-- PROFILE / FOOTER -->
+                <!-- PROJECT / FOOTER -->
+            <footer class="project-footer">
                 <div class="profile-footer">
                     <div class="social-media-container">
                         <a href="http://www.linkedin.com/in/a-lx/" class="social-media-container__link social-media-container__link--linkedin">
@@ -137,7 +127,7 @@
                         </a>
                     </div>
                 </div>
-            </main>
+            </footer>
         </main>
 
     <!-- FOOTER -->

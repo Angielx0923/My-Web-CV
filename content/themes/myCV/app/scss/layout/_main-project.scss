@@ -1,23 +1,42 @@
 .main-project {
-    position: relative;
-    top: 53px;
+    &::before {
+        content: '';
+        position: fixed;
+        width: 100%;
+        z-index: 0;
+        height: 161px;
+        background-color: $color-primary;
 
-    @media (min-width: $breakpoint-sm) {
-        top: 67.6px;
+        @media (min-width: $breakpoint-sm) {
+            height: 187px;
+        }
     }
 }
 
 .project-header {
-    position: fixed;
+
+    &__container {
+        position: relative;
+    }
+    
+    &__title-container {
+        position: fixed;
+        top: 53px;
+        width: 100%;
+        height: 108px;
+
+        @media (min-width: $breakpoint-sm) {
+            top: 67.6px;
+        }
+    }
 
     &__title-block {
         background-color: rgba(0, 0, 0, .8);
-        color: #fff;
-        display: inline-block;
+        color: $color-primary;
         position: absolute;
         left: 50%;
+        padding: .5rem 3rem;
         transform: translateX(-50%);
-        padding: 1rem 3rem 1rem 3rem;
     }
 
     &__title {
@@ -26,18 +45,109 @@
     }
 
     &__project-title-block {
-        text-align: center;
-        margin-top: 4rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     &__project-title {
         position: relative;
-        background-color: white;
-        display: inline-block;
-        padding: 1rem 3rem;
-        margin-top: -1rem;
-        z-index: 1;
-        color: #f4b500;
-        border-bottom: 2px solid rgba(0, 0, 0, .8);
+        background-color: $color-primary;
+        padding: .8rem 3rem;
+        margin-top: 3.7rem;
+        color: $special-color;
+
+        @media (min-width: $breakpoint-sm) {
+            margin-top: 4.5rem;
+        }
+        
+        &::after {
+            content: '';
+            position: absolute;
+            border-bottom: 2px solid rgba(0, 0, 0, .8);
+            width: 5rem;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+        }
     }
+
+    &__quote-container {
+        position: relative;
+        top: 11.5rem;
+        font-size: .9rem;
+        z-index: -1;
+        color: $font-color-quote;
+        font-style: italic;
+        font-weight: bold;
+        opacity: .7;
+        max-width: 62%;
+        margin: 0 auto;
+        line-height: 1.1rem;
+        text-transform: uppercase;
+
+        @media (min-width: $breakpoint-sm) {
+            position: fixed;
+            top: 5.5rem;
+            right: 1rem;
+            font-size: 1rem;
+            line-height: 1.3rem;
+            z-index: 1;
+            max-width: 30%;
+        }
+
+        &__content {
+            text-align: center;
+        }
+    }
+}
+
+.project-articles {
+    z-index: -1;
+    padding-top: 12rem;
+
+    @media (min-width: $breakpoint-sm) {
+        padding-top: 14rem;
+    }
+}
+
+.project-article {
+
+    &__title {
+        font-size: 1rem;
+        margin: 1rem 0rem;
+        text-transform: uppercase;
+        color: $font-color-secondary;
+
+        &--what::before {
+            content: '';
+            position: relative;
+            height: 150px;
+            width: 100%;
+            display: block;
+            margin-bottom: 1rem;
+
+            @media (min-width: $breakpoint-sm) {
+                content: none;
+            }
+        }
+    }
+}
+
+.article-project__img-container {
+    height: 150px;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    display: block;
+    left: 0;
+    z-index: -1;
+
+    @media (min-width: $breakpoint-sm) {
+        position: relative;
+    }
+}
+
+.project-divider {
+    z-index: -1;
 }

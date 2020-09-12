@@ -33,3 +33,40 @@
         right: -40%;
     }
 }
+
+.project-header__back-btn {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 26.5px;
+    background: none;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0.5;
+    outline: none;
+    cursor: pointer;
+    z-index: 1;
+
+    @media (min-width: $breakpoint-sm) {
+        left: 2rem;
+        top: 95px;
+        background-color: transparent;
+        transform: translate(0);
+        color: $font-color-secondary;
+    }
+
+    &__text {
+        padding: .5rem 0 .5rem .6rem;
+        position: relative;
+        left: 0;
+        transition: all $duration-fast ease;
+
+        @media (min-width: $breakpoint-sm) {
+            &:hover {
+                left: .5rem;
+            }
+        }
+    }
+}
