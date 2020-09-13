@@ -34,6 +34,8 @@
     }
 }
 
+/*--------------- PROJECT PAGE ---------------*/
+
 .project-header__back-btn {
     position: fixed;
     left: 50%;
@@ -55,6 +57,10 @@
         background-color: transparent;
         transform: translate(0);
         color: $font-color-secondary;
+    }
+
+    @media (min-width: $breakpoint-md) {
+        font-size: 1rem;
     }
 
     &__text {

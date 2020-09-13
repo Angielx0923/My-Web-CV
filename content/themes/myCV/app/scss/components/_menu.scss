@@ -47,6 +47,12 @@
         }
     }
   
+    @media (min-width: $breakpoint-sm) {
+        .nav__list--hidden {
+            display: none;
+        }
+    }
+
     .nav__list__item {
         margin-bottom: 2rem;
         position: relative;
@@ -54,10 +60,6 @@
         @media (min-width: $breakpoint-sm) {
             margin-left: .6rem;
             margin-bottom: 0;
-
-            &--hidden {
-                display: none;
-            }
 
             &:first-child {
                 margin-left: 1rem;

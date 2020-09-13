@@ -60,6 +60,10 @@
         @media (min-width: $breakpoint-sm) {
             margin-top: 4.5rem;
         }
+
+        @media (min-width: $breakpoint-md) {
+            font-size: 1.5rem;
+        }
         
         &::after {
             content: '';
@@ -96,6 +100,15 @@
             max-width: 30%;
         }
 
+        @media (min-width: $breakpoint-md) {
+            right: 2rem;
+            top: 6.5rem;
+        }
+
+        @media (min-width: $breakpoint-lg) {
+            right: 3rem;
+        }
+
         &__content {
             text-align: center;
         }
@@ -109,6 +122,10 @@
     @media (min-width: $breakpoint-sm) {
         padding-top: 14rem;
     }
+
+    @media (min-width: $breakpoint-md) {
+        padding-top: 16rem;
+    }
 }
 
 .project-article {
@@ -118,6 +135,10 @@
         margin: 1rem 0rem;
         text-transform: uppercase;
         color: $font-color-secondary;
+
+        @media (min-width: $breakpoint-md) {
+            font-size: 1.2rem;
+        }
 
         &--what::before {
             content: '';
@@ -145,6 +166,7 @@
 
     @media (min-width: $breakpoint-sm) {
         position: relative;
+        height: unset;
     }
 }
 
