@@ -105,13 +105,15 @@
         width: 100%;
         left: 0;
         bottom: 0;
-        height: 3rem;
+        height: 0;
         letter-spacing: normal;
-        transition: all $duration-fast ease;
+        transition: background-color $duration-fast ease;
+        transition: height 150ms ease;
 
         &:hover {
             font-weight: bold;
             background-color: $special-color;
+            height: 3rem;
         }
 
         &__text {
