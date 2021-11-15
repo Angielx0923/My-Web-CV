@@ -139,30 +139,19 @@
         @media (min-width: $breakpoint-md) {
             font-size: 1.2rem;
         }
-
-        &--what::before {
-            content: '';
-            position: relative;
-            height: 150px;
-            width: 100%;
-            display: block;
-            margin-bottom: 1rem;
-
-            @media (min-width: $breakpoint-sm) {
-                content: none;
-            }
-        }
     }
 }
 
 .article-project__img-container {
-    height: 150px;
+    height: auto;
+    max-height: 250px;
     width: 100%;
     margin: 0;
-    position: absolute;
+    position: relative;
     display: block;
     left: 0;
     z-index: -1;
+    overflow: hidden;
 
     @media (min-width: $breakpoint-sm) {
         position: relative;

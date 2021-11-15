@@ -32,7 +32,7 @@
             margin: 0 20px;
             position: relative;
             text-align: center;
-            top: 50%;
+            top: 45%;
             transform: translateY(-50%);
             color: $color-primary;
             text-shadow: .2rem .2rem 3px rgba($font-color-secondary, $alpha: .6);
@@ -48,10 +48,10 @@
             }
 
             &__job-title {
-                font-size: 1.3rem;
+                font-size: 1rem;
 
                 @media (min-width: $breakpoint-sm) {
-                    font-size: 1.5rem;
+                    font-size: 1.2rem;
                 }
             }
         }
@@ -258,14 +258,14 @@
         @media (min-width: $breakpoint-sm) {
         text-align: right;
     }
+}
 
-    .article__quote {
-        
-        &__author {
-            font-size: 1rem;
-        }
-        @include quote
+.article__quote {
+    
+    &__author {
+        font-size: 1rem;
     }
+    @include quote
 }
 
 .profile-footer {
