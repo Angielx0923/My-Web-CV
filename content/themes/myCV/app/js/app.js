@@ -170,9 +170,9 @@ $('.portfolio-container__info-link').css({'height' : 0});
 projectItem.each(function() {
     let currentItem = $(this);
     currentItem.mouseenter(function () {
-        $(this).find(infoBtn).css({'height' : '3rem'}), 100;
+        $(this).find(infoBtn).css({'height' : '3rem'});
     });
     currentItem.mouseleave(function () { 
-        infoBtn.css({'height' : 0}), 100;
+        infoBtn.css({'height' : 0});
     });
 })
