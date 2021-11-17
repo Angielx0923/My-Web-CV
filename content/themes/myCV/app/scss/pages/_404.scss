@@ -1,0 +1,41 @@
+.error__container {
+    background-color: $font-color-secondary;
+    height: 100vh;
+}
+
+.main-error {
+    height: 100%;
+    color: $special-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.error-content {
+    margin-bottom: -4rem;
+
+    &_title {
+        font-size: 15rem;
+        font-family: $font-family-alt;
+
+        @media (max-width: $breakpoint-sm) {
+            font-size: 10rem;
+        }
+    }
+
+    &_text {
+
+        @media (max-width: $breakpoint_sm) {
+            font-size: 1.2rem;
+        }
+        font-size: 1.7rem;
+    }
+}
+
+
+.footer-error {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
