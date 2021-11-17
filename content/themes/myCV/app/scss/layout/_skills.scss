@@ -57,48 +57,70 @@
 .hard-skills {
 
     &__list {
-        margin: 1rem auto;
-        color: $color-primary;
-        display: table;
+        max-width: 450px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 1rem 3rem;
+        justify-content: center;
+
+        @media (min-width: $breakpoint-md) {
+            justify-content: space-around;
+            margin: 4rem auto;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            margin: 5rem auto;
+        }
 
         @media (min-width: $breakpoint-lg) {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin: 4rem 2rem 0 2rem;
-            padding: 3rem 0;
+            max-width: 550px;
         }
     }
 
     &__item-container {
         max-width: 100%;
-        margin-bottom: 1.7rem;
-        display: flex;
-        flex-direction: column;
+        margin: 2rem;
+        align-items: center;
+
+        @media (min-width: $breakpoint-sm) {
+            margin: 1rem 2rem;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            margin: 1rem 1rem;
+        }
+
+        @media (min-width: $breakpoint-lg) {
+            margin: 1.5rem;
+        }
 
         .progress-bar {
-            width: 250px;
-            height: 20px;
-            background-color: $color-primary;  
-            border-radius: 10px;
-            z-index: 0;
+            width: 120px;
+            height: 120px;
             overflow: hidden;
+            background-repeat: no-repeat;
+            background-size: contain;
 
-            @media (min-width: $breakpoint-lg) {
-                height: 25px;
+            @media (min-width: $breakpoint-sm) {
+                height: 70px;
+                width: 70px;
+            }
 
+            @media (min-width: $breakpoint-md) {
+                height: 90px;
+                width: 90px;
             }
             
             &__value {
-                width: 0px;
+                opacity: 1;
+                width: 100%;
                 height: 100%;
-                background-color: $special-color;
-                border-top-left-radius: 10px;
-                border-bottom-left-radius: 10px;
+                background-color: $font-color-secondary;
                 z-index: 1;
                 font-size: .8rem;
                 text-align: center;
                 font-weight: bold;
+                transition: opacity 800ms linear;
             }
         }
     }

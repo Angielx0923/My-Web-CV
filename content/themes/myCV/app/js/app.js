@@ -102,12 +102,11 @@ var app = {
   function loadTheBars() {
       $('.progress-bar__value').each(function() {
           var element = $(this);
-          var value = element.attr('value');
           var elementBottom = $(this).offset().top + $(this).outerHeight();
           var windowBottom = $(window).scrollTop() + $(window).height();
   
           if(windowBottom > elementBottom){
-              $(this).animate({width: value}, 1800);
+              element.css({opacity : 0}, 1250);
           }
       });
   }
