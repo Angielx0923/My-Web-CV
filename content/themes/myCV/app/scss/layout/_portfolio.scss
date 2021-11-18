@@ -4,12 +4,36 @@
     background-color: $font-color-secondary;
     position: relative;
     text-align: center;
-    padding-bottom: 4rem;
+    padding-bottom: 8rem;
 
     // MAIN TITLE
     &__main-title {
         padding: 2rem 0;
         margin-bottom: 1rem;
+    }
+
+/*--------------- PORTFOLIO SEE MORE BTN ---------------*/
+
+    &__more-projects-container {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        margin-bottom: 3rem;
+
+        &__link {
+            color: $color-primary;
+            background-color: $special-color;
+            padding: 1rem 1.6rem;
+            font-weight: bold;
+            border-radius: 100%;
+            font-size: 2rem;
+            transition: all 250ms ease;
+
+            &:hover {
+                background-color: #fff;
+                color: #F4B500;
+            }
+        }
     }
 }
 
@@ -118,8 +142,13 @@
 
         &__text {
             position: relative;
-            top: 50%;
-            transform: translateY(-50%);
+            height: 0;
+            top: .9rem;
         }
     }
 }
+
+
+
+
+
