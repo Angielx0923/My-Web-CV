@@ -7,3 +7,5 @@ content/languages
 content/themes/*
 !content/themes/myCV
 content/plugins/*
+
+/content/db.php
