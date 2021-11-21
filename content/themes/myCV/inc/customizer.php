@@ -173,6 +173,349 @@ function alm_customize_register( $wp_customize ) {
             'type'    => 'textarea'
         ]
     );
+
+    // EDUCATION
+    $wp_customize->add_setting(
+        'alm_section_title-education', // ID
+        [
+            'default' => 'Mes'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_section_title-education', //ID
+        [
+            'section' => 'alm_sections_titles',
+            'label'   => 'Titre section formations',
+            'type'    => 'textarea'
+        ]
+    );
+
+    // EDUCATION COLORED
+    $wp_customize->add_setting(
+        'alm_section_title-education-colored', // ID
+        [
+            'default' => 'formations'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_section_title-education-colored', //ID
+        [
+            'section' => 'alm_sections_titles',
+            'label'   => 'Titre section formations coloré',
+            'type'    => 'textarea'
+        ]
+    );
+
+    // EXPERIENCE
+    $wp_customize->add_setting(
+        'alm_section_title-experience', // ID
+        [
+            'default' => 'Mon'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_section_title-experience', //ID
+        [
+            'section' => 'alm_sections_titles',
+            'label'   => 'Titre section parcours',
+            'type'    => 'textarea'
+        ]
+    );
+
+    // EXPERIENCE COLORED
+    $wp_customize->add_setting(
+        'alm_section_title-experience-colored', // ID
+        [
+            'default' => 'parcours'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_section_title-experience-colored', //ID
+        [
+            'section' => 'alm_sections_titles',
+            'label'   => 'Titre section parcours coloré',
+            'type'    => 'textarea'
+        ]
+    );
+
+    // PORTFOLIO
+    $wp_customize->add_setting(
+        'alm_section_title-portfolio', // ID
+        [
+            'default' => 'Mon'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_section_title-portfolio', //ID
+        [
+            'section' => 'alm_sections_titles',
+            'label'   => 'Titre section portfolio',
+            'type'    => 'textarea'
+        ]
+    );
+
+    // PORTFOLIO COLORED
+    $wp_customize->add_setting(
+        'alm_section_title-portfolio-colored', // ID
+        [
+            'default' => 'portfolio'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_section_title-portfolio-colored', //ID
+        [
+            'section' => 'alm_sections_titles',
+            'label'   => 'Titre section portfolio coloré',
+            'type'    => 'textarea'
+        ]
+    );
+
+    // INFORMATIONS
+    $wp_customize->add_setting(
+        'alm_section_title-info', // ID
+        [
+            'default' => 'Mes informations'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_section_title-info', //ID
+        [
+            'section' => 'alm_sections_titles',
+            'label'   => 'Titre section informations',
+            'type'    => 'textarea'
+        ]
+    );
+
+/*---------------------------------------------
+              DOWNLOAD CV SECTIONS
+---------------------------------------------*/
+
+    // DOWNLOAD CV
+    $wp_customize->add_section(
+        'alm_download',
+        [
+            'panel' => 'alm_theme_configuration',
+            'title' => 'Télécharger le CV'
+        ]
+    );
+
+    // Show / hide section
+    $wp_customize->add_setting(
+        'alm_download_active' // ID
+    );
+
+    $wp_customize->add_control(
+        'alm_download_active', //ID
+        [
+            'section' => 'alm_download',
+            'label'   => 'Activer la section',
+            'type'    => 'checkbox'
+        ]
+    );
+
+    // DOWNLOAD TEXT CONTENT
+    $wp_customize->add_setting(
+        'alm_download_text' // ID
+    );
+
+    $wp_customize->add_control(
+        'alm_download_text', //ID
+        [
+            'section' => 'alm_download',
+            'label'   => 'Libélé',
+            'type'    => 'textarea'
+        ]
+    );
+
+/*---------------------------------------------
+              EDUCATION SECTION
+---------------------------------------------*/
+
+    $wp_customize->add_section(
+        'alm_education',
+        [
+            'panel' => 'alm_theme_configuration',
+            'title' => 'Mes formations'
+        ]
+    );
+
+    // BAC - TOP
+    $wp_customize->add_setting(
+        'alm_education_bac-top', // ID
+        [
+            'default' => 'BAC Professionnel<br>Commerce'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_education_bac-top', //ID
+        [
+            'section' => 'alm_education',
+            'label'   => 'Titre',
+            'type'    => 'textarea'
+        ]
+    );
+
+    // BAC - BOTTOM
+    $wp_customize->add_setting(
+        'alm_education_bac-bottom', // ID
+        [
+            'default' => 'Mention Bien'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_education_bac-bottom', //ID
+        [
+            'section' => 'alm_education',
+            'label'   => 'Détails',
+            'type'    => 'textarea'
+        ]
+    );
+
+    // EF - TOP
+    $wp_customize->add_setting(
+        'alm_education_ef-top', // ID
+        [
+            'default' => 'Formation linguistique à<br>l\'étranger (NYC-USA)'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_education_ef-top', //ID
+        [
+            'section' => 'alm_education',
+            'label'   => 'Titre',
+            'type'    => 'textarea'
+        ]
+    );
+
+    // EF - BOTTOM
+    $wp_customize->add_setting(
+        'alm_education_ef-bottom', // ID
+        [
+            'default' => '9 mois à EF New York<br>Anglais niveau C2'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_education_ef-bottom', //ID
+        [
+            'section' => 'alm_education',
+            'label'   => 'Détails',
+            'type'    => 'textarea'
+        ]
+    );
+
+    // ESEC - TOP
+    $wp_customize->add_setting(
+        'alm_education_esec-top', // ID
+        [
+            'default' => 'Diplôme de montage vidéo,<br>trucages & effets spéciaux'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_education_esec-top', //ID
+        [
+            'section' => 'alm_education',
+            'label'   => 'Titre',
+            'type'    => 'textarea'
+        ]
+    );
+
+    // ESEC - BOTTOM
+    $wp_customize->add_setting(
+        'alm_education_esec-bottom', // ID
+        [
+            'default' => 'École de cinéma ESEC - Paris<br>Mention Bien'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_education_esec-bottom', //ID
+        [
+            'section' => 'alm_education',
+            'label'   => 'Détails',
+            'type'    => 'textarea'
+        ]
+    );
+
+    // O'CLOCK - TOP
+    $wp_customize->add_setting(
+        'alm_education_oclock-top', // ID
+        [
+            'default' => 'Formation Développeur web<br>Spécialisation Wordpress'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_education_oclock-top', //ID
+        [
+            'section' => 'alm_education',
+            'label'   => 'Titre',
+            'type'    => 'textarea'
+        ]
+    );
+
+    // O'CLOCK - BOTTOM
+    $wp_customize->add_setting(
+        'alm_education_oclock-bottom', // ID
+        [
+            'default' => '700h avec'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_education_oclock-bottom', //ID
+        [
+            'section' => 'alm_education',
+            'label'   => 'Détails',
+            'type'    => 'textarea'
+        ]
+    );
+
+    // O'CLOCK - BOTTOM / STRONG TAG
+    $wp_customize->add_setting(
+        'alm_education_oclock-bottom-tag', // ID
+        [
+            'default' => 'O\'Clock'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_education_oclock-bottom-tag', //ID
+        [
+            'section' => 'alm_education',
+            'label'   => 'Détails',
+            'type'    => 'textarea'
+        ]
+    );
+
+    // O'CLOCK - BOTTOM / LABEL
+    $wp_customize->add_setting(
+        'alm_education_oclock-bottom-label', // ID
+        [
+            'default' => 'Labellisée Grande École du Numérique'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_education_oclock-bottom-label', //ID
+        [
+            'section' => 'alm_education',
+            'label'   => 'Détails',
+            'type'    => 'textarea'
+        ]
+    );
+
 }
 
 add_action( 'customize_register', 'alm_customize_register' );

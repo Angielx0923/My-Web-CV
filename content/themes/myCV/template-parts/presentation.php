@@ -21,11 +21,11 @@ if ( post_type_exists( 'presentation' ) ) :
                         $style = 'style="display: none"';
                     }
                 ?>
-
+                
             <article class="article <?php echo $class; ?>">
                 <h4 class="show article__title article__title--about"><?php the_title(); ?></h4>
                 <p class="show article__text article__text--about"><?php the_content(); ?></p>
-                <p class="show article__quote quote"><?php the_field( 'quote' ); ?></p>
+                <p class="show article__quote quote"><?php the_field( 'quote' ); ?><br> <span class="article__quote__author quote__author"><?php the_field( 'author' ); ?></span></p>
             </article>
             
             <div class="profile-divider">

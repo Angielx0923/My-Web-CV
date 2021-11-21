@@ -47,12 +47,18 @@
                     <div class="profile-footer">
                         <div class="social-media-container">
                             <a href="http://www.linkedin.com/in/a-lx/" class="fa fa-linkedin-square icon social-media-container__logo social-media-container__logo--linkedin"></a>
-                            <a href="/chemin/vers/mon/fichier.jpg" class="social-media-container__link social-media-container__link--download btn-download">
-                                <img class="icon social-media-container__logo social-media-container__logo--download" src="<?php echo wp_get_attachment_image_url( ALM_THEME_DOWNLOAD_ICON ); ?>" alt="Download CV icon">
-                                <p class="social-media-container__link--text">Télécharger CV</p>
-                            </a>
-                            <a href="https://github.com/" class="fa fa-github icon social-media-container__logo social-media-container__logo--github"></a>
-                            
+
+                            <?php $alm_download_active = get_theme_mod( 'alm_download_active', false ); 
+			
+                                if ( $alm_download_active ) :
+                                ?>
+                                    <a href="/chemin/vers/mon/fichier.jpg" class="social-media-container__link social-media-container__link--download btn-download">
+                                        <img class="icon social-media-container__logo social-media-container__logo--download" src="<?php echo wp_get_attachment_image_url( ALM_THEME_DOWNLOAD_ICON ); ?>" alt="Download CV icon">
+                                        <p class="social-media-container__link--text"><?php echo get_theme_mod( 'alm_download_text' ); ?></p>
+                                    </a>
+                                <?php endif; ?>
+                                <a href="https://github.com/" class="fa fa-github icon social-media-container__logo social-media-container__logo--github"></a>
+                                    
                         </div>
                     </div>
                 </section>
@@ -110,7 +116,7 @@
             <section data-anchor="section-part-education" class="section-part education" id="education">
 
                 <div class="education__main-title-container">
-                    <h2 class="education__main-title titles-section">Mes <span class="colored-title">formations</span></h2>
+                    <h2 class="education__main-title titles-section"><?php echo get_theme_mod( 'alm_section_title-education' ); ?> <span class="colored-title"><?php echo get_theme_mod( 'alm_section_title-education-colored' ); ?></span></h2>
                 </div>
 
                 <div class="education__container">
@@ -129,7 +135,7 @@
                             </div>
                             <div class="education-list-item__text-panel-container education-list-item__text-panel-container--formation education-list-item__text-panel-container--top">
                                 <div class="education-list-item__content education-list-item__content--top education-list-item__content--top--formation">
-                                    <p class="education-list-item__title">Formation Développeur web<br>Spécialisation Wordpress</p>
+                                    <p class="education-list-item__title"><?php echo get_theme_mod( 'alm_education_oclock-top' ); ?></p>
                                 </div>
                             </div>
                         </li>
@@ -138,7 +144,7 @@
                         <li class="show education-list-item education-list-item--bottom education-list-item--oclock">
                             <div class="education-list-item__text-panel-container education-list-item__text-panel-container--bottom">
                                 <div class="education-list-item__content education-list-item__content--bottom education-list-item__content--bottom--formation">
-                                    <p class="education-list-item__text">700h avec <strong>O'Clock</strong> <br>Labélisée Grande École du Numérique</p>
+                                    <p class="education-list-item__text"><?php echo get_theme_mod( 'alm_education_oclock-bottom' ); ?> <strong><?php echo get_theme_mod( 'alm_education_oclock-bottom-tag' ); ?></strong> <br><?php echo get_theme_mod( 'alm_education_oclock-bottom-label' ); ?></p>
                                 </div>
                             </div>
                             <div class="education-list-item__dates-panel-container education-list-item__dates-panel-container--bottom">
@@ -160,7 +166,7 @@
                             </div>
                             <div class="education-list-item__text-panel-container education-list-item__text-panel-container--top">
                                 <div class="education-list-item__content education-list-item__content--top education-list-item__content--top--diploma">
-                                    <p class="education-list-item__title">Diplôme de montage vidéo,<br>trucages & effets spéciaux</p>
+                                    <p class="education-list-item__title"><?php echo get_theme_mod( 'alm_education_esec-top' ); ?></p>
                                 </div>
                             </div>
                         </li>
@@ -169,7 +175,7 @@
                         <li class="show education-list-item education-list-item--bottom education-list-item--esec">
                             <div class="education-list-item__text-panel-container education-list-item__text-panel-container--bottom">
                                 <div class="education-list-item__content education-list-item__content--bottom education-list-item__content--bottom--esec education-list-item__content--bottom--diploma">
-                                    <p class="education-list-item__text">École de cinéma ESEC - Paris<br>Mention Bien</p>
+                                    <p class="education-list-item__text"><?php echo get_theme_mod( 'alm_education_esec-bottom' ); ?></p>
                                 </div>
                             </div>
                         </li>
@@ -185,7 +191,7 @@
                             </div>
                             <div class="education-list-item__text-panel-container education-list-item__text-panel-container--formation education-list-item__text-panel-container--top">
                                 <div class="education-list-item__content education-list-item__content--top education-list-item__content--top--formation">
-                                    <p class="education-list-item__title">Formation linguistique à<br>l'étranger (NYC-USA)</p>
+                                    <p class="education-list-item__title"><?php echo get_theme_mod( 'alm_education_ef-top' ); ?></p>
                                 </div>
                             </div>
                         </li>
@@ -194,7 +200,7 @@
                         <li class="show education-list-item education-list-item--bottom education-list-item--ef">
                             <div class="education-list-item__text-panel-container education-list-item__text-panel-container--bottom">
                                 <div class="education-list-item__content education-list-item__content--bottom education-list-item__content--bottom--formation">
-                                    <p class="education-list-item__text">9 mois à EF New York<br>Anglais niveau C2</p>
+                                    <p class="education-list-item__text"><?php echo get_theme_mod( 'alm_education_ef-bottom' ); ?></p>
                                 </div>
                             </div>
                             <div class="education-list-item__dates-panel-container education-list-item__dates-panel-container--bottom">
@@ -210,7 +216,7 @@
                         <li class="show education-list-item education-list-item--top education-list-item--bac">
                             <div class="education-list-item__text-panel-container education-list-item__text-panel-container--top">
                                 <div class="education-list-item__content education-list-item__content--top education-list-item__content--top--bac education-list-item__date-content--top--diploma">
-                                    <p class="education-list-item__title">BAC Professionnel<br>Commerce</p>
+                                    <p class="education-list-item__title"><?php echo get_theme_mod( 'alm_education_bac-top' ); ?></p>
                                 </div>
                             </div>
                         </li>
@@ -219,7 +225,7 @@
                         <li class="show education-list-item education-list-item--bottom education-list-item--bac">
                             <div class="education-list-item__text-panel-container education-list-item__text-panel-container--bottom">
                                 <div class="education-list-item__content education-list-item__content--bottom education-list-item__content--bottom--diploma">
-                                    <p class="education-list-item__text">Mention Bien</p>
+                                    <p class="education-list-item__text"><?php echo get_theme_mod( 'alm_education_bac-bottom' ); ?></p>
                                 </div>
                             </div>
                             <div class="education-list-item__dates-panel-container education-list-item__dates-panel-container--bottom">
@@ -234,7 +240,7 @@
 
         <!-- PART 4 - PROFESSIONNAL EXPERIENCE -->
             <section data-anchor="section-part-formation" class="section-part formation" id="formation">
-                <h2 class="formation__main-title titles-section">Mon <span class="colored-title">parcours</span></h2>
+                <h2 class="formation__main-title titles-section"><?php echo get_theme_mod( 'alm_section_title-experience' ); ?> <span class="colored-title"><?php echo get_theme_mod( 'alm_section_title-experience-colored' ); ?></span></h2>
 
                 <section class="formation-timeline">
                     <div class="formation-timeline__container container">
@@ -421,7 +427,7 @@
         <!-- PART 5 - PORTFOLIO -->
             <section data-anchor="section-part-portfolio" class="section-part portfolio" id="portfolio">
 
-                <h2 class="portfolio__main-title titles-section"><span class="colored-title--white">Mon </span><span class="colored-title">portfolio</span></h2>
+                <h2 class="portfolio__main-title titles-section"><span class="colored-title--white"><?php echo get_theme_mod( 'alm_section_title-portfolio' ); ?> </span><span class="colored-title"><?php echo get_theme_mod( 'alm_section_title-portfolio-colored' ); ?></span></h2>
 
                 <!-- PORTFOLIO ITEMS -->
                 <div class="portfolio-container">

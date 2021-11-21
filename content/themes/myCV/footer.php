@@ -8,7 +8,7 @@
             <div class="info-container">
 
                 <div class="info-main-title-container">
-                    <h2 class="info-main-title-container__text titles-section">Mes informations</h2>
+                    <h2 class="info-main-title-container__text titles-section"><?php echo get_theme_mod( 'alm_section_title-info' ); ?></h2>
                 </div>
                 
                 <!-- PARTIE INFORMATIONS -->
@@ -43,12 +43,17 @@
                         </div>
 
                         <!-- CV à télécharger - CHEMIN A REMPLIR -->
-                        <div class="info-link-block">
-                            <a href="/chemin/vers/mon/fichier.jpg" download="fichier.jpg" class="info-links__link info-links__link-cv">
-                                <i class="info-link__icon fa fa-download" aria-hidden="true"></i>
-                                <p class="info-link__content info-link__cv">Télécharger le CV</p>
-                            </a>
-                        </div>
+                        <?php $alm_download_active = get_theme_mod( 'alm_download_active', false ); 
+			
+                                if ( $alm_download_active ) :
+                                ?>
+                                    <div class="info-link-block">
+                                        <a href="/chemin/vers/mon/fichier.jpg" download="fichier.jpg" class="info-links__link info-links__link-cv">
+                                            <i class="info-link__icon fa fa-download" aria-hidden="true"></i>
+                                            <p class="info-link__content info-link__cv"><?php echo get_theme_mod( 'alm_download_text' ); ?></p>
+                                        </a>
+                                    </div>
+                                <?php endif; ?>
 
                         <!-- GITHUB -->
                         <div class="info-link-block">

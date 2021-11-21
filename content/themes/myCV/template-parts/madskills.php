@@ -15,9 +15,16 @@ if ( post_type_exists( 'madskills' ) ) :
             <?php
             while ( $alm_madskills->have_posts() ) :
                 $alm_madskills->the_post();
+
+                if ( $alm_madskills->current_post === 1 ) {
+                    $nofilter = 'style="filter: none"';
+                }
+                elseif ( $alm_madskills->current_post === 2 ) {
+                    $nofilter = '';
+                }
             ?>
                 <div class="skills-wrapper">
-                    <img src="<?php the_post_thumbnail_url(); ?>" alt="Meditating woman icon" class="mad-skills__img--usa skills__img icon">
+                    <img src="<?php the_post_thumbnail_url(); ?>" class="mad-skills__img--usa skills__img icon" <?php echo $nofilter; ?>>
                     <div class="skills-text-container">
                         <p class="mad-skills__text skills__text skills-text-container__content"><?php the_title(); ?></p>
                     </div>
