@@ -7,5 +7,9 @@ content/languages
 content/themes/*
 !content/themes/myCV
 content/plugins/*
+!content/plugins/alm-presentation
+!content/plugins/alm-hard-skills
+!content/plugins/alm-soft-skills
+!content/plugins/alm-mad-skills
 
 /content/db.php
