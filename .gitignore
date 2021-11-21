@@ -11,5 +11,6 @@ content/plugins/*
 !content/plugins/alm-hard-skills
 !content/plugins/alm-soft-skills
 !content/plugins/alm-mad-skills
+!content/plugins/alm-parcours
 
 /content/db.php

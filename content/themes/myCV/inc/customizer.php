@@ -516,6 +516,53 @@ function alm_customize_register( $wp_customize ) {
         ]
     );
 
+/*---------------------------------------------
+              EXPERIENCE SECTION
+---------------------------------------------*/
+
+    $wp_customize->add_section(
+        'alm_experience',
+        [
+            'panel' => 'alm_theme_configuration',
+            'title' => 'Mon parcours'
+        ]
+    );
+
+    // TITLE TAG
+    $wp_customize->add_setting(
+        'alm_experience_now', // ID
+        [
+            'default' => 'Actuellement'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_experience_now', //ID
+        [
+            'section' => 'alm_experience',
+            'label'   => 'Titre',
+            'type'    => 'textarea'
+        ]
+    );
+
+    // CONTENT
+    $wp_customize->add_setting(
+        'alm_experience_content', // ID
+        [
+            'default' => 'En recherche active d\'un super job dans le dev, aux USA !'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_experience_content', //ID
+        [
+            'section' => 'alm_experience',
+            'label'   => 'Texte',
+            'type'    => 'textarea'
+        ]
+    );
+
+
 }
 
 add_action( 'customize_register', 'alm_customize_register' );
