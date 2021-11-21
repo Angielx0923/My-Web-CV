@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Angelina Lorieux-Machova is a creative French web-developer, currently looking for her dream job in the United States.">
 	<?php wp_head(); ?>
@@ -31,7 +31,7 @@
                     <div id="burger__content" class="burger__content">
                         <nav class="nav">
                             <ul class="nav__list">
-                                <li class="nav__list__item is-home active"><a href="#" class="nav__list__item__link nav__link--home" data-scroll="section-part-home"><img class="nav__list__item__img icon icon--home" src="img/Icons/home.svg" alt="home button icon"></a></li>
+                                <li class="nav__list__item is-home active"><a href="#" class="nav__list__item__link nav__link--home" data-scroll="section-part-home"><img class="nav__list__item__img icon icon--home" src="<?php echo wp_get_attachment_image_url( ALM_THEME_HOME_ICON ); ?>" alt="home button icon"></a></li>
                                 <li class="nav__list__item is-profile"><a href="#" class="nav__list__item__link nav__link--profile" data-scroll="section-part-profile">Profil</a></li>
                                 <li class="nav__list__item is-skills"><a href="#" class="nav__list__item__link nav__link--skills" data-scroll="section-part-skills">Skills</a></li>
                                 <li class="nav__list__item is-education"><a href="#" class="nav__list__item__link nav__link--education" data-scroll="section-part-education">Formations</a></li>

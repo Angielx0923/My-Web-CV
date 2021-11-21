@@ -11,15 +11,15 @@
 
                     <div class="profile-content">
 
-                        <div class="bg-container" id="bg-profile" style="background-image:url(img/6-desktop.jpg);">
+                        <div class="bg-container" id="bg-profile" style="background-image:url(<?php echo get_theme_mod( 'alm_bg_img' ); ?>);">
                             <div id="idContainer" class="ID-container rellax" data-rellax-speed="-1.5"
                             data-rellax-percentage=".8">
-                                <h1 class="section-part ID-container__my-name">Angélina Lorieux-Machova</h1>
-                                <p class="ID-container__job-title">Le jour, je design et developpe de jolis sites cool et j'adore ça.<br>La nuit, je poursuis le rêve Américain et cherche un job aux USA.</p>
+                                <h1 class="section-part ID-container__my-name">Angelina Lorieux-Machova</h1>
+                                <p class="ID-container__job-title"><?php echo get_theme_mod( 'alm_slogan' ); ?></p>
                             </div>
                             <!-- PROFIL PICTURE -->
                             <div class="section-part picture-container">
-                                <img src="img/angie_cv_photo.png" alt="picture of Angelina Lorieux-Machova" class="picture-container__img">
+                                <img src="<?php echo get_theme_mod( 'alm_profile_picture' ); ?>" alt="picture of Angelina Lorieux-Machova" class="picture-container__img">
                             </div>
                         </div>
                     </div>
@@ -34,63 +34,25 @@
                             <p id="helloWorld" class="quote-container__content">Hello World!</p>
                         </div>
                         <div class="profile-content__title-block">
-                            <h2 id="profilTitle" class="profile-content__title-block__main-title titles-section">Profil</h2>
+                            <h2 id="profilTitle" class="profile-content__title-block__main-title titles-section"><?php echo get_theme_mod( 'alm_section_title-profile' ); ?></h2>
                         </div>
                     </div>
 
+
                     <!-- PROFILE MAIN / PRESENTATION & GOALS -->
-                    <section data-anchor="section-part-profile" class="profile-main">
-                        <article class="article article--about">
-                            <h4 class="show article__title article__title--about">Qui es-<span class="colored-title">tu ?</span></h4>
-                            <p class="show article__text article__text--about">Développeuse cinéphile & créative, amatrice d’explorations urbaines, passionnée de technologie et à la poursuite du rêve Américain.
-                            </p>
+                    <?php get_template_part( 'template-parts/presentation' ); ?>
 
-                            <p class="show article__text article__text--goals">Très ambitieuse et bienveillante, j'aspire à aller toujours plus loin, en évoluant dans un esprit d'équipe et de partage.</p>
-
-                            <h6 class="show article__title article__title--inner">Ton petit <span class="colored-title--plus">+</span> ?</h6>
-                            <p class="show article__text article__text--inner">
-                                Jamais à court d’idées, de bonne humeur 98% du temps et toujours en quête de solutions ! 
-                            </p>
-
-                            <p class="show article__quote quote">"Je connais mes limites, c'est pourquoi je vais au-delà."<br> <span class="article__quote__author quote__author">– Serge Gainsbourg</span></p>
-                        </article>
-
-                        <!-- DIVIDER -->
-                        <div class="profile-divider">
-                            <div class="profile-divider__divider"></div>
-                        </div>
-
-                        <article class="article article--goals">
-                            <h4 class="show article__title article__title--goals">Tes <span class="colored-title">objectifs ?</span></h4>
-                            <p class="show article__text article__text--goals">Apprendre plus et toujours plus afin de monter en compétences et gagner en liberté d'action.</p>
-                            
-                            <h6 class="show article__title article__title--inner article__title--inner-goals">Actuellement ?</h6>
-
-                            <p class="show article__text article__text--now">Je cherche le job de mes rêves, tout en continuant à développer mes compétences !</p>
-
-                            <h6 class="show article__title article__title--inner article__title--inner-goals">Et c'est quoi le job de tes rêves ?</h6>
-                            <p class="show article__text article__text--dream-job">
-                            Intégrer une équipe de superhéro du web, ayant la sagesse de Maître Yoda, les compétences des Experts, dans une ambiance à la F<span class="colored-friends colored-friends--red">.</span>R<span class="colored-friends colored-friends--blue">.</span>I<span class="colored-friends colored-friends--yellow">.</span>E<span class="colored-friends colored-friends--red">.</span>N<span class="colored-friends colored-friends--blue">.</span>D<span class="colored-friends colored-friends--yellow">.</span>S !
-                            </p>
-
-                            <p class="show article__quote quote">" 'I don't know' has become 'I don't know yet'. " <br> <span class="article__quote__author quote__author">– Bill Gates</span></p>
-
-                        </article>
-                    </section>
 
                     <!-- PROFILE / FOOTER -->
                     <div class="profile-footer">
                         <div class="social-media-container">
-                            <a href="http://www.linkedin.com/in/a-lx/" class="social-media-container__link social-media-container__link--linkedin">
-                                <a href="http://www.linkedin.com/in/a-lx/" class="fa fa-linkedin-square icon social-media-container__logo social-media-container__logo--linkedin"></a>
-                            </a>
+                            <a href="http://www.linkedin.com/in/a-lx/" class="fa fa-linkedin-square icon social-media-container__logo social-media-container__logo--linkedin"></a>
                             <a href="/chemin/vers/mon/fichier.jpg" class="social-media-container__link social-media-container__link--download btn-download">
-                                <img class="icon social-media-container__logo social-media-container__logo--download" src="img/Icons/download2.png" alt="Download CV icon">
+                                <img class="icon social-media-container__logo social-media-container__logo--download" src="<?php echo wp_get_attachment_image_url( ALM_THEME_DOWNLOAD_ICON ); ?>" alt="Download CV icon">
                                 <p class="social-media-container__link--text">Télécharger CV</p>
                             </a>
-                            <a href="https://github.com/" class="social-media-container__link social-media-container__link--github">
-                                <a href="https://github.com/" class="fa fa-github icon social-media-container__logo social-media-container__logo--github"></a>
-                            </a>
+                            <a href="https://github.com/" class="fa fa-github icon social-media-container__logo social-media-container__logo--github"></a>
+                            
                         </div>
                     </div>
                 </section>
@@ -105,67 +67,13 @@
                         <!-- HARD SKILLS -->
                         <section class="skills-section hard-skills">
 
-                            <h2 class="skills-section__main-title skills-section__main-title--hard titles-section">Hard <span class="colored-title">skills</span></h2>
+                            <h2 class="skills-section__main-title skills-section__main-title--hard titles-section"><?php echo get_theme_mod( 'alm_section_title-hardskills' ); ?> <span class="colored-title"><?php echo get_theme_mod( 'alm_section_title-hardskills-colored' ); ?></span></h2>
                             
                             <!-- PROGRESS BAR HARD SKILL LIST (Animated) -->
                             <div class="hard-skills__list">
 
-                                <div class="hard-skills__item-container">
-                                    <div class="progress-bar" role="progressbar" style="background-image: url(img/Icons/HARD-SKILLS/WP.png);">
-                                        <div class="progress-bar__value"></div>
-                                    </div>        
-                                </div>
-
-                                <div class="hard-skills__item-container">
-                                    <div class="progress-bar" role="progressbar" style="background-image: url(img/Icons/HARD-SKILLS/SASS.png);">
-                                        <div class="progress-bar__value"></div>
-                                    </div>                
-                                </div>
-
-                                <div class="hard-skills__item-container">
-                                    <div class="progress-bar" role="progressbar" style="background-image: url(img/Icons/HARD-SKILLS/BOOTSTRAP.png);">
-                                        <div class="progress-bar__value"></div>
-                                    </div>            
-                                </div>
+                            <?php get_template_part( 'template-parts/hardskills' ); ?>
                                 
-                                <div class="hard-skills__item-container">
-                                    <div class="progress-bar" role="progressbar" style="background-image: url(img/Icons/HARD-SKILLS/PS.png);">
-                                        <div class="progress-bar__value"></div>
-                                    </div>                                    
-                                </div>
-
-                                <div class="hard-skills__item-container">
-                                    <div class="progress-bar" role="progressbar" style="background-image: url(img/Icons/HARD-SKILLS/GIT.png);">
-                                        <div class="progress-bar__value"></div>
-                                    </div>                        
-                                </div>
-
-                                <div class="hard-skills__item-container">
-                                    <div class="progress-bar" role="progressbar" style="background-image: url(img/Icons/HARD-SKILLS/webpack_3.png);">
-                                        <div class="progress-bar__value"></div>
-                                    </div>                                    
-                                </div>
-
-                                <div class="hard-skills__item-container">
-                                    <div class="progress-bar" role="progressbar" style="background-image: url(img/Icons/HARD-SKILLS/MYSQL.png);">
-                                        <div class="progress-bar__value"></div>
-                                    </div>            
-                                </div>
-
-                                <div class="hard-skills__item-container">
-                                    <div class="progress-bar" role="progressbar" style="background-image: url(img/Icons/HARD-SKILLS/PHP.png);">
-                                        <div class="progress-bar__value"></div>
-                                    </div>            
-                                </div>
-
-                                <div class="hard-skills__item-container">
-                                    <div class="progress-bar" role="progressbar" style="background-image: url(img/Icons/HARD-SKILLS/JQUERY.png);">
-                                        <div class="progress-bar__value"></div>
-                                    </div>        
-                                </div>
-                                
-                                
-
                             </div>
 
                         </section>
@@ -176,55 +84,21 @@
                         <!-- SOFT SKILLS -->
                         <section class="skills-section soft-skills">
                             <div class="skills-section__title-container soft-skills__title-container">
-                                <h2 class="skills-section__main-title soft-skills__title titles-section">Soft skills</h2>
+                                <h2 class="skills-section__main-title soft-skills__title titles-section"><?php echo get_theme_mod( 'alm_section_title-softskills' ); ?></h2>
                             </div>
-                            <div class="soft-skills__container">
-                                <div class="skills-wrapper">
-                                    <img src="img/Icons/creativity.png" alt="creativity icon" class="soft-skills__img--creativity skills__img icon">
-                                    <div class="skills-text-container">
-                                        <p class="soft-skills__text skills__text skills-text-container__content">Esprit créatif</p>
-                                    </div>
-                                </div>
-                                <div class="skills-wrapper">
-                                    <img src="img/Icons/idea.png" alt="idea icon" class="soft-skills__img--learning skills__img icon">
-                                    <div class="skills-text-container">
-                                        <p class="soft-skills__text skills__text skills-text-container__content">Soif d'apprendre</p>
-                                    </div>
-                                </div>
-                                <div class="skills-wrapper skills-wrapper--smiley">
-                                    <img src="img/Icons/smiley.png" alt="smiley face in a talking buble icon" class="soft-skills__img--communication skills__img icon icon--smiley">
-                                    <div class="skills-text-container">
-                                        <p class="soft-skills__text skills__text skills-text-container__content">Bonne communiquante</p>
-                                    </div>
-                                </div>
-                            </div>
+                            
+                            <?php get_template_part( 'template-parts/softskills' ); ?>
+                                                            
                         </section>
 
                         <!-- MAD SKILLS -->
                         <section class="skills-section mad-skills">
                             <div class="skills-section__title-container mad-skills__title-container">
-                                <h2 class="skills-section__main-title mad-skills__title titles-section">Mad skills</h2>
+                                <h2 class="skills-section__main-title mad-skills__title titles-section"><?php echo get_theme_mod( 'alm_section_title-madskills' ); ?></h2>
                             </div>
-                            <div class="mad-skills__container">
-                                <div class="skills-wrapper">
-                                    <img src="img/Icons/MAD-SKILLS/meditation_1.png" alt="Meditating woman icon" class="mad-skills__img--usa skills__img icon">
-                                    <div class="skills-text-container">
-                                        <p class="mad-skills__text skills__text skills-text-container__content">Méditation</p>
-                                    </div>
-                                </div>
-                                <div class="skills-wrapper">
-                                    <img src="img/Icons/popcorn-2.png" alt="popcorn icon" class="mad-skills__img--cinema skills__img icon">
-                                    <div class="skills-text-container">
-                                        <p class="mad-skills__text skills__text skills-text-container__content">Pratique intensive du 7ème Art</p>
-                                    </div>
-                                </div>
-                                <div class="skills-wrapper skills-wrapper--piano">
-                                    <img src="img/Icons/MAD-SKILLS/rollers.png" alt="rollers icon" class="mad-skills__img--piano skills__img icon">
-                                    <div class="skills-text-container">
-                                        <p class="mad-skills__text skills__text skills-text-container__content">Rollers</p>
-                                    </div>
-                                </div>
-                            </div>
+                            
+                            <?php get_template_part( 'template-parts/madskills' ); ?>
+
                         </section>
                     </div>
                         
@@ -369,7 +243,7 @@
                         <div class="formation-currently">
                             <h4 class="show formation-currently__title">Actuellement</h4>
                             <p class="show formation-currently__content">En recherche active d'un super job dans le dev aux USA !</p>
-                            <img src="img/Icons/arrow-head.png" alt="" class="formation-currently__icon-arrow icon">
+                            <img src="<?php echo wp_get_attachment_image_url( ALM_THEME_ARROW_HEAD ); ?>" alt="" class="formation-currently__icon-arrow icon">
                         </div>
 
                     <!-- LIST -->
@@ -634,91 +508,4 @@
                 </div>
             </section>
 
-        </main>
-
-    <!-- FOOTER -->
-        <!-- PART 7 - INFO -->
-        <footer class="footer">
-            <section class="section info">
-
-                <div class="info-container">
-
-                    <div class="info-main-title-container">
-                        <h2 class="info-main-title-container__text titles-section">Mes informations</h2>
-                    </div>
-                    
-                    <!-- PARTIE INFORMATIONS -->
-                    <div class="info-container-panel">
-                        
-                        <!-- INFORMATIONS PERSONNELLES -->
-                        <address class="info-contact">
-                            <div class="info-contact-block">
-                                <!-- <img src="img/Icons/pin_mark.png" alt="pin icon" class="info-contact__icon icon"> -->
-                                <i class="info-contact__icon fa fa-map-marker" aria-hidden="true"></i>
-                                <p class="info-contact__title info-contact__localisation">Localisation <span class="double-dot">:</span></p>
-                                <p class="info-contact__content info-contact__city">Fontenay-Sous-Bois (94)</p>
-                            </div>
-                            <div class="info-contact-block">
-                                <i class="info-contact__icon fa fa-paper-plane" aria-hidden="true"></i>
-                                <p class="info-contact__title info-contact__email">Email <span class="double-dot">:</span></p>
-                                <a href="mailto:lorieux.angelina@gmail.com" class="info-contact__content info-contact__email-adress">machova.angelina@gmail.com</a>
-                            </div>
-                            <div class="info-contact-block">
-                                <i class="info-contact__icon fa fa-phone" aria-hidden="true"></i>
-                                <p class="info-contact__title info-contact__phone">Tel <span class="double-dot">:</span></p>
-                                <a href="tel:+33794326249" class="info-contact__content info-contact__number-phone">07 84 32 62 49</a>
-                            </div>
-                        </address>
-
-                        <!-- INFORMATIONS PROFESSIONNELLES (LIENS) -->
-                        <div class="info-links">
-                                
-                            <div class="info-link-block">
-                            <!-- LINKEDIN -->
-                                <a href="http://www.linkedin.com/in/a-lx/" class="info-links__link info-links__link-linkedin">
-                                    <i class="info-link__icon fa fa-linkedin-square" aria-hidden="true"></i>
-                                    <p class="info-link__content info-link__linkedin">LinkedIn</p>
-                                    <!-- Faire disparaitre l'url pour la version mobile -->
-                                    <p class="info-link__url">www.linkedin.com/in/a-lm/</p>
-                                </a>
-                            </div>
-
-                            <!-- CV à télécharger - CHEMIN A REMPLIR -->
-                            <div class="info-link-block">
-                                <a href="/chemin/vers/mon/fichier.jpg" download="fichier.jpg" class="info-links__link info-links__link-cv">
-                                    <i class="info-link__icon fa fa-download" aria-hidden="true"></i>
-                                    <p class="info-link__content info-link__cv">Télécharger le CV</p>
-                                </a>
-                            </div>
-
-                            <!-- GITHUB -->
-                            <div class="info-link-block">
-                                <a href="https://github.com/" class="info-links__link info-links__link-github">
-                                    <i class="info-link__icon fa fa-github" aria-hidden="true"></i>
-                                    <p class="info-link__content info-link__github">GitHub</p>
-                                    <!-- Faire disparaitre l'url pour la version mobile -->
-                                    <p class="info-link__url">Angielx0923</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- PARTIE COPYRIGHT -->
-            <section class="copyright">
-
-                <div class="copyright-container">
-                    <!-- Dynamiser et rendre automatique le changement de date -->
-                    <p class="copyright__content">&copy; Copyright 2020 - Angélina Lorieux-Machova. Tous droits réservés</p>
-                </div>
-
-            </section>
-        </footer>
-    </div>
-    <div class="dark-overlay"></div>
-    
-    <!-- SCRIPTS JS -->
-	<?php wp_footer(); ?>
-</body>
-</html>
+<?php get_footer(); ?>
