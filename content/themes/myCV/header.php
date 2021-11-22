@@ -8,11 +8,22 @@
 </head>
 <body <?php body_class(); ?> class="body">
 
-    <div class="onepage__container">
+    <?php if ( is_404() ) : ?>
+        <div class="error__container">
+    <?php elseif ( is_single() ) : ?>
+        <div class="project__container">
+    <?php else : ?>
+        <div class="onepage__container">
+    <?php endif ?>
 
+    <?php
+        $headerclass = 'header-project-page';
+        $logoclass = 'logo__container--project';
+        $animation = 'header__scroll-animation--project';
+    ?>
         <!-- HEADER -->
-        <header class="header" id="header">
-            <div class="logo__container">
+        <header class="header <?php if ( is_single() ) : echo $headerclass; endif; ?>" id="header">
+            <div class="logo__container <?php if ( is_single() ) : echo $logoclass; endif; ?>">
                 <!-- The link is disabled when it's the front-page -->
                 <?php if ( ! is_front_page() ) : ?>
                     <a href="<?= home_url(); ?>">
@@ -60,5 +71,5 @@
                 </div>
             </div>
 
-            <div id="headerAnim" class="header__scroll-animation"></div>
+            <div id="headerAnim" class="header__scroll-animation <?php if ( is_single() ) : echo $animation; endif; ?>"></div>
         </header>

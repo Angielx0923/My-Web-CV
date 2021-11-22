@@ -269,38 +269,7 @@
                 <h2 class="portfolio__main-title titles-section"><span class="colored-title--white"><?php echo get_theme_mod( 'alm_section_title-portfolio' ); ?> </span><span class="colored-title"><?php echo get_theme_mod( 'alm_section_title-portfolio-colored' ); ?></span></h2>
 
                 <!-- PORTFOLIO ITEMS -->
-                <div class="portfolio-container">
-
-                    <div class="portfolio-container__block" id="projectItem" style="background-image:url(img/5-desktop.jpg)">
-                        <a href="#" class="portfolio-container__link portfolio-container__link--?">
-                            <h3 class="portfolio-container__title">ALM</h3>
-                            <p class="portfolio-container__content">Mon site web personnel</p>
-                        </a>
-                        <a class="portfolio-container__info-link" id="infoBtn" href="project.html">
-                            <p class="portfolio-container__info-link__text">+ d'infos</p>
-                        </a>
-                    </div>
-
-                    <div class="portfolio-container__block " id="bg-oroadtrip" style="background-image:url(img/portfolio/oroadtrip-desktop.jpg)">
-                        <a href="#" class="portfolio-container__link portfolio-container__link--oroadtrip">
-                            <h3 class="portfolio-container__title">O'Roadtrip</h3>
-                            <p class="portfolio-container__content">Projet de fin de formation</p>
-                        </a>
-                        <a class="portfolio-container__info-link" href="project.html">
-                            <p class="portfolio-container__info-link__text">+ d'infos</p>
-                        </a>
-                    </div>
-
-                    <div class="portfolio-container__block" id="bg-hypnosis" style="background-image:url(img/portfolio/hypnose/hypnose-desktop.jpg)">
-                        <a href="#" class="portfolio-container__link portfolio-container__link--?">
-                            <h3 class="portfolio-container__title">Site hypnose</h3>
-                            <p class="portfolio-container__content">Projet Professionnel</p>
-                        </a>
-                        <a class="portfolio-container__info-link" href="project.html">
-                            <p class="portfolio-container__info-link__text">+ d'infos</p>
-                        </a>
-                    </div>
-                </div>
+                <?php get_template_part( 'template-parts/portfolio' ); ?>
 
                 <div class="portfolio__more-projects-container">
                     <a href="archive.html" class="portfolio__more-projects-container__link">+</a>

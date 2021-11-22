@@ -562,6 +562,51 @@ function alm_customize_register( $wp_customize ) {
         ]
     );
 
+/*---------------------------------------------
+                  PROJECT PAGES
+---------------------------------------------*/
+
+    $wp_customize->add_section(
+        'alm_project',
+        [
+            'panel' => 'alm_theme_configuration',
+            'title' => 'Page des projets'
+        ]
+    );
+
+    // RETURN BTN
+    $wp_customize->add_setting(
+        'alm_project_btn', // ID
+        [
+            'default' => 'Retour'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_project_btn', //ID
+        [
+            'section' => 'alm_project',
+            'label'   => 'Titre',
+            'type'    => 'textarea'
+        ]
+    );
+
+    // PROJECT TITLE
+    $wp_customize->add_setting(
+        'alm_project_title', // ID
+        [
+            'default' => 'Projet'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_project_title', //ID
+        [
+            'section' => 'alm_project',
+            'label'   => 'Titre',
+            'type'    => 'textarea'
+        ]
+    );
 
 }
 
