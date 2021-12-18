@@ -50,6 +50,7 @@
     outline: none;
     cursor: pointer;
     z-index: 1;
+    font-size: 1rem;
 
     @media (min-width: $breakpoint-sm) {
         left: 2rem;
@@ -57,10 +58,6 @@
         background-color: transparent;
         transform: translate(0);
         color: $font-color-secondary;
-    }
-
-    @media (min-width: $breakpoint-md) {
-        font-size: 1rem;
     }
 
     &__text {
@@ -75,4 +72,27 @@
             }
         }
     }
+}
+
+/*--------------- PROJECT PAGE / BTN DEMO ---------------*/
+
+// Center the link in the part "a quoi ca ressemble"
+.project-article__text--first {
+    text-align: center;
+}
+
+// CSS added in wordpress to create the link that goes to the live demo
+.project-article__demolink {
+        font-weight: bold;
+        border: 1px solid $special-color;
+        color: $special-color;
+        padding: 0.6rem 1rem;
+        border-radius: 20px;
+
+        transition: all $duration-fast ease;
+
+        &:hover {
+            color: $color-primary;
+            background-color: $special-color;
+        }
 }

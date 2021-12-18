@@ -6,9 +6,11 @@
     width: 100%;
 
     padding: 1rem 1.5rem;
+    height: 53px;
 
     @media (min-width: $breakpoint-sm) {
         padding: 1.3rem 2rem;
+        height: 68.39px;
     }
 }
 
@@ -23,6 +25,6 @@
     z-index: -1;
 
     &--project {
-        opacity: 1;
+        opacity: 1 !important;
     }
 }

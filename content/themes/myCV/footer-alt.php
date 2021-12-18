@@ -1,7 +1,9 @@
        <!-- PROJECT / FOOTER -->
-       <?php $errorclass = '--error'; ?>
+       <?php $errorclass = '--error';
+             $style   = 'style="position: relative"';
+       ?>
 
-            <footer class="footer-error">
+            <footer class="footer-error" <?php if ( is_single() ) : echo $style; endif; ?>>
                 <div class="profile-footer">
                     <div class="social-media-container">
                         <div class="social-media-container__link social-media-container__link--linkedin">

@@ -6,14 +6,16 @@
 
         <?php while ( have_posts() ) : 
             the_post();
+
             if ( ( $current_post + 1 ) == $post_count ) {
                 $style = 'style="display: none"';
             }
+                    
             ?>
             <header class="project-header">
                 <!-- PROJECT HEADER -->
                 <div class="project-header__container">
-                    <a href="<?php home_url(); ?>" id="backBtn" class="project-header__back-btn">
+                    <a href="<?= home_url(); ?>" id="backBtn" class="project-header__back-btn">
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="project-header__back-btn__text"><?php echo get_theme_mod( 'alm_project_btn' ); ?></span>
                     </a>
@@ -34,20 +36,22 @@
             </header>
 
             <main class="project-articles">
-                <!-- PROFILE MAIN / PRESENTATION & GOALS -->
+                <!-- PROJECT MAIN -->
                 <section class="profile-main project-articles__block">
-                    <article class="article">
+                    
+                        <?php the_content(); ?>
+                    
+                    <!-- <article class="article">
                         <div class="article-project__img-container">
                             <img src="img/portfolio/Capture d’écran 2020-09-12 à 19.37.19.png" alt="illustrations du projet" class="article-project__img">
                         </div>
-                        <p class="article__text project-article__text"><?php the_content(); ?>
-                        </p>
-                    </article>
+                        <p class="article__text project-article__text"></p>
+                    </article> -->
 
                     <!-- DIVIDER -->
-                    <div class="profile-divider project-divider">
-                        <div class="profile-divider__divider" <?php echo $style; ?>></div>
-                    </div>
+                    <!-- <div class="profile-divider project-divider">
+                        <div class="profile-divider__divider"></div>
+                    </div> -->
                 </section>
                 <?php endwhile; ?>
             </main>

@@ -26,11 +26,13 @@
             <div class="logo__container <?php if ( is_single() ) : echo $logoclass; endif; ?>">
                 <!-- The link is disabled when it's the front-page -->
                 <?php if ( ! is_front_page() ) : ?>
-                    <a href="<?= home_url(); ?>">
+                    <a class="logo" href="<?= home_url(); ?>">
                         <?php the_custom_logo(); ?>
                     </a>
                 <?php else : ?>
-                    <?php the_custom_logo(); ?>
+                    <h1 class="logo disabled">
+                        <?php the_custom_logo(); ?>
+                    </h1>
                 <?php endif; ?>
             </div>
             <div class="header__container">
@@ -42,7 +44,7 @@
                     <div id="burger__content" class="burger__content">
                         <nav class="nav">
                             <ul class="nav__list">
-                                <li class="nav__list__item is-home active"><a href="#" class="nav__list__item__link nav__link--home" data-scroll="section-part-home"><img class="nav__list__item__img icon icon--home" src="<?php echo wp_get_attachment_image_url( ALM_THEME_HOME_ICON ); ?>" alt="home button icon"></a></li>
+                                <li class="nav__list__item is-home active"><a href="<?= home_url(); ?>" class="nav__list__item__link nav__link--home" data-scroll="section-part-home"><img class="nav__list__item__img icon icon--home" src="<?php echo wp_get_attachment_image_url( ALM_THEME_HOME_ICON ); ?>" alt="home button icon"></a></li>
                                 <li class="nav__list__item is-profile"><a href="#" class="nav__list__item__link nav__link--profile" data-scroll="section-part-profile">Profil</a></li>
                                 <li class="nav__list__item is-skills"><a href="#" class="nav__list__item__link nav__link--skills" data-scroll="section-part-skills">Skills</a></li>
                                 <li class="nav__list__item is-education"><a href="#" class="nav__list__item__link nav__link--education" data-scroll="section-part-education">Formations</a></li>
