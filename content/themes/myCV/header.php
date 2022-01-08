@@ -1,3 +1,12 @@
+<?php
+/**
+ * Header Template
+ * 
+ * @package ALM
+ */
+
+?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -42,16 +51,18 @@
                         <span class="burger__nav__content"></span>
                     </div>
                     <div id="burger__content" class="burger__content">
-                        <nav class="nav">
-                            <ul class="nav__list">
-                                <li class="nav__list__item is-home active"><a href="<?= home_url(); ?>" class="nav__list__item__link nav__link--home" data-scroll="section-part-home"><img class="nav__list__item__img icon icon--home" src="<?php echo wp_get_attachment_image_url( ALM_THEME_HOME_ICON ); ?>" alt="home button icon"></a></li>
-                                <li class="nav__list__item is-profile"><a href="#" class="nav__list__item__link nav__link--profile" data-scroll="section-part-profile">Profil</a></li>
-                                <li class="nav__list__item is-skills"><a href="#" class="nav__list__item__link nav__link--skills" data-scroll="section-part-skills">Skills</a></li>
-                                <li class="nav__list__item is-education"><a href="#" class="nav__list__item__link nav__link--education" data-scroll="section-part-education">Formations</a></li>
-                                <li class="nav__list__item is-formation"><a href="#" class="nav__list__item__link nav__link--formation" data-scroll="section-part-formation">Parcours</a></li>
-                                <li class="nav__list__item is-portfolio"><a href="#" class="nav__list__item__link nav__link--portfolio" data-scroll="section-part-portfolio">Portfolio</a></li>
-                                <li class="nav__list__item is-contact"><a href="#" class="nav__list__item__link nav__link--contact" data-scroll="section-part-contact">Contact</a></li>
-                            </ul>
+                    <!-- Menu of the header -->
+                    <?php
+                        wp_nav_menu(
+                            [
+                                'theme_location'  => 'menu-header',
+                                'container'       => 'nav',
+                                'container_class' => 'nav',
+                                'menu_class'      => 'nav__list',
+                            ]
+                        );
+                    ?> <!-- End menu of the header -->
+                            
                             <div id="socialMediaNav" class="nav__social-media">
                                 <a href="https://www.linkedin.com/in/a-lx/" class="fa fa-linkedin-square nav__social-media__link nav__social-media__link--linkedin"></a>
                                 <a href="https://github.com/Angielx0923" class="fa fa-github nav__social-media__link nav__social-media__link--github"></a>

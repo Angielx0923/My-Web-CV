@@ -9,5 +9,8 @@ require get_theme_file_path( 'inc/setups.php' );
 // Theme configuration
 require get_theme_file_path( 'inc/theme_config.php' );
 
-// Theme configuration
+// Customizer
 require get_theme_file_path( 'inc/customizer.php' );
+
+// Menu
+require get_theme_file_path( 'inc/menu.php' );

@@ -32,21 +32,6 @@
   
   /*--------------- LINKS ---------------*/
   
-    .icon--home {
-        width: 1rem;
-        margin-top: 5rem;
-        filter: invert(1);
-      
-        transition: filter $duration-fast ease-in-out;
-        
-        @media (min-width: $breakpoint-sm) {
-            width: 16px;
-            position: relative;
-            top: 2px;
-            margin-top: 0;
-        }
-    }
-  
     @media (min-width: $breakpoint-sm) {
         .nav__list--hidden {
             display: none;
@@ -70,8 +55,21 @@
             margin-left: 1rem;
             margin-bottom: 0;
         }
+
+        & img {
+            margin-top: 5rem;
+            filter: invert(1);
         
-        &__link {
+            transition: filter $duration-fast ease-in-out;
+            
+            @media (min-width: $breakpoint-sm) {
+                position: relative;
+                top: -2px;
+                margin-top: 0;
+            }
+        }
+        
+        & a {
         color: $font-color-secondary;
         font-weight: bold;
         font-size: 1rem;

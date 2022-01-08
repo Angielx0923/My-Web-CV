@@ -1,3 +1,12 @@
+<?php
+/**
+ * Footer Alternative Template
+ * 
+ * @package ALM
+ */
+
+?>
+       
        <!-- PROJECT / FOOTER -->
        <?php $errorclass = '--error';
              $style   = 'style="position: relative"';

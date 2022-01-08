@@ -17,7 +17,7 @@
                 ?>
                 
                 <div class="portfolio-container__block" id="projectItem" style="background-image:url(<?php the_post_thumbnail_url( 'large' ); ?>)">
-                    <a href="#" class="portfolio-container__link portfolio-container__link--?">
+                    <a href="<?php the_field( 'url' ); ?>" class="portfolio-container__link portfolio-container__link--?">
                         <h3 class="portfolio-container__title"><?php the_title(); ?></h3>
                         <p class="portfolio-container__content"><?php the_field( 'presentation' ); ?></p>
                     </a>

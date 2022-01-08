@@ -1,3 +1,12 @@
+<?php
+/**
+ * Portfolio articles Template
+ * 
+ * @package ALM
+ */
+
+?>
+
 <?php get_header(); ?>
 
  <!-- MAIN -->
@@ -38,20 +47,7 @@
             <main class="project-articles">
                 <!-- PROJECT MAIN -->
                 <section class="profile-main project-articles__block">
-                    
                         <?php the_content(); ?>
-                    
-                    <!-- <article class="article">
-                        <div class="article-project__img-container">
-                            <img src="img/portfolio/Capture d’écran 2020-09-12 à 19.37.19.png" alt="illustrations du projet" class="article-project__img">
-                        </div>
-                        <p class="article__text project-article__text"></p>
-                    </article> -->
-
-                    <!-- DIVIDER -->
-                    <!-- <div class="profile-divider project-divider">
-                        <div class="profile-divider__divider"></div>
-                    </div> -->
                 </section>
                 <?php endwhile; ?>
             </main>

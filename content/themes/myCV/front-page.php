@@ -1,3 +1,12 @@
+<?php
+/**
+ * Home-Page Template
+ * 
+ * @package ALM
+ */
+
+?>
+
 <?php get_header(); ?>
 
         <!-- MAIN -->
@@ -272,7 +281,7 @@
                 <?php get_template_part( 'template-parts/portfolio' ); ?>
 
                 <div class="portfolio__more-projects-container">
-                    <a href="archive.html" class="portfolio__more-projects-container__link">+</a>
+                    <a href="archive.php" class="portfolio__more-projects-container__link">+</a>
                 </div>
 
             </section>

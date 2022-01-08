@@ -1,3 +1,12 @@
+<?php
+/**
+ * 404 error page Template
+ * 
+ * @package ALM
+ */
+
+?>
+
 <?php get_header(); ?>
 
     <!-- MAIN -->

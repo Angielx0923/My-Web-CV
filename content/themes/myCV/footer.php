@@ -1,3 +1,12 @@
+<?php
+/**
+ * Footer Template
+ * 
+ * @package ALM
+ */
+
+?>
+
 </main>
 
 <!-- FOOTER -->
