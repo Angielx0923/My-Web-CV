@@ -88,15 +88,26 @@ var app = {
   
   let link = $('.nav__list__item__link');
   
-  link.click(function() {
-      let scrollAnchor = $(this).attr('data-scroll');
-      let scrollPoint  = $('section[data-anchor="' + scrollAnchor + '"]').offset().top - headerAnim.outerHeight();
+  link.click(function(e) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        e.preventDefault();
   
-      $('body, html').animate({
-          scrollTop: scrollPoint
-      }, 800);
-  });
+        // Store hash
+        var hash = this.hash;
   
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+            // +1 fix the one missing pixel
+          scrollTop: $(hash).offset().top - headerAnim.outerHeight() + 1
+        }, 800);
+            
+        } // End if
+    });
+
   /*--------------- PROGRESS BAR ANIMATION ---------------*/
   
   function loadTheBars() {

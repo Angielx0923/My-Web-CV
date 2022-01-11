@@ -24,8 +24,16 @@ function alm_list_item_class( $class ) {
     return $class;
 }
 
+add_filter( 'nav_menu_link_attributes', 'alm_custom_nav_attributes' );
+
 function alm_custom_nav_attributes ( $atts ) {
     $atts['data-scroll'] = 'true';
     return $atts;
 }
-add_filter( 'nav_menu_link_attributes', 'alm_custom_nav_attributes' );
+
+add_filter( 'nav_menu_link_attributes', 'alm_custom_nav_class' );
+
+function alm_custom_nav_class ( $linkClass ) {
+    $linkClass['class'] = 'nav__list__item__link';
+    return $linkClass;
+}
