@@ -13,7 +13,8 @@ add_action(
 function alm_register_nav_menus() {
 	register_nav_menus(
     [
-        'menu-header' => 'Menu principal'
+        'menu-header'    => 'Menu principal',
+        'menu-portfolio' => 'Menu portfolio'
     ]);
 }
 

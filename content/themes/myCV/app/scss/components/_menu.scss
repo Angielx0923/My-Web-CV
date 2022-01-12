@@ -120,8 +120,8 @@
         }
     }
 
-@media (min-width: $breakpoint-sm) {
-    .active {
+.active {
+    @media (min-width: $breakpoint-sm) {
         color: $special-color;
         &::after {
             content: '';
@@ -137,6 +137,14 @@
             transform: translateX(-50%) scaleX(1);
         }
     }
+    // Resolve color issue on active menu links mobile version
+    & a {
+        color: $color-primary;
+    }
+}
+// Highlight the current article link in portfolio sub-menu
+.sub-menu .current-menu-item a {
+    color: $color-primary;
 }
 
   /*--------------- BURGER ---------------*/

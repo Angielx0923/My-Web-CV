@@ -125,15 +125,28 @@
         }
 
     &__info-link {
-        background-color: $color-primary;
         position: absolute;
-        width: 100%;
-        left: 0;
         bottom: 0;
-        height: 0;
         letter-spacing: normal;
-        transition: background-color $duration-fast ease;
-        transition: height 150ms ease;
+        background-color: $color-primary;
+
+        @media (max-width: $breakpoint-sm) {
+            width: 30%;
+            height: 2.5rem;
+            left: 50%;
+            border-top-right-radius: 30px;
+            border-top-left-radius: 30px;
+            transform: translateX(-50%);
+            font-size: 1.1rem;
+        }
+        
+        @media (min-width: $breakpoint-sm) {
+            height: 0;
+            width: 100%;
+            left: 0;
+            transition: background-color $duration-fast ease;
+            transition: height 150ms ease;
+        }
 
         &:hover {
             font-weight: bold;
@@ -145,6 +158,10 @@
             position: relative;
             height: 0;
             top: .9rem;
+
+            @media (max-width: $breakpoint-sm) {
+                top: .7rem;
+            }
         }
     }
 }

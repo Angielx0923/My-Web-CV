@@ -53,14 +53,25 @@
                     <div id="burger__content" class="burger__content">
                     <!-- Menu of the header -->
                     <?php
-                        wp_nav_menu(
-                            [
-                                'theme_location'  => 'menu-header',
-                                'container'       => 'nav',
-                                'container_class' => 'nav',
-                                'menu_class'      => 'nav__list',
-                            ]
-                        );
+                        if ( !is_front_page() ) {
+                            wp_nav_menu(
+                                [
+                                    'theme_location'  => 'menu-portfolio',
+                                    'container'       => 'nav',
+                                    'container_class' => 'nav',
+                                    'menu_class'      => 'nav__list',
+                                ]
+                            );
+                        } else {
+                            wp_nav_menu(
+                                [
+                                    'theme_location'  => 'menu-header',
+                                    'container'       => 'nav',
+                                    'container_class' => 'nav',
+                                    'menu_class'      => 'nav__list',
+                                ]
+                            );
+                        }
                     ?> <!-- End menu of the header -->
                             
                             <div id="socialMediaNav" class="nav__social-media">
