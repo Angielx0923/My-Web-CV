@@ -257,9 +257,11 @@
     text-align: center;
     padding-top: 1.5rem;
     opacity: 1;
-    width: 100px;
     margin: 0 auto;
-
+    
+    @media (max-width: $breakpoint-sm) {
+        width: 100px;
+    }
 
     &__link {
         font-size: 1.7rem;
