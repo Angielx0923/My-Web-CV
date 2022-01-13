@@ -180,6 +180,34 @@
     }
 }
 
+// Porfolio menu for desktop
+@media (min-width: $breakpoint-sm) {
+    #menu-menu-portfolio {
+        #menu-item-209 {
+            margin-top: 0;
+
+            & > a {
+                background-color: $special-color;
+                padding: 26px 1.5rem;
+                font-size: 1.1rem;
+                color: $font-color-secondary;
+            }
+        }
+
+        .sub-menu {
+            background-color: rgba(30, 30, 30, .9);
+            padding: 1.5rem 0 0.1rem;
+            text-align: center;
+            display: none;
+
+            & > li {
+                padding: 0 1rem;
+                margin: 1rem 0;
+            }
+        }
+    }
+}
+
 
 /*--------------- BURGER ---------------*/
 

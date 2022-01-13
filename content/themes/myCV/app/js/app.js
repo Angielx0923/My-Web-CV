@@ -55,7 +55,10 @@ $(window).scroll(function(){
   
 /*--------------- DESKTOP MENU LINKS ANIMATION WHEN ACTIVE ---------------*/
 
-$('.nav__list__item:first').addClass('active');
+// Highlight home btn only if it's front-page
+if($('.home').length) {
+    $('.nav__list__item:first').addClass('active');
+}
 
 $(window).scroll(function() {
     let scrollTop = $(this).scrollTop();
@@ -97,6 +100,23 @@ if (this.hash !== "") {
             
     } // End if
 });
+
+/*--------------- MENU DROPDOWN PORTFOLIO ---------------*/
+
+let portfolioDropdown = $('.menu-item-209');
+let submenu           = $('.sub-menu');
+
+if (windowSize >= 768) {
+    portfolioDropdown.mouseenter(function () {
+        submenu.slideToggle();
+    });
+    
+    portfolioDropdown.mouseleave(function () {
+        submenu.slideToggle();;
+    });
+}
+
+
 
 /*--------------- PROGRESS BAR ANIMATION ---------------*/
   
