@@ -147,7 +147,42 @@
     color: $color-primary;
 }
 
-  /*--------------- BURGER ---------------*/
+// Porfolio menu for mobile
+@media (max-width: $breakpoint-sm) {
+    #menu-menu-header {
+        padding: 0 2rem;
+    }
+        
+    #menu-item-209 > a {
+        background-color: #1E1E1E;
+        color: #FFF;
+        display: inline-block;
+        padding: 1.3rem 3rem;
+        font-size: 1.2rem;
+    }
+    
+    .sub-menu {
+        padding: 0 2rem;
+        text-align: center;
+        margin-top: 1rem;
+    
+        & a {
+            background-color: none;
+            color: unset;
+            display: unset;
+            padding: unset;
+        }
+    }
+
+    #menu-menu-portfolio img {
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
+/*--------------- BURGER ---------------*/
+
 
 .burger__content {
     display: inline-block;
@@ -155,7 +190,6 @@
     background-color: $special-color;
     height: 100vh;
     top: 0;
-    padding: 2rem;
     left: -60%;
     // width: 60%;
     
@@ -194,6 +228,10 @@
     border-top: 1px solid black;
     text-align: center;
     padding-top: 1.5rem;
+    opacity: 1;
+    width: 100px;
+    margin: 0 auto;
+
 
     &__link {
         font-size: 1.7rem;
@@ -204,10 +242,6 @@
             color: $color-primary;
         }
     }
-}
-
-.nav__social-media {
-    opacity: 1;
 }
 
 @media (min-width: $breakpoint-sm) {
