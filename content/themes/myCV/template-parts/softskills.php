@@ -13,6 +13,7 @@ if ( post_type_exists( 'softskills' ) ) :
         <div class="soft-skills__container">
 
             <?php
+            $nofilter = '';
             while ( $alm_softskills->have_posts() ) :
                 $alm_softskills->the_post();
 

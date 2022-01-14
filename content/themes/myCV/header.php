@@ -21,6 +21,8 @@
         <div class="error__container">
     <?php elseif ( is_single() ) : ?>
         <div class="project__container">
+    <?php elseif ( is_page( 'contact' ) ) : ?>
+        <div class="contact-page">
     <?php else : ?>
         <div class="onepage__container">
     <?php endif ?>
@@ -31,7 +33,7 @@
         $animation = 'header__scroll-animation--project';
     ?>
         <!-- HEADER -->
-        <header class="header <?php if ( is_single() ) : echo $headerclass; endif; ?>" id="header">
+        <header class="header <?php if ( is_single() || is_page( 'contact' ) ) : echo $headerclass; endif; ?>" id="header">
             <div class="logo__container <?php if ( is_single() ) : echo $logoclass; endif; ?>">
                 <!-- The link is disabled when it's the front-page -->
                 <?php if ( ! is_front_page() ) : ?>
@@ -53,25 +55,7 @@
                     <div id="burger__content" class="burger__content">
                     <!-- Menu of the header -->
                     <?php
-                        if ( !is_front_page() ) {
-                            wp_nav_menu(
-                                [
-                                    'theme_location'  => 'menu-portfolio',
-                                    'container'       => 'nav',
-                                    'container_class' => 'nav',
-                                    'menu_class'      => 'nav__list',
-                                ]
-                            );
-                        } else {
-                            wp_nav_menu(
-                                [
-                                    'theme_location'  => 'menu-header',
-                                    'container'       => 'nav',
-                                    'container_class' => 'nav',
-                                    'menu_class'      => 'nav__list',
-                                ]
-                            );
-                        }
+                        get_template_part( 'template-parts/components/menus' );
                     ?> <!-- End menu of the header -->
                             
                             <div id="socialMediaNav" class="nav__social-media">
@@ -95,5 +79,5 @@
                 </div>
             </div>
 
-            <div id="headerAnim" class="header__scroll-animation <?php if ( is_single() ) : echo $animation; endif; ?>"></div>
+            <div id="headerAnim" class="header__scroll-animation <?php if ( is_single() || is_page( 'contact' ) ) : echo $animation; endif; ?>"></div>
         </header>

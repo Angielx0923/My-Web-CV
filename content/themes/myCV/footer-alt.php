@@ -8,13 +8,14 @@
 ?>
        
        <!-- PROJECT / FOOTER -->
-       <?php $errorclass = '--error';
-             $style   = 'style="position: relative"';
+       <?php $errorclass  = '--error';
+             $style       = 'style="position: relative"';
+             $socialmedia = 'style="display: none"';
        ?>
 
-            <footer class="footer-error" <?php if ( is_single() ) : echo $style; endif; ?>>
+            <footer class="footer-error" <?php if ( !is_404() ) : echo $style; endif; ?>>
                 <div class="profile-footer">
-                    <div class="social-media-container">
+                    <div class="social-media-container" <?php if ( is_page( 'contact' ) ) : echo $socialmedia; endif; ?>>
                         <div class="social-media-container__link social-media-container__link--linkedin">
                             <a href="http://www.linkedin.com/in/a-lx/" class="fa fa-linkedin-square icon social-media-container__logo<?php if ( is_404() ) : echo $errorclass; endif; ?> social-media-container__logo--linkedin"></a>
                         </div>

@@ -8,12 +8,21 @@
  */
 ?>
 
-<div id="contact-container" class="main-index">
-
 <?php get_header(); ?>
 
-<div class="form-container">
+
+<main id="contactPage">
+    <div class="contact-page-container">
+        <a href="">
+            <div class="contact-page-container__item fa fa-linkedin"></div>
+        </a>
+        <a href="">
+            <div class="contact-page-container__item fa fa-paper-plane"></div>
+        </a>
+    </div>
+
+<div class="form-container form-container--contact-page">
 <?php get_template_part( 'template-parts/form' ); ?>
 
 <?php
-//  get_footer( 'alt' );
+ get_footer( 'alt' );

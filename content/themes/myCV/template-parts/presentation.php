@@ -12,6 +12,7 @@ if ( post_type_exists( 'presentation' ) ) :
         <section data-anchor="section-part-profile" class="profile-main">
 
             <?php
+            $style = '';
             while ( $alm_presentation->have_posts() ) :
                 $alm_presentation->the_post();
                     $class = 'article';

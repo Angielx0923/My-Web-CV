@@ -182,8 +182,8 @@
 
 // Porfolio menu for desktop
 @media (min-width: $breakpoint-sm) {
-    #menu-menu-portfolio {
-        #menu-item-209 {
+    #menu-menu-portfolio, #menu-menu-hire-me {
+        #menu-item-209, #menu-item-222 {
             margin-top: 0;
 
             & > a {

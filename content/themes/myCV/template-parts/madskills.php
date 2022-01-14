@@ -13,6 +13,7 @@ if ( post_type_exists( 'madskills' ) ) :
         <div class="mad-skills__container">
 
             <?php
+            $nofilter = '';
             while ( $alm_madskills->have_posts() ) :
                 $alm_madskills->the_post();
 
