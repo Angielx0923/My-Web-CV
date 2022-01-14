@@ -1,8 +1,13 @@
 <?php 
+    $posts_number =  get_theme_mod(
+        'alm_portfolio_number',
+        3
+    );
 
     $alm_portfolio = new WP_Query([
         'post_type' => 'post',
-        'order'     => 'ASC'
+        'order'     => 'ASC',
+        'posts_per_page' => $posts_number
     ]);
 
     if ( $alm_portfolio->have_posts() ) :

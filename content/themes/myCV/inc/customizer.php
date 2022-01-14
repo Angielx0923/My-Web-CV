@@ -688,6 +688,38 @@ function alm_customize_register( $wp_customize ) {
         ]
     );
 
+/*---------------------------------------------
+                    PORTFOLIO
+---------------------------------------------*/
+
+// Set the number of projects we want to display on the portfolio in front-page
+    $wp_customize->add_section(
+        'alm_section_portfolio',
+        [
+            'panel' => 'alm_theme_configuration',
+            'title' => 'Portfolio front-page'
+        ]
+    );
+
+    $wp_customize->add_setting(
+        'alm_portfolio_number',
+        [
+            'default' => 3
+        ]
+    );
+    
+    $wp_customize->add_control(
+        'alm_portfolio_number',
+        [
+            'section' => 'alm_section_portfolio',
+            'label'   => 'Nombre de projets à afficher',
+            'type'    => 'number',
+            'input_attrs' => [
+                'min'  => 2,
+                'max'  => 10
+            ]
+        ]
+    );
 }
 
 add_action( 'customize_register', 'alm_customize_register' );
