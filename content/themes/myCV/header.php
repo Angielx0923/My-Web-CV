@@ -28,9 +28,10 @@
     <?php endif ?>
 
     <?php
-        $headerclass = 'header-project-page';
-        $logoclass = 'logo__container--project';
-        $animation = 'header__scroll-animation--project';
+        $headerclass     = 'header-project-page';
+        $logoclass       = 'logo__container--project';
+        $animation       = 'header__scroll-animation--project';
+        $showsocialmedia = 'nav__social-media--visible';
     ?>
         <!-- HEADER -->
         <header class="header <?php if ( is_single() || is_page( 'contact' ) ) : echo $headerclass; endif; ?>" id="header">
@@ -58,9 +59,9 @@
                         get_template_part( 'template-parts/components/menus' );
                     ?> <!-- End menu of the header -->
                             
-                            <div id="socialMediaNav" class="nav__social-media">
-                                <a href="https://www.linkedin.com/in/a-lx/" class="fa fa-linkedin-square nav__social-media__link nav__social-media__link--linkedin"></a>
-                                <a href="https://github.com/Angielx0923" class="fa fa-github nav__social-media__link nav__social-media__link--github"></a>
+                            <div id="socialMediaNav" class="nav__social-media <?php if ( ! is_front_page() ) : echo $showsocialmedia; endif; ?>">
+                                <a href="<?php echo get_theme_mod( 'alm_section_linkedin' ); ?>" class="fa fa-linkedin-square nav__social-media__link nav__social-media__link--linkedin"></a>
+                                <a href="<?php echo get_theme_mod( 'alm_section_github' ); ?>" class="fa fa-github nav__social-media__link nav__social-media__link--github"></a>
                             </div>
                         </nav>
                     </div>
@@ -79,5 +80,5 @@
                 </div>
             </div>
 
-            <div id="headerAnim" class="header__scroll-animation <?php if ( is_single() || is_page( 'contact' ) ) : echo $animation; endif; ?>"></div>
+            <div id="headerAnim" class="header__scroll-animation <?php if ( ! is_front_page() ) : echo $animation; endif; ?>"></div>
         </header>

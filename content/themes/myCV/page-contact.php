@@ -13,10 +13,10 @@
 
 <main id="contactPage">
     <div class="contact-page-container">
-        <a href="">
+        <a href="<?php echo get_theme_mod( 'alm_section_linkedin' ); ?>">
             <div class="contact-page-container__item fa fa-linkedin"></div>
         </a>
-        <a href="">
+        <a href="mailto:<?php echo get_theme_mod( 'alm_section_email' ); ?>">
             <div class="contact-page-container__item fa fa-paper-plane"></div>
         </a>
     </div>

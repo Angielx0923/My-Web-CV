@@ -55,7 +55,7 @@
                     <!-- PROFILE / FOOTER -->
                     <div class="profile-footer">
                         <div class="social-media-container">
-                            <a href="http://www.linkedin.com/in/a-lx/" class="fa fa-linkedin-square icon social-media-container__logo social-media-container__logo--linkedin"></a>
+                            <a href="<?php echo get_theme_mod( 'alm_section_linkedin' ); ?>" class="fa fa-linkedin-square icon social-media-container__logo social-media-container__logo--linkedin"></a>
 
                             <?php $alm_download_active = get_theme_mod( 'alm_download_active', false ); 
 			
@@ -66,7 +66,7 @@
                                         <p class="social-media-container__link--text"><?php echo get_theme_mod( 'alm_download_text' ); ?></p>
                                     </a>
                                 <?php endif; ?>
-                                <a href="https://github.com/" class="fa fa-github icon social-media-container__logo social-media-container__logo--github"></a>
+                                <a href="<?php echo get_theme_mod( 'alm_section_linkedin' ); ?>" class="fa fa-github icon social-media-container__logo social-media-container__logo--github"></a>
                                     
                         </div>
                     </div>
@@ -299,6 +299,7 @@
                     </div>
                 </aside>
 
+                <!-- CONTACT FORM -->
                 <div class="form-container">
                     <?php get_template_part( 'template-parts/form' ); ?>
                 </div>

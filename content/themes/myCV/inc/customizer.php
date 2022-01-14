@@ -608,6 +608,86 @@ function alm_customize_register( $wp_customize ) {
         ]
     );
 
+/*---------------------------------------------
+                SOCIAL MEDIA LINKS
+---------------------------------------------*/
+
+    $wp_customize->add_section(
+        'alm_sections_socialmedia',
+        [
+            'panel' => 'alm_theme_configuration',
+            'title' => 'Social media'
+        ]
+    );
+
+    // LINKEDIN
+    $wp_customize->add_setting(
+        'alm_section_linkedin', // ID
+        [
+            'default' => 'https://www.linkedin.com/in/a-lm/'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_section_linkedin', //ID
+        [
+            'section' => 'alm_sections_socialmedia',
+            'label'   => 'Lien linkedIn',
+            'type'    => 'url'
+        ]
+    );
+
+    // GITHUB
+    $wp_customize->add_setting(
+        'alm_section_github', // ID
+        [
+            'default' => 'https://github.com/Angielx0923'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_section_github', //ID
+        [
+            'section' => 'alm_sections_socialmedia',
+            'label'   => 'Lien Github',
+            'type'    => 'url'
+        ]
+    );
+
+    // EMAIL
+    $wp_customize->add_setting(
+        'alm_section_email', // ID
+        [
+            'default' => 'machova.angelina@gmail.com'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_section_email', //ID
+        [
+            'section' => 'alm_sections_socialmedia',
+            'label'   => 'Email',
+            'type'    => 'email'
+        ]
+    );
+
+    // LOCALISATION
+    $wp_customize->add_setting(
+        'alm_section_location', // ID
+        [
+            'default' => 'Austin, TX / Paris, FR'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_section_location', //ID
+        [
+            'section' => 'alm_sections_socialmedia',
+            'label'   => 'Localisation',
+            'type'    => 'textarea'
+        ]
+    );
+
 }
 
 add_action( 'customize_register', 'alm_customize_register' );
