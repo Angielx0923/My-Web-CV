@@ -29,7 +29,6 @@
         'layout/experience',
         'layout/portfolio',
         'layout/contact',
-        'pages/hireme',
         'layout/info',
         'layout/copyright',
         'layout/footer';
@@ -44,12 +43,14 @@
         'components/burger',
         'components/dark-overlay',
         'components/menu',
+        'components/hireme-btn',
         'components/scrollbar';
 
 
 // 6- PAGES 
 
 @import 'pages/onepage',
+        'pages/hireme',
         'pages/404';
 
 // 7- SHAME

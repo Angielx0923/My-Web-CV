@@ -6,6 +6,9 @@ define( 'ALM_THEME_HOME_ICON', 36 );
 // Arrow head icon
 define( 'ALM_THEME_ARROW_HEAD', 12 );
 
+// Download icon
+define( 'ALM_THEME_HIRE_ME', 232 );
+
 /*---------------------------------------------
                SOCIAL MEDIA ICONS
 ---------------------------------------------*/

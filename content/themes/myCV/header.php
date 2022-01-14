@@ -31,13 +31,13 @@
 
     <?php
         $headerclass     = 'header-project-page';
-        $logoclass       = 'logo__container--project';
+        $logoclass       = 'logo__container--hidden';
         $animation       = 'header__scroll-animation--project';
         $showsocialmedia = 'nav__social-media--visible';
     ?>
         <!-- HEADER -->
         <header class="header <?php if ( ! is_front_page() ) : echo $headerclass; endif; ?>" id="header">
-            <div class="logo__container <?php if ( is_single() ) : echo $logoclass; endif; ?>">
+            <div class="logo__container <?php if ( is_single() || is_404() ) : echo $logoclass; endif; ?>">
                 <!-- The link is disabled when it's the front-page -->
                 <?php if ( ! is_front_page() ) : ?>
                     <a class="logo" href="<?= home_url(); ?>">

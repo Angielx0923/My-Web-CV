@@ -12,6 +12,7 @@
         <!-- MAIN -->
         <!-- PART 1 - PROFILE -->
         <main id="home" class="main-index">
+            <?php get_template_part( 'template-parts/components/hireme' ); ?>
             
             <section class="profile">
 

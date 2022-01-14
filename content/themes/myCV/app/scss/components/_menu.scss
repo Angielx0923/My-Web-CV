@@ -152,8 +152,9 @@
     #menu-menu-header {
         padding: 0 2rem;
     }
-        
-    #menu-item-209 > a {
+    
+    // CSS for the title of the dynamic menus (mobile)
+    #menu-item-209 > a, #menu-item-222 > a, #menu-item-226 > a {
         background-color: #1E1E1E;
         color: #FFF;
         display: inline-block;
@@ -174,7 +175,8 @@
         }
     }
 
-    #menu-menu-portfolio img {
+    // CSS to center the home menu icon in the dynamic menus (mobile)
+    #menu-menu-portfolio img, #menu-menu-hire-me img, #menu-404 img {
         margin-left: 50%;
         transform: translateX(-50%);
     }
