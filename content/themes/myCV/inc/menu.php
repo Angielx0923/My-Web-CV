@@ -15,7 +15,8 @@ function alm_register_nav_menus() {
     [
         'menu-header'    => 'Menu principal',
         'menu-portfolio' => 'Menu portfolio',
-        'menu-contact' => 'Menu Hire Me'
+        'menu-error'     => 'Menu 404',
+        'menu-contact'   => 'Menu Hire Me'
     ]);
 }
 

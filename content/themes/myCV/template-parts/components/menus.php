@@ -25,6 +25,16 @@ elseif ( is_page( 'contact' ) ) {
             'menu_class'      => 'nav__list',
         ]
     );
+}
+elseif ( is_404() ) {
+    wp_nav_menu(
+        [
+            'theme_location'  => 'menu-error',
+            'container'       => 'nav',
+            'container_class' => 'nav',
+            'menu_class'      => 'nav__list',
+        ]
+    );
 } else {
     wp_nav_menu(
         [

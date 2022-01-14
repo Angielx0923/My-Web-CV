@@ -104,14 +104,27 @@ if (this.hash !== "") {
 /*--------------- MENU DROPDOWN PORTFOLIO ---------------*/
 
 let portfolioDropdown = $('.menu-item-209');
+let errorPageDropdown = $('.menu-item-226');
 let submenu           = $('.sub-menu');
 
+// PORTOLIO DROPDOWN (ARTICLE PAGE)
 if (windowSize >= 768) {
     portfolioDropdown.mouseenter(function () {
         submenu.slideToggle();
     });
     
     portfolioDropdown.mouseleave(function () {
+        submenu.slideToggle();;
+    });
+}
+
+// ERROR 404 PAGE DROPDOWN
+if (windowSize >= 768) {
+    errorPageDropdown.mouseenter(function () {
+        submenu.slideToggle();
+    });
+    
+    errorPageDropdown.mouseleave(function () {
         submenu.slideToggle();;
     });
 }

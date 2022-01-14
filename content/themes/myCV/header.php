@@ -23,6 +23,8 @@
         <div class="project__container">
     <?php elseif ( is_page( 'contact' ) ) : ?>
         <div class="contact-page">
+    <?php elseif ( is_404() ) : ?>
+        <div class="main-error">
     <?php else : ?>
         <div class="onepage__container">
     <?php endif ?>
@@ -34,7 +36,7 @@
         $showsocialmedia = 'nav__social-media--visible';
     ?>
         <!-- HEADER -->
-        <header class="header <?php if ( is_single() || is_page( 'contact' ) ) : echo $headerclass; endif; ?>" id="header">
+        <header class="header <?php if ( ! is_front_page() ) : echo $headerclass; endif; ?>" id="header">
             <div class="logo__container <?php if ( is_single() ) : echo $logoclass; endif; ?>">
                 <!-- The link is disabled when it's the front-page -->
                 <?php if ( ! is_front_page() ) : ?>
