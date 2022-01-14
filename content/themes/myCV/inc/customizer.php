@@ -603,7 +603,24 @@ function alm_customize_register( $wp_customize ) {
         'alm_project_title', //ID
         [
             'section' => 'alm_project',
-            'label'   => 'Titre',
+            'label'   => 'Titre du projet',
+            'type'    => 'textarea'
+        ]
+    );
+
+    // PROJECTS TITLE
+    $wp_customize->add_setting(
+        'alm_archive_title', // ID
+        [
+            'default' => 'Projets'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_archive_title', //ID
+        [
+            'section' => 'alm_project',
+            'label'   => 'Titre de la page archive',
             'type'    => 'textarea'
         ]
     );
