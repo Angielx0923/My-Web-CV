@@ -281,9 +281,21 @@
                 <!-- PORTFOLIO ITEMS -->
                 <?php get_template_part( 'template-parts/portfolio' ); ?>
 
-                <div class="portfolio__more-projects-container">
-                    <a href="archive.php" class="portfolio__more-projects-container__link">+</a>
-                </div>
+                <?php
+                
+                // Récupération du contenu de la page archive via son id au cas ou le slug change à cause de la version anglaise
+                $alm_archive = new WP_Query([
+                    'page_id' => 239
+                ]); 
+
+                if ( $alm_archive->have_posts() ) :
+                    $alm_archive->the_post();
+                ?>
+                    <div class="portfolio__more-projects-container">
+                        <a href="<?php the_permalink(); ?>" class="portfolio__more-projects-container__link">+</a>
+                    </div>
+                <?php wp_reset_postdata(); ?>
+                <?php endif ?>
 
             </section>
 

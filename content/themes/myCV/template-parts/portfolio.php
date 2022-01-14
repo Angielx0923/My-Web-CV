@@ -1,7 +1,5 @@
 <?php 
 
-
-
     $alm_portfolio = new WP_Query([
         'post_type' => 'post',
         'order'     => 'ASC'

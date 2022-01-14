@@ -12,14 +12,10 @@
  <!-- MAIN -->
     <?php if ( have_posts() ) : ?>
         <main id="project" class="main-project">
+        <?php get_template_part( 'template-parts/components/hireme' ); ?>
 
         <?php while ( have_posts() ) : 
             the_post();
-
-            // if ( ( $current_post + 1 ) == $post_count ) {
-            //     $style = 'style="display: none"';
-            // }
-                    
             ?>
             <header class="project-header">
                 <!-- PROJECT HEADER -->
