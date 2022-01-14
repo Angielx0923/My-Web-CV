@@ -16,6 +16,7 @@ function alm_register_nav_menus() {
         'menu-header'    => 'Menu principal',
         'menu-portfolio' => 'Menu portfolio',
         'menu-error'     => 'Menu 404',
+        'menu-archive'   => 'Menu projets',
         'menu-contact'   => 'Menu Hire Me'
     ]);
 }

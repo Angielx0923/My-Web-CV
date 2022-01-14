@@ -35,6 +35,16 @@ elseif ( is_404() ) {
             'menu_class'      => 'nav__list',
         ]
     );
+}
+elseif ( is_page_template( 'archive.php' ) ) {
+    wp_nav_menu(
+        [
+            'theme_location'  => 'menu-archive',
+            'container'       => 'nav',
+            'container_class' => 'nav',
+            'menu_class'      => 'nav__list',
+        ]
+    );
 } else {
     wp_nav_menu(
         [

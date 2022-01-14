@@ -154,7 +154,7 @@
     }
     
     // CSS for the title of the dynamic menus (mobile)
-    #menu-item-209 > a, #menu-item-222 > a, #menu-item-226 > a {
+    #menu-item-209 > a, #menu-item-222 > a, #menu-item-226 > a, #menu-item-240 > a {
         background-color: #1E1E1E;
         color: #FFF;
         display: inline-block;
@@ -176,7 +176,7 @@
     }
 
     // CSS to center the home menu icon in the dynamic menus (mobile)
-    #menu-menu-portfolio img, #menu-menu-hire-me img, #menu-404 img {
+    #menu-menu-portfolio img, #menu-menu-hire-me img, #menu-404 img, #menu-techno img {
         margin-left: 50%;
         transform: translateX(-50%);
     }
@@ -184,8 +184,8 @@
 
 // Porfolio menu for desktop
 @media (min-width: $breakpoint-sm) {
-    #menu-menu-portfolio, #menu-menu-hire-me, #menu-404 {
-        #menu-item-209, #menu-item-222, #menu-item-226 {
+    #menu-menu-portfolio, #menu-menu-hire-me, #menu-404, #menu-techno {
+        #menu-item-209, #menu-item-222, #menu-item-226, #menu-item-240 {
             margin-top: 0;
 
             & > a {

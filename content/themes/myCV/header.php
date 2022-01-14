@@ -17,14 +17,15 @@
 </head>
 <body <?php body_class(); ?> class="body">
 
+<!-- Classes of the div containing the content of the entire page (GRID layouts) -->
     <?php if ( is_404() ) : ?>
         <div class="error__container">
     <?php elseif ( is_single() ) : ?>
         <div class="project__container">
     <?php elseif ( is_page( 'contact' ) ) : ?>
         <div class="contact-page">
-    <?php elseif ( is_404() ) : ?>
-        <div class="main-error">
+    <?php elseif ( is_page_template( 'archive.php' ) ) : ?>
+        <div class="archive-projects__container">
     <?php else : ?>
         <div class="onepage__container">
     <?php endif ?>
