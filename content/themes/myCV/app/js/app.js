@@ -50,7 +50,7 @@ $(window).scroll(function(){
     if (windowSize >= 767) {
         socialMedia.css({'opacity' : (0 + scrollTop / 250)})
     }
-    headerAnim.css({'opacity' : (0 + scrollTop / 250)})
+    headerAnim.css({'opacity' : (0 + scrollTop / 200)})
 });
   
 /*--------------- DESKTOP MENU LINKS ANIMATION WHEN ACTIVE ---------------*/
