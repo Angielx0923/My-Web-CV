@@ -103,9 +103,11 @@ if (this.hash !== "") {
 
 /*--------------- MENU DROPDOWN PORTFOLIO ---------------*/
 
-let portfolioDropdown = $('.menu-item-209');
-let errorPageDropdown = $('.menu-item-226');
-let submenu           = $('.sub-menu');
+let portfolioDropdown = $('#menu-item-209');
+let errorPageDropdown = $('#menu-item-226');
+let languageDropdown  = $('#menu-item-258');
+let submenu           = $('.custom-sub-menu');
+let languageSubMenu   = $('.language-sub-menu');
 
 // PORTOLIO DROPDOWN (ARTICLE PAGE)
 if (windowSize >= 768) {
@@ -114,7 +116,7 @@ if (windowSize >= 768) {
     });
     
     portfolioDropdown.mouseleave(function () {
-        submenu.slideToggle();;
+        submenu.slideToggle();
     });
 }
 
@@ -125,11 +127,27 @@ if (windowSize >= 768) {
     });
     
     errorPageDropdown.mouseleave(function () {
-        submenu.slideToggle();;
+        submenu.slideToggle();
     });
 }
 
+// LANGUAGE DROPDOWN DESKTOP
+if (windowSize >= 768) {
+    languageDropdown.mouseenter(function () {
+        languageSubMenu.slideToggle();
+    });
 
+    languageDropdown.mouseleave(function () {
+        languageSubMenu.slideToggle();
+    });
+}
+
+// LANGUAGE DROPDOWN MOBILE
+if (windowSize < 768) {
+    languageDropdown.click(function () {
+        languageSubMenu.slideToggle('fast');
+    });
+}
 
 /*--------------- PROGRESS BAR ANIMATION ---------------*/
   

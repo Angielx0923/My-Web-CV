@@ -290,11 +290,15 @@
 
                 if ( $alm_archive->have_posts() ) :
                     $alm_archive->the_post();
+
+                    $alm_more_btn_active = get_theme_mod( 'alm_portfolio_btn_active', true );
+                    if ( $alm_more_btn_active ) :
                 ?>
                     <div class="portfolio__more-projects-container">
                         <a href="<?php the_permalink(); ?>" class="portfolio__more-projects-container__link">+</a>
                     </div>
                 <?php wp_reset_postdata(); ?>
+                    <?php endif ?>
                 <?php endif ?>
 
             </section>

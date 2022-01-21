@@ -1,10 +1,11 @@
 <?php
 
 /**
- * Template for all the menus
+ * Template for the nav menus
  * 
  * @package ALM
  */
+
 
 if ( is_single() ) {
     wp_nav_menu(
@@ -13,6 +14,7 @@ if ( is_single() ) {
             'container'       => 'nav',
             'container_class' => 'nav',
             'menu_class'      => 'nav__list',
+            'walker'          => new Menus_Walker()
         ]
     );
 }
@@ -23,6 +25,7 @@ elseif ( is_page( 'contact' ) ) {
             'container'       => 'nav',
             'container_class' => 'nav',
             'menu_class'      => 'nav__list',
+            'walker'          => new Menus_Walker()
         ]
     );
 }
@@ -33,6 +36,7 @@ elseif ( is_404() ) {
             'container'       => 'nav',
             'container_class' => 'nav',
             'menu_class'      => 'nav__list',
+            'walker'          => new Menus_Walker()
         ]
     );
 }
@@ -43,6 +47,7 @@ elseif ( is_page_template( 'archive.php' ) ) {
             'container'       => 'nav',
             'container_class' => 'nav',
             'menu_class'      => 'nav__list',
+            'walker'          => new Menus_Walker()
         ]
     );
 } else {
@@ -52,6 +57,14 @@ elseif ( is_page_template( 'archive.php' ) ) {
             'container'       => 'nav',
             'container_class' => 'nav',
             'menu_class'      => 'nav__list',
+            'walker'          => new Menus_Walker()
         ]
     );
+}
+
+class Menus_Walker extends Walker_Nav_Menu {
+    function start_lvl( &$output, $depth = 0, $args = array() ) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "\n$indent<ul class=\"custom-sub-menu\">\n";
+    }
 }

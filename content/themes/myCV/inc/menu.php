@@ -14,8 +14,9 @@ function alm_register_nav_menus() {
 	register_nav_menus(
     [
         'menu-header'    => 'Menu principal',
+        'menu-language'  => 'Menu langues',
         'menu-portfolio' => 'Menu portfolio',
-        'menu-error'     => 'Menu 404',
+        'menu-error'     => 'Menu 404', 
         'menu-archive'   => 'Menu projets',
         'menu-contact'   => 'Menu Hire Me'
     ]);

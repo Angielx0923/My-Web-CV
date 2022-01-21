@@ -16,17 +16,14 @@
   
   .languages-nav {
       position: relative;
-      top: -2px;
-      width: 25px;
+      width: 1.9rem;
   
       &__link {
         width: 100%;
       }
   
       @media (min-width: $breakpoint-sm) {
-          position: static;
           margin: -1px 0 0 1.5rem;
-          width: 1.5rem;
       }
   }
   
@@ -143,8 +140,36 @@
     }
 }
 // Highlight the current article link in portfolio sub-menu
-.sub-menu .current-menu-item a {
+.custom-sub-menu .current-menu-item a {
     color: $color-primary;
+}
+
+.languages-nav {
+    margin-right: -1rem;
+    padding: 0.1rem;
+    border-radius: 20px;
+    border: 2px solid $color-primary;
+    transition: all $duration-fast ease;
+    height: fit-content;
+
+    &:hover {
+        background-color: $special-color;
+        border-color: $special-color;
+    }
+}
+
+.language-sub-menu {
+    padding-top: 1.3rem;
+}
+
+// Language menu
+#menu-langues .language-sub-menu {
+    margin-top: .5rem;
+    display: none;
+}
+
+#menu-item-258, .menu-item-weglot-258-fr, .menu-item-weglot-258-en {
+    margin: 0 !important;
 }
 
 // Porfolio menu for mobile
@@ -162,7 +187,7 @@
         font-size: 1.2rem;
     }
     
-    .sub-menu {
+    .custom-sub-menu {
         padding: 0 2rem;
         text-align: center;
         margin-top: 1rem;
@@ -196,7 +221,7 @@
             }
         }
 
-        .sub-menu {
+        .custom-sub-menu {
             background-color: rgba(30, 30, 30, .9);
             padding: 1.5rem 0 0.1rem;
             text-align: center;

@@ -12,6 +12,32 @@ function alm_customize_register( $wp_customize ) {
     );
 
 /*---------------------------------------------
+              LANGUAGE SWITCH BUTTON
+---------------------------------------------*/
+
+    $wp_customize->add_section(
+        'alm_language_btn',
+        [
+            'panel' => 'alm_theme_configuration',
+            'title' => 'Bouton langues'
+        ]
+    );
+
+    // Show / hide btn
+    $wp_customize->add_setting(
+        'alm_language_btn_active' // ID
+    );
+
+    $wp_customize->add_control(
+        'alm_language_btn_active', //ID
+        [
+            'section' => 'alm_language_btn',
+            'label'   => 'Afficher le bouton langue',
+            'type'    => 'checkbox'
+        ]
+    );
+
+/*---------------------------------------------
                PROFILE SECTION
 ---------------------------------------------*/
 
@@ -735,6 +761,20 @@ function alm_customize_register( $wp_customize ) {
                 'min'  => 2,
                 'max'  => 10
             ]
+        ]
+    );
+
+    // Show / hide +
+    $wp_customize->add_setting(
+        'alm_portfolio_btn_active' // ID
+    );
+
+    $wp_customize->add_control(
+        'alm_portfolio_btn_active', //ID
+        [
+            'section' => 'alm_section_portfolio',
+            'label'   => 'Afficher le bouton +',
+            'type'    => 'checkbox'
         ]
     );
 }

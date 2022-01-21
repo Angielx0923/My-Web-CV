@@ -14,7 +14,8 @@
         "wpackagist-plugin/advanced-custom-fields": "5.11.1",
         "wpackagist-plugin/wp-mail-bank":"4.0.14",
         "wpackagist-plugin/wp-stats-manager":"4.5",
-        "wpackagist-plugin/wp-maintenance-mode":"2.4.1"
+        "wpackagist-plugin/wp-maintenance-mode":"2.4.1",
+        "wpackagist-plugin/weglot":"3.5"
     },
     
     "require-dev": {

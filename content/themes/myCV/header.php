@@ -70,17 +70,9 @@
                     </div>
                 </div>
 
-                <div class="languages-nav" id="dropdown">
-                    <button class="languages-nav__button" id="languageBtn">
-                        <img class="languages-nav__img icon" src="img/Icons/flag-EN.png" alt="switch language icon">
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="" class="dropdown-content__link">
-                            <p class="dropdown-content__language">FR</p>
-                            <img src="img/Icons/flag-FR.png" alt="flag" class="dropdown-content__icon">
-                        </a>
-                    </div>
-                </div>
+                <?php $alm_language_btn_active = get_theme_mod( 'alm_language_btn_active', false );
+                    if ( $alm_language_btn_active ) : get_template_part( 'template-parts/components/menu-language' ); endif;
+                ?>
             </div>
 
             <div id="headerAnim" class="header__scroll-animation <?php if ( ! is_front_page() ) : echo $animation; endif; ?>"></div>
