@@ -3,7 +3,7 @@
 
 /*--------------- BACKGROUND ---------------*/
     .bg-container {
-        height: 83vh;
+        height: 78vh;
         background: {
             size: cover;
             position: center center;
@@ -32,11 +32,15 @@
             margin: 0 20px;
             position: relative;
             text-align: center;
-            top: 45%;
+            top: 30%;
             transform: translateY(-50%);
             color: $color-primary;
             text-shadow: .2rem .2rem 3px rgba($font-color-secondary, $alpha: .6);
             letter-spacing: .2rem;
+
+            @media (min-width: $breakpoint-sm) {
+                top: 40%;
+            }
 
             &__my-name {
                 font-size: 2.8rem;
