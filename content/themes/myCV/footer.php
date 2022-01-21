@@ -34,7 +34,7 @@
                         <div class="info-contact-block">
                             <i class="info-contact__icon fa fa-paper-plane" aria-hidden="true"></i>
                             <p class="info-contact__title info-contact__email">Email <span class="double-dot">:</span></p>
-                            <a href="mailto:<?php echo get_theme_mod( 'alm_section_email' ); ?>" class="info-contact__content info-contact__email-adress">machova.angelina@gmail.com</a>
+                            <a href="mailto:<?php echo get_theme_mod( 'alm_section_email' ); ?>" class="info-contact__content info-contact__email-adress"><?php echo get_theme_mod( 'alm_section_email' ); ?></a>
                         </div>
                     </address>
 
