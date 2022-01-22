@@ -129,7 +129,8 @@
         position: relative;
         text-align: center;
         top: 50%;
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
         font: {
             weight: bold;
             size: 1.7rem;
@@ -254,6 +255,8 @@
 @media (min-width: $breakpoint-sm) {
 
     .education-timeline {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         max-width: 100%;
         margin: 0 auto;
@@ -284,10 +287,12 @@
 
             &--oclock {
                 left: 100%;
-                transform: translateX(-100%);
+                -webkit-transform: translateX(-100%);
+                        transform: translateX(-100%);
 
                 &--top {
-                    transform: translate(-100%, -100%);
+                    -webkit-transform: translate(-100%, -100%);
+                            transform: translate(-100%, -100%);
                 }
             }
 
@@ -326,18 +331,21 @@
                 height: 45px;
             
                 &--top {
-                    transform: translateY(-50%);
+                    -webkit-transform: translateY(-50%);
+                            transform: translateY(-50%);
                 }
 
                 &--2015 {
                     right: 50%;
-                    transform: translateX(50%);
+                    -webkit-transform: translateX(50%);
+                            transform: translateX(50%);
                     top: -22.5px;
                 }
 
                 &--bottom {
                     right: 50%;
-                    transform: translateX(50%);
+                    -webkit-transform: translateX(50%);
+                            transform: translateX(50%);
                 }
 
                 &--2010-ef, &--2018 {
@@ -347,7 +355,8 @@
 
                 &--2019, &--2011 {
                     left: 100%;
-                    transform: translate(-100%);
+                    -webkit-transform: translate(-100%);
+                            transform: translate(-100%);
                     top: -22.5px;
                 }
             }

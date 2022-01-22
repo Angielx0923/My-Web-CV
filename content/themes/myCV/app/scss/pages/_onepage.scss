@@ -1,4 +1,5 @@
 .onepage__container {
+    display: -ms-grid;
     display: grid;
     grid-template-areas:
         "header"

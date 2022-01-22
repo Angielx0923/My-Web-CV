@@ -1,10 +1,19 @@
 .header__container {
     position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   
      @media (min-width: $breakpoint-sm) {
-         justify-content: flex-end;
+         -webkit-box-pack: end;
+         -webkit-justify-content: flex-end;
+             -ms-flex-pack: end;
+                 justify-content: flex-end;
      }
   }
 
@@ -55,9 +64,16 @@
 
         & img {
             margin-top: 5rem;
-            filter: invert(1);
+            -webkit-filter: invert(1);
+                    filter: invert(1);
+        
+            -webkit-transition: -webkit-filter $duration-fast ease-in-out;
+        
+            transition: -webkit-filter $duration-fast ease-in-out;
         
             transition: filter $duration-fast ease-in-out;
+        
+            transition: filter $duration-fast ease-in-out, -webkit-filter $duration-fast ease-in-out;
             
             @media (min-width: $breakpoint-sm) {
                 position: relative;
@@ -80,18 +96,27 @@
                 position: absolute;
                 left: 50%;
                 bottom: -.5rem;
-                transform: translateX(-50%) scaleX(0);
-                transform-origin: 50% 50%;
+                -webkit-transform: translateX(-50%) scaleX(0);
+                    -ms-transform: translateX(-50%) scaleX(0);
+                        transform: translateX(-50%) scaleX(0);
+                -webkit-transform-origin: 50% 50%;
+                    -ms-transform-origin: 50% 50%;
+                        transform-origin: 50% 50%;
                 width: 100%;
                 height: 1px;
                 background-color: $special-color;
+                -webkit-transition: -webkit-transform 250ms;
+                transition: -webkit-transform 250ms;
                 transition: transform 250ms;
+                transition: transform 250ms, -webkit-transform 250ms;
             }
             
             &:hover {
                 
                 &::after {
-                    transform: translateX(-50%) scaleX(1);
+                    -webkit-transform: translateX(-50%) scaleX(1);
+                        -ms-transform: translateX(-50%) scaleX(1);
+                            transform: translateX(-50%) scaleX(1);
                 }
                 
             }
@@ -100,6 +125,8 @@
         @media (min-width: $breakpoint-md) {
             font-size: 1rem;
         }
+    
+        -webkit-transition: all $duration-fast ease-in-out;
     
         transition: all $duration-fast ease-in-out;
     
@@ -125,13 +152,22 @@
             position: absolute;
             left: 50%;
             bottom: -.5rem;
-            transform: translateX(-50%) scaleX(0);
-            transform-origin: 50% 50%;
+            -webkit-transform: translateX(-50%) scaleX(0);
+                -ms-transform: translateX(-50%) scaleX(0);
+                    transform: translateX(-50%) scaleX(0);
+            -webkit-transform-origin: 50% 50%;
+                -ms-transform-origin: 50% 50%;
+                    transform-origin: 50% 50%;
             width: 100%;
             height: 1px;
             background-color: $special-color;
+            -webkit-transition: -webkit-transform 250ms;
+            transition: -webkit-transform 250ms;
             transition: transform 250ms;
-            transform: translateX(-50%) scaleX(1);
+            transition: transform 250ms, -webkit-transform 250ms;
+            -webkit-transform: translateX(-50%) scaleX(1);
+                -ms-transform: translateX(-50%) scaleX(1);
+                    transform: translateX(-50%) scaleX(1);
         }
     }
     // Resolve color issue on active menu links mobile version
@@ -149,7 +185,10 @@
     padding: 0.1rem;
     border-radius: 20px;
     border: 2px solid $color-primary;
+    -webkit-transition: all $duration-fast ease;
     transition: all $duration-fast ease;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 
     &:hover {
@@ -203,7 +242,9 @@
     // CSS to center the home menu icon in the dynamic menus (mobile)
     #menu-menu-portfolio img, #menu-menu-hire-me img, #menu-404 img, #menu-techno img {
         margin-left: 50%;
-        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
     }
 }
 
@@ -248,6 +289,8 @@
     left: -60%;
     // width: 60%;
     
+    -webkit-transition: all $duration ease-out;
+    
     transition: all $duration ease-out;
     
     @media (min-width: $breakpoint-sm) {
@@ -268,6 +311,9 @@
       }
   
       .nav__list {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
           display: flex;
           margin-right: -.5rem;
 
@@ -293,6 +339,7 @@
     &__link {
         font-size: 1.7rem;
         margin: 0 0.1rem;
+        -webkit-transition: color $duration-fast ease;
         transition: color $duration-fast ease;
 
         &:hover {
@@ -320,6 +367,7 @@
         &__link {
             color: $color-primary;
             opacity: .3;
+            -webkit-transition: all $duration-fast ease;
             transition: all $duration-fast ease;
 
             &:hover {

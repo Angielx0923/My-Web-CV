@@ -19,6 +19,8 @@
     background-color: $color-primary;
     padding: 1rem;
     position: relative;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
     max-width: fit-content;
     margin: 0 auto;
 
@@ -28,7 +30,8 @@
         top: 0;
         bottom: -73px;
         left: 50%;
-        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
         border: 1.5px dashed $font-color-secondary;
         opacity: .5;
         border-radius: 2px;
@@ -42,7 +45,8 @@
         color: $color-primary;
         top: -22px;
         left: 50%;
-        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
         font-family: $font-family-secondary;
         font-weight: bold;
         font-size: 1.1rem;
@@ -60,7 +64,8 @@
     }
 
     &__icon-arrow {
-        transform: rotateZ(-90deg);
+        -webkit-transform: rotateZ(-90deg);
+                transform: rotateZ(-90deg);
         position: absolute;
         bottom: -12px;
         right: calc(50% - 15px);
@@ -78,7 +83,8 @@
         top: 80px;
         bottom: 0;
         left: 50%;
-        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
         border: 1.5px solid $font-color-secondary;
         opacity: .5;
         border-radius: 2px;
@@ -218,7 +224,8 @@
         display: inline-block;
         position: absolute;
         top: 0;
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
         padding: .5rem .7rem;
         font-size: 1rem;
         font-style: italic;

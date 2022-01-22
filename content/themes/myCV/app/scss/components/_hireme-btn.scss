@@ -13,6 +13,8 @@
     -webkit-box-shadow: 0px 5px 20px 3px rgba(0,0,0,0.37); 
     box-shadow: 0px 5px 20px 3px rgba(0,0,0,0.37);
 
+    -webkit-transition: all $duration-fast ease;
+
     transition: all $duration-fast ease;
 
     &:hover {
@@ -21,7 +23,8 @@
     }
 
     &__img:hover {
-        filter: invert(1);
+        -webkit-filter: invert(1);
+                filter: invert(1);
     }
 
     &__img {

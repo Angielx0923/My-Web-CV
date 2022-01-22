@@ -1,4 +1,5 @@
 .contact-page {
+    display: -ms-grid;
     display: grid;
     grid-template-areas:
         "header"
@@ -24,6 +25,7 @@
         border-radius: 50%;
         font-size: 2rem;
         margin: 0 .7rem;
+        -webkit-transition: all $duration-fast ease;
         transition: all $duration-fast ease;
 
         &:hover {
@@ -45,6 +47,8 @@
         opacity: .1;
         position: relative;
         border-radius: 2px;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
         display: inline-flex;
     }
 }

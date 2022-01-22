@@ -13,8 +13,12 @@
 @media (min-width: $breakpoint-sm) {
 
     .skills-text-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 }
 
@@ -30,8 +34,10 @@
         position: relative;
 
         @media (min-width: $breakpoint-sm) {
+            display: -ms-grid;
             display: grid;
-            grid-template-columns: 50% 50%;
+            -ms-grid-columns: 50% 50%;
+                grid-template-columns: 50% 50%;
         }
     }
 }
@@ -58,17 +64,23 @@
 
     &__list {
         max-width: 450px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         margin: 1rem auto;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
 
         @media (min-width: $breakpoint-sm) {
             margin: 1rem;
         }
 
         @media (min-width: $breakpoint-md) {
-            justify-content: space-around;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
             margin: auto;
         }
 
@@ -80,7 +92,9 @@
     &__item-container {
         max-width: 100%;
         margin: 2rem;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
 
         @media (min-width: $breakpoint-sm) {
             margin: 1rem 2rem;
@@ -120,6 +134,7 @@
                 font-size: .8rem;
                 text-align: center;
                 font-weight: bold;
+                -webkit-transition: opacity 800ms linear;
                 transition: opacity 800ms linear;
             }
         }
@@ -127,7 +142,8 @@
 
     &__label {
         display: inline;
-        text-align-last: left;
+        -moz-text-align-last: left;
+             text-align-last: left;
         margin: 0 0 .3rem 0;
         font-size: 1rem;
         font-weight: bold;
@@ -198,21 +214,29 @@
 
         @media (min-width: $breakpoint-sm) {
             max-width: 600px;
-            align-items: baseline;
+            -webkit-box-align: baseline;
+                -ms-flex-align: baseline;
+                    align-items: baseline;
             margin: 1.5rem 2rem 1rem 1rem;
             padding-bottom: 1.5rem;
             text-align: center;
+            display: -webkit-inline-box;
+            display: -ms-inline-flexbox;
             display: inline-flex;
         }
 
         .icon {
             width: 100%;
 
-            filter: grayscale(100);
+            -webkit-filter: grayscale(100);
+
+                    filter: grayscale(100);
+            -webkit-transition: all $duration-fast ease-in-out;
             transition: all $duration-fast ease-in-out;
 
             &:hover {
-                filter: grayscale(0);
+                -webkit-filter: grayscale(0);
+                        filter: grayscale(0);
             }
 
             @media (min-width: $breakpoint-sm) {
@@ -221,7 +245,8 @@
         }
 
         .soft-skills__img--learning {
-            filter: none;
+            -webkit-filter: none;
+                    filter: none;
         }
         
 
@@ -272,21 +297,29 @@
 
         @media (min-width: $breakpoint-sm) {
             max-width: 600px;
-            align-items: baseline;
+            -webkit-box-align: baseline;
+                -ms-flex-align: baseline;
+                    align-items: baseline;
             margin: 1.5rem 2rem 1rem 1rem;
             padding-bottom: 1.5rem;
             text-align: center;
+            display: -webkit-inline-box;
+            display: -ms-inline-flexbox;
             display: inline-flex;
         }
 
         .icon {
             width: 100%;
 
-            filter: grayscale(100);
+            -webkit-filter: grayscale(100);
+
+                    filter: grayscale(100);
+            -webkit-transition: all $duration-fast ease-in-out;
             transition: all $duration-fast ease-in-out;
 
             &:hover {
-                filter: grayscale(0);
+                -webkit-filter: grayscale(0);
+                        filter: grayscale(0);
             }
 
             @media (min-width: $breakpoint-sm) {
@@ -295,7 +328,8 @@
         }
 
         .mad-skills__img--cinema  {
-            filter: none;
+            -webkit-filter: none;
+                    filter: none;
         }
 
         .skills-wrapper {
@@ -310,5 +344,6 @@
 }
 
 .mad-skills__img--piano:hover {
-    filter: invert(1);
+    -webkit-filter: invert(1);
+            filter: invert(1);
 }

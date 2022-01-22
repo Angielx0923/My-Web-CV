@@ -5,10 +5,14 @@
         content: '';
         border-top: 2px solid $special-color;
         padding-top: .7rem;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
         width: 60%;
         position: relative;
         right: -40%;
+        -webkit-transition: right $duration ease-in-out;
         transition: right $duration ease-in-out;
         
     }
@@ -16,10 +20,15 @@
     &::after {
         content: '';
         border-top: 2px solid $special-color;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
         width: 60%;
         position: relative;
         right: 0;
+
+        -webkit-transition: right $duration ease-in-out;
 
         transition: right $duration ease-in-out;
         
@@ -39,7 +48,9 @@
 .project-header__back-btn {
     position: fixed;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     top: 26.5px;
     background: none;
     color: white;
@@ -56,7 +67,9 @@
         left: 2rem;
         top: 95px;
         background-color: transparent;
-        transform: translate(0);
+        -webkit-transform: translate(0);
+            -ms-transform: translate(0);
+                transform: translate(0);
         color: $font-color-secondary;
     }
 
@@ -64,6 +77,7 @@
         padding: .5rem 0 .5rem .6rem;
         position: relative;
         left: 0;
+        -webkit-transition: all $duration-fast ease;
         transition: all $duration-fast ease;
 
         @media (min-width: $breakpoint-sm) {
@@ -88,6 +102,8 @@
         color: $special-color;
         padding: 0.6rem 1rem;
         border-radius: 20px;
+
+        -webkit-transition: all $duration-fast ease;
 
         transition: all $duration-fast ease;
 

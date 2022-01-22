@@ -19,6 +19,7 @@
         &::after {
             content: ' ';
             background: rgb(0,0,0);
+            background: -webkit-linear-gradient(105deg, rgba(0,0,0,1) 10%, rgba(0,0,0,0.5) 20%);
             background: linear-gradient(345deg, rgba(0,0,0,1) 10%, rgba(0,0,0,0.5) 20%);
             position: absolute;
             top: 0;
@@ -33,7 +34,9 @@
             position: relative;
             text-align: center;
             top: 30%;
-            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                    transform: translateY(-50%);
             color: $color-primary;
             text-shadow: .2rem .2rem 3px rgba($font-color-secondary, $alpha: .6);
             letter-spacing: .2rem;
@@ -70,7 +73,9 @@
             position: absolute;
             bottom: -125px;
             left: 50%;
-            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                    transform: translateX(-50%);
 
             @media (min-width: $breakpoint-sm) {
                 width: 280px;
@@ -88,8 +93,10 @@
         margin-bottom: 50px;
         
         @media (min-width: $breakpoint-sm) {
+            display: -ms-grid;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            -ms-grid-columns: 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
             grid-column-gap: 25%;
             margin-bottom: 0;
             
@@ -97,8 +104,14 @@
 
         // QUOTE 
         .quote-container {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
             
             &__content {
                 text-transform: uppercase;
@@ -122,9 +135,18 @@
         .profile-content {
             
             &__title-block {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
                 display: flex;
-                justify-content: flex-end;
-                align-items: flex-end;
+                -webkit-box-pack: end;
+                -webkit-justify-content: flex-end;
+                    -ms-flex-pack: end;
+                        justify-content: flex-end;
+                -webkit-box-align: end;
+                -webkit-align-items: flex-end;
+                    -ms-flex-align: end;
+                        align-items: flex-end;
         
                 &__main-title {
                     background-color: #000;
@@ -134,8 +156,13 @@
 
                     @media (min-width: $breakpoint-sm) {
                         margin: 0 2.5rem 0 0;
+                        display: -webkit-box;
+                        display: -webkit-flex;
+                        display: -ms-flexbox;
                         display: flex;
-                        align-self: flex-start;
+                        -webkit-align-self: flex-start;
+                            -ms-flex-item-align: start;
+                                align-self: flex-start;
                     }
                     @media (min-width: $breakpoint-md) {
                         margin: 0 7rem 0 0;
@@ -151,15 +178,18 @@
         padding-top: 1rem;
         
         @media (min-width: $breakpoint-sm) {
+            display: -ms-grid;
             display: grid;
-            grid-template-columns: 1fr 70px 1fr;
+            -ms-grid-columns: 1fr 70px 1fr;
+                grid-template-columns: 1fr 70px 1fr;
             padding: 0;
             margin: 0 2rem;         
         }
 
         @media (min-width: $breakpoint-md) {
             margin: 0 5rem;
-            grid-template-columns: 1fr 90px 1fr;
+            -ms-grid-columns: 1fr 90px 1fr;
+                grid-template-columns: 1fr 90px 1fr;
 
         }
         
@@ -238,10 +268,16 @@
 
 .profile-divider {
     display: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     
     @media (min-width: $breakpoint-sm) {
-        justify-content: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
 
         &__divider::before {
             left: 6px;
@@ -251,6 +287,9 @@
             opacity: .1;
             position: relative;
             border-radius: 2px;
+            display: -webkit-inline-box;
+            display: -webkit-inline-flex;
+            display: -ms-inline-flexbox;
             display: inline-flex;
         }       
     }
@@ -272,7 +311,7 @@
     @include quote
 }
 
-// style for the link to o'clock in the article oroadtrip "ici"
+// style for the link to oclock in the article oroadtrip "ici"
 .article__link-url {
     text-decoration: underline;
     color: $special-color;
@@ -287,22 +326,36 @@
 
 
     .social-media-container {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
   
         &__link {
-            filter: grayscale(100%);
+            -webkit-filter: grayscale(100%);
+                    filter: grayscale(100%);
             margin: 0 .3rem;
             padding-top: 1rem;
+            -webkit-transition: -webkit-filter $duration-fast ease-in-out;
+            transition: -webkit-filter $duration-fast ease-in-out;
             transition: filter $duration-fast ease-in-out;
+            transition: filter $duration-fast ease-in-out, -webkit-filter $duration-fast ease-in-out;
             
             &--download {
                 text-align: center;
             }
 
             &:hover {
-                filter: none;
+                -webkit-filter: none;
+                        filter: none;
             }
 
             &--text {
@@ -321,6 +374,8 @@
             color: #808080;
             margin-bottom: 14px;
             padding: 1rem 0;
+
+            -webkit-transition: color $duration-fast ease-in-out;
 
             transition: color $duration-fast ease-in-out;
 

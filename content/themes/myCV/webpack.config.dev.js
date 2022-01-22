@@ -76,6 +76,8 @@ let config = {
           }
         },
       },
+      // Autoprefixer
+
       // Images
       {
         test: /\.(jpg|jpeg|png|gif|svg)$/,

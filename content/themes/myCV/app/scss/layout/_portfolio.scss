@@ -27,6 +27,7 @@
             font-weight: bold;
             border-radius: 100%;
             font-size: 2rem;
+            -webkit-transition: all 250ms ease;
             transition: all 250ms ease;
 
             &:hover {
@@ -40,8 +41,11 @@
 /*--------------- PORTFOLIO CONTENT ---------------*/
 
 .portfolio-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 
     &__block {
         position: relative;
@@ -49,18 +53,23 @@
         text-align: center;
         padding: 4rem;
         z-index: 0;
-        filter: grayscale(50%);
+        -webkit-filter: grayscale(50%);
+                filter: grayscale(50%);
         background: {
             position: center;
             size: 100%;
             repeat: no-repeat;
         }
         
+        -webkit-transition: all $duration-fast ease;
+        
         transition: all $duration-fast ease;
         
         @media (min-width: $breakpoint-sm) {
             width: 50%;
-            flex-grow: 1;
+            -webkit-box-flex: 1;
+                -ms-flex-positive: 1;
+                    flex-grow: 1;
             padding: 5.4rem;
         }
 
@@ -81,10 +90,12 @@
         }
 
             &:hover {
-                filter: grayscale(0);
+                -webkit-filter: grayscale(0);
+                        filter: grayscale(0);
                 letter-spacing: 2px;
                 
                 &::after {
+                    -webkit-transition: all $duration-fast ease;
                     transition: all $duration-fast ease;
                     background: rgba(0,0,0, .2);
                 }
@@ -136,7 +147,8 @@
             left: 50%;
             border-top-right-radius: 30px;
             border-top-left-radius: 30px;
-            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%);
             font-size: 1.1rem;
         }
         
@@ -144,7 +156,9 @@
             height: 0;
             width: 100%;
             left: 0;
+            -webkit-transition: background-color $duration-fast ease;
             transition: background-color $duration-fast ease;
+            -webkit-transition: height 150ms ease;
             transition: height 150ms ease;
         }
 
