@@ -10,7 +10,7 @@
     width: 100%;
 
     padding: 1rem 1.5rem;
-    height: 53px;
+    height: fit-content;
 
     @media (min-width: $breakpoint-sm) {
         padding: 1.3rem 2rem;

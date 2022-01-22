@@ -32,7 +32,7 @@ $(document).ready(function(){
           burgerContentToggle();
     });
 });
-  
+
 // Au clic sur les liens contenus dans le menu burger
 $('.nav__list__item').click(function() {
     if($('.burger__nav').hasClass('open')) {
