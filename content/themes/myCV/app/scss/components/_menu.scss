@@ -195,6 +195,10 @@
         background-color: $special-color;
         border-color: $special-color;
     }
+
+    @media (max-width: $breakpoint-sm) {
+        margin-right: unset;
+    }
 }
 
 .language-sub-menu {
