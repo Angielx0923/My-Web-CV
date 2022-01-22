@@ -8,24 +8,26 @@
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
-
-    @media (max-width: $breakpoint-sm) {
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-    }
         
   
-     @media (min-width: $breakpoint-sm) {
+    @media (min-width: $breakpoint-sm) {
          -webkit-box-pack: end;
          -webkit-justify-content: flex-end;
              -ms-flex-pack: end;
                  justify-content: flex-end;
-     }
-  }
+    }
+}
+    @media (min-width: $breakpoint-sm) {
+       #burger__content > nav {
+           position: relative;
+           top: -6px;
+       }
+    }
+
 
 .burger {
     position: relative;
+    margin-top: 6px;
 }
   
   /*--------------- LANGUAGES ICON ---------------*/
@@ -365,7 +367,7 @@
         text-align: initial;
         padding-top: 0;
         position: absolute;
-        top: 0;
+        top: -6px;
         left: -76px;
         border-right: 1px solid rgba($color-primary, .5);
         padding-right: .9rem;
