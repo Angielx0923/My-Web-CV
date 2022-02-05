@@ -191,14 +191,15 @@
 
 .languages-nav {
     margin-right: -1rem;
-    padding: 0.1rem;
     border-radius: 20px;
     border: 2px solid $color-primary;
     -webkit-transition: all $duration-fast ease;
     transition: all $duration-fast ease;
     height: -webkit-fit-content;
     height: -moz-fit-content;
-    height: fit-content;
+    width: 32px;
+    height: 32px;
+    top: -2px;
 
     &:hover {
         background-color: $special-color;
@@ -210,6 +211,7 @@
     }
 }
 
+
 .language-sub-menu {
     padding-top: 1.3rem;
 }
@@ -220,7 +222,7 @@
     display: none;
 }
 
-#menu-item-258, .menu-item-weglot-258-fr, .menu-item-weglot-258-en {
+#menu-item-258 {
     margin: 0 !important;
 }
 
@@ -391,3 +393,18 @@
     }
 }
 
+// ADDITIONAL CSS FROM WPML / LANGUAGE ICONS
+.wpml-ls-menu-item .wpml-ls-flag {
+    height: auto !important;
+    width: auto !important;
+}
+
+// FIX for circle flag icon 
+.wpml-ls-flag {
+    top: 0 !important;
+    filter: invert(0) !important;
+}
+
+.menu-item-wpml-ls-9-fr {
+    margin: 0 !important;
+}

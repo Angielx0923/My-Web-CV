@@ -105,7 +105,7 @@ if (this.hash !== "") {
 
 let portfolioDropdown = $('#menu-item-209');
 let errorPageDropdown = $('#menu-item-226');
-let languageDropdown  = $('#menu-item-258');
+let languageDropdown  = $('.wpml-ls-menu-item');
 let submenu           = $('.custom-sub-menu');
 let languageSubMenu   = $('.language-sub-menu');
 
@@ -131,23 +131,12 @@ if (windowSize >= 768) {
     });
 }
 
-// LANGUAGE DROPDOWN DESKTOP
-if (windowSize >= 768) {
-    languageDropdown.mouseenter(function () {
-        languageSubMenu.slideToggle();
-    });
+// LANGUAGE DROPDOWN
 
-    languageDropdown.mouseleave(function () {
-        languageSubMenu.slideToggle();
-    });
-}
+// languageDropdown.click(function () {
+//     languageSubMenu.slideToggle('fast');
+// });
 
-// LANGUAGE DROPDOWN MOBILE
-if (windowSize < 768) {
-    languageDropdown.click(function () {
-        languageSubMenu.slideToggle('fast');
-    });
-}
 
 /*--------------- PROGRESS BAR ANIMATION ---------------*/
   
