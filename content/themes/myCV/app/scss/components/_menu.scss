@@ -193,13 +193,14 @@
     margin-right: -1rem;
     border-radius: 20px;
     border: 2px solid $color-primary;
-    -webkit-transition: all $duration-fast ease;
-    transition: all $duration-fast ease;
+    -webkit-transition: all 325ms ease;
+    transition: all 325ms ease;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     width: 32px;
     height: 32px;
     top: -2px;
+    background-color: none;
 
     &:hover {
         background-color: $special-color;

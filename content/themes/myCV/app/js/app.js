@@ -108,6 +108,7 @@ let menusDropdown       = $('#menu-item-209, #menu-item-226, #menu-item-240, #me
 let languageDropdown    = $('#menu-langues, #menu-langues-anglais');
 let languageSubMenu     = $('.language-sub-menu');
 let submenu             = $('.custom-sub-menu');
+let languageNav        = $('.languages-nav');
 
 // MENUS DROPDOWN
 if (windowSize >= 768) {
@@ -120,10 +121,20 @@ if (windowSize >= 768) {
     });
 }
 
-
 // LANGUAGE DROPDOWN
 languageDropdown.click(function () {
+    languageNav.toggleClass('open');
     languageSubMenu.slideToggle('fast');
+    if (languageNav.hasClass('open')) {
+        languageNav.css({height : '73px'});
+        languageNav.css({'background-color' : '#F4B500'});
+        languageNav.css({'border-color' : '#F4B500'});
+    }
+    else {
+        languageNav.css({height : '32px'});
+        languageNav.css({'background-color' : 'none'});
+        languageNav.css({'border-color' : '#fff'});
+    }
 });
 
 
