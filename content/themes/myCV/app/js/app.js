@@ -103,39 +103,32 @@ if (this.hash !== "") {
 
 /*--------------- MENU DROPDOWN PORTFOLIO ---------------*/
 
-let portfolioDropdown = $('#menu-item-209');
-let errorPageDropdown = $('#menu-item-226');
-let languageDropdown  = $('.wpml-ls-menu-item');
-let submenu           = $('.custom-sub-menu');
-let languageSubMenu   = $('.language-sub-menu');
+// IDs of menus in FR and EN
+let menusDropdown       = $('#menu-item-209, #menu-item-226, #menu-item-240, #menu-item-405, #menu-item-226, #menu-item-401');
+let languageDropdown    = $('#menu-langues');
+let languageSubMenu     = $('.language-sub-menu');
+let submenu             = $('.custom-sub-menu');
 
-// PORTOLIO DROPDOWN (ARTICLE PAGE)
+// MENUS DROPDOWN
 if (windowSize >= 768) {
-    portfolioDropdown.mouseenter(function () {
+    menusDropdown.mouseenter(function () {
         submenu.slideToggle();
     });
     
-    portfolioDropdown.mouseleave(function () {
+    menusDropdown.mouseleave(function () {
         submenu.slideToggle();
     });
 }
 
-// ERROR 404 PAGE DROPDOWN
-if (windowSize >= 768) {
-    errorPageDropdown.mouseenter(function () {
-        submenu.slideToggle();
-    });
-    
-    errorPageDropdown.mouseleave(function () {
-        submenu.slideToggle();
-    });
-}
 
 // LANGUAGE DROPDOWN
+languageDropdown.mouseenter(function () {
+    languageSubMenu.slideToggle('fast');
+});
 
-// languageDropdown.click(function () {
-//     languageSubMenu.slideToggle('fast');
-// });
+languageDropdownFR.mouseleave(function () {
+    languageSubMenu.slideToggle('fast');
+});
 
 
 /*--------------- PROGRESS BAR ANIMATION ---------------*/
