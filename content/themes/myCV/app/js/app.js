@@ -105,7 +105,7 @@ if (this.hash !== "") {
 
 // IDs of menus in FR and EN
 let menusDropdown       = $('#menu-item-209, #menu-item-226, #menu-item-240, #menu-item-405, #menu-item-226, #menu-item-401');
-let languageDropdown    = $('#menu-langues');
+let languageDropdown    = $('#menu-langues, #menu-langues-anglais');
 let languageSubMenu     = $('.language-sub-menu');
 let submenu             = $('.custom-sub-menu');
 
@@ -122,11 +122,7 @@ if (windowSize >= 768) {
 
 
 // LANGUAGE DROPDOWN
-languageDropdown.mouseenter(function () {
-    languageSubMenu.slideToggle('fast');
-});
-
-languageDropdownFR.mouseleave(function () {
+languageDropdown.click(function () {
     languageSubMenu.slideToggle('fast');
 });
 

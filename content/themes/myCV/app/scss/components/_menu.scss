@@ -212,14 +212,9 @@
 }
 
 
-.language-sub-menu {
-    padding-top: 1.3rem;
-}
-
 // Language menu
-#menu-langues .language-sub-menu {
+.language-sub-menu {
     margin-top: .5rem;
-    display: none;
 }
 
 #menu-item-258 {
@@ -394,16 +389,32 @@
     }
 }
 
+// Prévent from clicking on the current flag which was causing an issue with the submenu (not opening)
+.wpml-ls-current-language a {
+    pointer-events: none;
+}
+
+// BY DEFAULT WE WANT TO HIDE THE SUBMENU
+.language-sub-menu {
+    display: none;
+
+    & a {
+        pointer-events: unset;
+    }
+}
+
 // ADDITIONAL CSS FROM WPML / LANGUAGE ICONS
 .wpml-ls-menu-item .wpml-ls-flag {
     height: auto !important;
     width: auto !important;
+    margin: 0;
 }
 
 // FIX for circle flag icon 
 .wpml-ls-flag {
     top: 0 !important;
     filter: invert(0) !important;
+    margin: 0;
 }
 
 .menu-item-wpml-ls-9-fr,
