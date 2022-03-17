@@ -310,9 +310,9 @@
                 <h2 class="contact-main-title titles-section">Contact</h2>
                 <aside class="contact-aside">
                     <div class="contact-aside__block">
-                        <p class="contact-aside__content">Un commentaire ?</p>
-                        <p class="contact-aside__content">Un conseil ? Une question ?</p>
-                        <p class="contact-aside__content contact-aside__content">Toute suggestion est la bienvenue !</p>
+                        <p class="contact-aside__content">
+                            <?php echo get_theme_mod( 'alm_section_aside' ); ?>
+                        </p>
                     </div>
                 </aside>
 

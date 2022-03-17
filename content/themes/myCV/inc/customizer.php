@@ -652,6 +652,37 @@ function alm_customize_register( $wp_customize ) {
     );
 
 /*---------------------------------------------
+                CONTACT ASIDE
+---------------------------------------------*/
+
+    $wp_customize->add_section(
+        'alm_section_contact-aside',
+        [
+            'panel' => 'alm_theme_configuration',
+            'title' => 'Contact aside'
+        ]
+    );
+
+    // LINKEDIN
+    $wp_customize->add_setting(
+        'alm_section_aside', // ID
+        [
+            'default' => 'Un commentaire ?
+            Un conseil ? Une question ?
+            Toute suggestion est la bienvenue !'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_section_aside', //ID
+        [
+            'section' => 'alm_section_contact-aside',
+            'label'   => 'Commentaire',
+            'type'    => 'textarea'
+        ]
+    );
+
+/*---------------------------------------------
                 SOCIAL MEDIA LINKS
 ---------------------------------------------*/
 
@@ -714,7 +745,25 @@ function alm_customize_register( $wp_customize ) {
         ]
     );
 
-    // LOCALISATION
+    // LOCALISATION - TITLE
+    
+    $wp_customize->add_setting(
+        'alm_section_title-location', // ID
+        [
+            'default' => 'Localisation '
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_section_title-location', //ID
+        [
+            'section' => 'alm_sections_socialmedia',
+            'label'   => 'Titre localisation',
+            'type'    => 'textarea'
+        ]
+    );
+
+    // LOCALISATION - PLACE
     $wp_customize->add_setting(
         'alm_section_location', // ID
         [
@@ -726,7 +775,7 @@ function alm_customize_register( $wp_customize ) {
         'alm_section_location', //ID
         [
             'section' => 'alm_sections_socialmedia',
-            'label'   => 'Localisation',
+            'label'   => 'Lieu',
             'type'    => 'textarea'
         ]
     );
