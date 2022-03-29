@@ -104,11 +104,11 @@ if (this.hash !== "") {
 /*--------------- MENU DROPDOWN PORTFOLIO ---------------*/
 
 // IDs of menus in FR and EN
-let menusDropdown       = $('#menu-item-209, #menu-item-226, #menu-item-240, #menu-item-405, #menu-item-226, #menu-item-401');
+let menusDropdown       = $('#menu-item-209, #menu-item-226, #menu-item-240, #menu-item-405, #menu-item-391, #menu-item-401');
 let languageDropdown    = $('#menu-langues, #menu-langues-anglais');
 let languageSubMenu     = $('.language-sub-menu');
 let submenu             = $('.custom-sub-menu');
-let languageNav        = $('.languages-nav');
+let languageNav         = $('.languages-nav');
 
 // MENUS DROPDOWN
 if (windowSize >= 768) {

@@ -60,6 +60,15 @@
                 @media (min-width: $breakpoint-sm) {
                     font-size: 1.2rem;
                 }
+
+                @media (min-width: $breakpoint-md) {
+                    max-width: 80%;
+                    margin: auto;
+                }
+                @media (min-width: $breakpoint-lg) {
+                    max-width: 65%;
+                    margin: auto;
+                }
             }
         }
 

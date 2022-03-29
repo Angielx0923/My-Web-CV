@@ -310,6 +310,7 @@
     }
     &--is-open {
         left: 0;
+        z-index: 2;
     }
 }
 

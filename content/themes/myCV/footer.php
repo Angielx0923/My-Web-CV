@@ -43,7 +43,7 @@
                             
                         <div class="info-link-block">
                         <!-- LINKEDIN -->
-                            <a href="<?php echo get_theme_mod( 'alm_section_linkedin' ); ?>" class="info-links__link info-links__link-linkedin">
+                            <a href="<?php echo esc_url(get_theme_mod( 'alm_section_linkedin' )); ?>" class="info-links__link info-links__link-linkedin">
                                 <i class="info-link__icon fa fa-linkedin-square" aria-hidden="true"></i>
                                 <p class="info-link__content info-link__linkedin">LinkedIn</p>
                                 <!-- Faire disparaitre l'url pour la version mobile -->
@@ -57,7 +57,7 @@
                                 if ( $alm_download_active ) :
                                 ?>
                                     <div class="info-link-block">
-                                        <a href="/chemin/vers/mon/fichier.jpg" download="fichier.jpg" class="info-links__link info-links__link-cv">
+                                        <a href="<?php echo get_theme_mod( 'alm_download_upload' ); ?>" download class="info-links__link info-links__link-cv">
                                             <i class="info-link__icon fa fa-download" aria-hidden="true"></i>
                                             <p class="info-link__content info-link__cv"><?php echo get_theme_mod( 'alm_download_text' ); ?></p>
                                         </a>
@@ -66,7 +66,7 @@
 
                         <!-- GITHUB -->
                         <div class="info-link-block">
-                            <a href="<?php echo get_theme_mod( 'alm_section_github' ); ?>" class="info-links__link info-links__link-github">
+                            <a href="<?php echo esc_url(get_theme_mod( 'alm_section_github' )); ?>" class="info-links__link info-links__link-github">
                                 <i class="info-link__icon fa fa-github" aria-hidden="true"></i>
                                 <p class="info-link__content info-link__github">GitHub</p>
                                 <!-- Faire disparaitre l'url pour la version mobile -->

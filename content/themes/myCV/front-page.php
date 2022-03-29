@@ -56,18 +56,18 @@
                     <!-- PROFILE / FOOTER -->
                     <div class="profile-footer">
                         <div class="social-media-container">
-                            <a href="<?php echo get_theme_mod( 'alm_section_linkedin' ); ?>" class="fa fa-linkedin-square icon social-media-container__logo social-media-container__logo--linkedin"></a>
+                            <a href="<?php echo esc_url(get_theme_mod( 'alm_section_linkedin' )); ?>" class="fa fa-linkedin-square icon social-media-container__logo social-media-container__logo--linkedin"></a>
 
                             <?php $alm_download_active = get_theme_mod( 'alm_download_active', false ); 
 			
                                 if ( $alm_download_active ) :
                                 ?>
-                                    <a href="/chemin/vers/mon/fichier.jpg" class="social-media-container__link social-media-container__link--download btn-download">
+                                    <a href="<?php echo get_theme_mod( 'alm_download_upload' ); ?>" class="social-media-container__link social-media-container__link--download btn-download" download>
                                         <img class="icon social-media-container__logo social-media-container__logo--download" src="<?php echo wp_get_attachment_image_url( ALM_THEME_DOWNLOAD_ICON ); ?>" alt="Download CV icon">
                                         <p class="social-media-container__link--text"><?php echo get_theme_mod( 'alm_download_text' ); ?></p>
                                     </a>
                                 <?php endif; ?>
-                                <a href="<?php echo get_theme_mod( 'alm_section_linkedin' ); ?>" class="fa fa-github icon social-media-container__logo social-media-container__logo--github"></a>
+                                <a href="<?php echo esc_url(get_theme_mod( 'alm_section_github' )); ?>" class="fa fa-github icon social-media-container__logo social-media-container__logo--github"></a>
                                     
                         </div>
                     </div>

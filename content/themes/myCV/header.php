@@ -38,7 +38,13 @@
     ?>
         <!-- HEADER -->
         <header class="header <?php if ( ! is_front_page() ) : echo $headerclass; endif; ?>" id="header">
-            <div class="logo__container <?php if ( is_single() || is_404() ) : echo $logoclass; endif; ?>">
+             <!-- FIX for the back btn not working with z-index in the project-header -->
+            <a href="<?= home_url(); ?>" id="backBtn" class="back-btn__container project-header__back-btn <?php if ( is_single() || is_404() || is_page_template( 'archive' ) ) : echo $logoclass; endif; ?>">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                <span class="project-header__back-btn__text"><?php echo get_theme_mod( 'alm_project_btn' ); ?></span>
+            </a>
+
+            <div class="logo__container <?php if ( is_single() || is_404() || is_page_template( 'archive' ) ) : echo $logoclass; endif; ?>">
                 <!-- The link is disabled when it's the front-page -->
                 <?php if ( ! is_front_page() ) : ?>
                     <a class="logo" href="<?= home_url(); ?>">
@@ -50,6 +56,7 @@
                     </h1>
                 <?php endif; ?>
             </div>
+
             <div class="header__container">
 
                 <div class="burger">
@@ -63,8 +70,8 @@
                     ?> <!-- End menu of the header -->
                             
                             <div id="socialMediaNav" class="nav__social-media <?php if ( ! is_front_page() ) : echo $showsocialmedia; endif; ?>">
-                                <a href="<?php echo get_theme_mod( 'alm_section_linkedin' ); ?>" class="fa fa-linkedin-square nav__social-media__link nav__social-media__link--linkedin"></a>
-                                <a href="<?php echo get_theme_mod( 'alm_section_github' ); ?>" class="fa fa-github nav__social-media__link nav__social-media__link--github"></a>
+                                <a href="<?php echo esc_url(get_theme_mod( 'alm_section_linkedin' )); ?>" class="fa fa-linkedin-square nav__social-media__link nav__social-media__link--linkedin"></a>
+                                <a href="<?php echo esc_url(get_theme_mod( 'alm_section_github' )); ?>" class="fa fa-github nav__social-media__link nav__social-media__link--github"></a>
                             </div>
                         </nav>
                     </div>

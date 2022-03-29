@@ -45,6 +45,17 @@
 
 /*--------------- PROJECT PAGE ---------------*/
 
+// Back btn in header (for mobile)
+// Fix the issue with z-index for back btn in main-project header
+.back-btn__container {
+    z-index: 1 !important;
+}
+@media (min-width: $breakpoint-sm) {
+    .back-btn__container {
+        display: none;
+    }
+}
+
 .project-header__back-btn {
     position: fixed;
     left: 50%;
@@ -53,7 +64,7 @@
             transform: translate(-50%, -50%);
     top: 26.5px;
     background: none;
-    color: white;
+    color: $color-primary;
     border: none;
     text-transform: uppercase;
     font-weight: bold;

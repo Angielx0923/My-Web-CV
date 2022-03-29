@@ -346,6 +346,24 @@ function alm_customize_register( $wp_customize ) {
         ]
     );
 
+     // Upload file
+     $wp_customize->add_setting(
+        'alm_download_upload', // ID
+    );
+
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'alm_download_upload', // ID
+        [
+            'section'       => 'alm_download', // Is linked to this section
+            'label'         => 'Upload CV',
+            'button_labels' =>
+            [
+                'select' => 'Sélectionner le fichier',
+                'remove' => 'Supprimer le fichier',
+                'change' => 'Changer le fichier'
+            ]      
+        ]
+    ));
+
     // DOWNLOAD TEXT CONTENT
     $wp_customize->add_setting(
         'alm_download_text' // ID
