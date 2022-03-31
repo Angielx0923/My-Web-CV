@@ -1,10 +1,6 @@
 <header class="project-header">
         <!-- PROJECT HEADER -->
         <div class="project-header__container">
-            <a href="<?= home_url(); ?>" id="backBtn" class="project-header__back-btn">
-                <i class="fa fa-angle-left" aria-hidden="true"></i>
-                <span class="project-header__back-btn__text"><?php echo get_theme_mod( 'alm_project_btn' ); ?></span>
-            </a>
 
             <div class="project-header__title-container">
                 <div class="project-header__title-block">

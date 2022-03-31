@@ -35,16 +35,17 @@
         $logoclass       = 'logo__container--hidden';
         $animation       = 'header__scroll-animation--project';
         $showsocialmedia = 'nav__social-media--visible';
+        $opacity         = 'style="opacity: 0"'
     ?>
         <!-- HEADER -->
         <header class="header <?php if ( ! is_front_page() ) : echo $headerclass; endif; ?>" id="header">
              <!-- FIX for the back btn not working with z-index in the project-header -->
-            <a href="<?= home_url(); ?>" id="backBtn" class="back-btn__container project-header__back-btn <?php if ( is_single() || is_404() || is_page_template( 'archive' ) ) : echo $logoclass; endif; ?>">
+            <a href="<?= home_url(); ?>" id="backBtn" class="back-btn__container project-header__back-btn" <?php if ( is_front_page() || is_page( 'contact' ) ) : echo $opacity; endif; ?>>
                 <i class="fa fa-angle-left" aria-hidden="true"></i>
                 <span class="project-header__back-btn__text"><?php echo get_theme_mod( 'alm_project_btn' ); ?></span>
             </a>
 
-            <div class="logo__container <?php if ( is_single() || is_404() || is_page_template( 'archive' ) ) : echo $logoclass; endif; ?>">
+            <div class="logo__container <?php if ( is_single() || is_404() || is_page_template( 'archive.php' ) ) : echo $logoclass; endif; ?>">
                 <!-- The link is disabled when it's the front-page -->
                 <?php if ( ! is_front_page() ) : ?>
                     <a class="logo" href="<?= home_url(); ?>">

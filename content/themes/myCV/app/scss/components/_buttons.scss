@@ -50,11 +50,6 @@
 .back-btn__container {
     z-index: 1 !important;
 }
-@media (min-width: $breakpoint-sm) {
-    .back-btn__container {
-        display: none;
-    }
-}
 
 .project-header__back-btn {
     position: fixed;
