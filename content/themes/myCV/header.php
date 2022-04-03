@@ -45,7 +45,7 @@
                 <span class="project-header__back-btn__text"><?php echo get_theme_mod( 'alm_project_btn' ); ?></span>
             </a>
 
-            <div class="logo__container <?php if ( is_single() || is_404() || is_page_template( 'archive.php' ) ) : echo $logoclass; endif; ?>">
+            <div class="logo__container <?php if ( is_single() || is_404() || is_page_template( 'archive.php' ) || is_tax() ) : echo $logoclass; endif; ?>">
                 <!-- The link is disabled when it's the front-page -->
                 <?php if ( ! is_front_page() ) : ?>
                     <a class="logo" href="<?= home_url(); ?>">

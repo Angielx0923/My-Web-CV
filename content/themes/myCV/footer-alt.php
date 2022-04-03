@@ -14,7 +14,7 @@
              $socialmedia = 'style="display: none"';
        ?>
 
-            <footer class="footer-error<?php if ( is_page_template( 'archive.php' ) ) : echo $black; endif; ?>" <?php if ( !is_404() ) : echo $style; endif; ?>>
+            <footer class="footer-error<?php if ( is_page_template( 'archive.php' ) || is_tax() ) : echo $black; endif; ?>" <?php if ( !is_404() ) : echo $style; endif; ?>>
                 <div class="profile-footer">
                     <div class="social-media-container" <?php if ( is_page( 'contact' ) ) : echo $socialmedia; endif; ?>>
                         <div class="social-media-container__link social-media-container__link--linkedin">

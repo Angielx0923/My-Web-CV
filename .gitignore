@@ -14,5 +14,6 @@ content/plugins/*
 !content/plugins/alm-mad-skills
 !content/plugins/alm-parcours
 !content/plugins/alm-portfolio
+!content/plugins/alm-technologies
 
 /content/db.php

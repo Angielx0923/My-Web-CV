@@ -40,7 +40,7 @@ elseif ( is_404() ) {
         ]
     );
 }
-elseif ( is_page_template( 'archive.php' ) ) {
+elseif ( is_page_template( 'archive.php' ) || is_tax() ) {
     wp_nav_menu(
         [
             'theme_location'  => 'menu-archive',
