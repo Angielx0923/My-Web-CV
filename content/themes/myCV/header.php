@@ -24,7 +24,7 @@
         <div class="project__container">
     <?php elseif ( is_page( 'contact' ) ) : ?>
         <div class="contact-page">
-    <?php elseif ( is_page_template( 'archive.php' ) ) : ?>
+    <?php elseif ( is_page_template( 'archive.php' ) || is_tax() ) : ?>
         <div class="archive-projects__container">
     <?php else : ?>
         <div class="onepage__container">
@@ -71,8 +71,8 @@
                     ?> <!-- End menu of the header -->
                             
                             <div id="socialMediaNav" class="nav__social-media <?php if ( ! is_front_page() ) : echo $showsocialmedia; endif; ?>">
-                                <a href="<?php echo esc_url(get_theme_mod( 'alm_section_linkedin' )); ?>" class="fa fa-linkedin-square nav__social-media__link nav__social-media__link--linkedin"></a>
-                                <a href="<?php echo esc_url(get_theme_mod( 'alm_section_github' )); ?>" class="fa fa-github nav__social-media__link nav__social-media__link--github"></a>
+                                <a href="<?php echo esc_url(get_theme_mod( 'alm_section_linkedin' )); ?>" aria-label="LinkedIn" class="fa fa-linkedin-square nav__social-media__link nav__social-media__link--linkedin"></a>
+                                <a href="<?php echo esc_url(get_theme_mod( 'alm_section_github' )); ?>" aria-label="GitHub" class="fa fa-github nav__social-media__link nav__social-media__link--github"></a>
                             </div>
                         </nav>
                     </div>

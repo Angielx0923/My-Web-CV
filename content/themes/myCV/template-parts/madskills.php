@@ -25,7 +25,7 @@ if ( post_type_exists( 'madskills' ) ) :
                 }
             ?>
                 <div class="skills-wrapper">
-                    <img src="<?php the_post_thumbnail_url(); ?>" class="mad-skills__img--usa skills__img icon" <?php echo $nofilter; ?>>
+                    <img src="<?php the_post_thumbnail_url(); ?>" alt="" class="mad-skills__img--usa skills__img icon" <?php echo $nofilter; ?>>
                     <div class="skills-text-container">
                         <p class="mad-skills__text skills__text skills-text-container__content"><?php the_title(); ?></p>
                     </div>

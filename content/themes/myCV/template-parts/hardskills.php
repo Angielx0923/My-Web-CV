@@ -17,7 +17,7 @@ if ( post_type_exists( 'hardskills' ) ) :
                 $alm_hardskills->the_post();
             ?>
                 <div class="hard-skills__item-container">
-                    <div class="progress-bar" role="progressbar" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+                    <div class="progress-bar" role="progressbar" aria-label="hard skills" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
                         <div class="progress-bar__value"></div>
                     </div>        
                 </div>

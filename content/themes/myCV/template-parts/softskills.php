@@ -25,7 +25,7 @@ if ( post_type_exists( 'softskills' ) ) :
                 }
             ?>
                 <div class="skills-wrapper">
-                    <img src="<?php the_post_thumbnail_url(); ?>" class="soft-skills__img--creativity skills__img icon" <?php echo $nofilter; ?>>
+                    <img src="<?php the_post_thumbnail_url(); ?>" alt="" class="soft-skills__img--creativity skills__img icon" <?php echo $nofilter; ?>>
                     <div class="skills-text-container">
                         <p class="soft-skills__text skills__text skills-text-container__content"><?php the_title(); ?></p>
                     </div>

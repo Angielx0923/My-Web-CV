@@ -24,7 +24,7 @@
                         <h3 class="portfolio-container__title"><?php the_title(); ?></h3>
                         <p class="portfolio-container__content"><?php the_field( 'presentation' ); ?></p>
                     </a>
-                    <a class="portfolio-container__info-link" id="infoBtn" href="<?php the_permalink(); ?>">
+                    <a class="portfolio-container__info-link infoBtn" href="<?php the_permalink(); ?>">
                         <p class="portfolio-container__info-link__text"><?php the_field( 'info' ); ?></p>
                     </a>
                 </div>
