@@ -13,3 +13,11 @@
         color: $font-color-secondary;
     }
 }
+
+.captcha {
+    margin-bottom: .2rem;
+
+    &__link {
+        text-decoration: underline;
+    }
+}

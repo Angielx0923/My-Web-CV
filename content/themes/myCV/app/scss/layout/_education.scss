@@ -38,11 +38,9 @@
 .education-timeline {
     position: relative;
     top: -2rem;
-    margin-bottom: -7rem;
 
     @media (min-width: $breakpoint-sm) {
         top: 0;
-        margin-bottom: 0;
     }
 
     &::before {
@@ -69,12 +67,8 @@
 
     .education-list-item--oclock {
         position: relative;
-        bottom: -60px;
-
-        @media (min-width: $breakpoint-sm) {
-            bottom: unset;
-            position: absolute;
-        }
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -83,8 +77,31 @@
 *----------------------------------------*/
 
 .education-list-item {
+    // Fix the space on mobile
+    &--esec {
+        margin-top: -3rem;
+    }
 
 /*--------------- DATES ---------------*/
+    &__year-container {
+        transform: translateY(50%);
+    }
+
+    // Fix the design for the items containing 2 years
+    &__year-container--left {
+        order: 1;
+    }
+
+    &__content-container--dashed {
+        order: 2;
+    }
+
+    &__year-container--right {
+        order: 3;
+        position: relative;
+        top: -110px;
+    }
+
     &__dates-panel-container {
         position: relative;
         width: initial;
@@ -98,33 +115,12 @@
         margin: 0 auto;
         background-color: $color-circle;
 
-        &--formation {
-            position: relative;
-            top: -110px;
-
-            @media (min-width: $breakpoint-sm) {
-                position: absolute;
-                top: initial;
-            }  
-        }
-
         &--2019, &--2011 {
             top: 0;
         }
 
         &--diploma {
             background-color: $special-color;
-        
-        }
-
-        &--2010-bac {
-            position: relative;
-            top: -110px;
-
-            @media (min-width: $breakpoint-sm) {
-                top: initial;
-                position: absolute;
-            }
         }
     }
     
@@ -156,7 +152,6 @@
         background-color: $font-color-secondary;
         text-align: center;
         position: relative;
-        top: -55px;
         z-index: -1;
 
         @media (min-width: $breakpoint-sm) {
@@ -174,15 +169,6 @@
                 background-color: rgba($color-mad-skills, .4);
                 color: $font-color-secondary;
             }
-
-            &--bac {
-                padding-top: 2rem;
-
-                @media (min-width: $breakpoint-sm) {
-                    padding: 1rem .2rem 1.7rem .2rem;
-                }
-            }
-
         }
         
         &--bottom {
@@ -261,22 +247,22 @@
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        max-width: 100%;
+        position: relative;
+        justify-content: space-between;
+        max-width: 800px;
         margin: 0 auto;
 
         @media (min-width: $breakpoint-md) {
-            max-width: 90%;
+            max-width: 900px;
         }
 
         @media (min-width: $breakpoint-lg) {
-            max-width: 85%;
+            max-width: 1000px;
         }
     }
 
         .education-list-item {
             display: inline-block;
-            position: absolute;
-            max-width: 25%;
             width: 200px;
 
             @media (min-width: $breakpoint-md) {
@@ -287,81 +273,24 @@
                 width: 240px;
             }
 
-
-            &--oclock {
-                left: 100%;
-                -webkit-transform: translateX(-100%);
-                        transform: translateX(-100%);
-
-                &--top {
-                    -webkit-transform: translate(-100%, -100%);
-                            transform: translate(-100%, -100%);
-                }
-            }
-
-            &--esec {
-                left: 50%;
-            }
-
-            &--ef {
-                left: 25%;
-            }
-
-            &--bac {
-                left: 0;
-            }
-
-            &--top {
-                bottom: -25%;
+            &__content-container {
+                position: relative;
+                transform: translateY(-50%);
+                z-index: -1;
             }
 
             &__dates-panel-container {
-                position: absolute;
                 width: 100%;
-
-                &--top {
-                    bottom: 0;
-                }
-
-                &--bottom {
-                    top: -22.5px;
-                }
+                display: flex;
+                justify-content: space-evenly;
+                position: relative;
+                top: -22.5px;
             }
 
             &__date-container {
                 position: absolute;
                 width: 45px;
                 height: 45px;
-            
-                &--top {
-                    -webkit-transform: translateY(-50%);
-                            transform: translateY(-50%);
-                }
-
-                &--2015 {
-                    right: 50%;
-                    -webkit-transform: translateX(50%);
-                            transform: translateX(50%);
-                    top: -22.5px;
-                }
-
-                &--bottom {
-                    right: 50%;
-                    -webkit-transform: translateX(50%);
-                            transform: translateX(50%);
-                }
-
-                &--2010-ef, &--2018 {
-                    left: -22.5px;
-                    right: 100%;
-                }
-
-                &--2019, &--2011 {
-                    left: 100%;
-                    -webkit-transform: translate(-100%);
-                            transform: translate(-100%);
-                    top: -22.5px;
-                }
             }
 
             &__text-panel-container--formation {

@@ -80,12 +80,7 @@
 
         <!-- PARTIE COPYRIGHT -->
         <section class="copyright">
-
-            <div class="copyright-container">
-                <!-- Dynamiser et rendre automatique le changement de date -->
-                <p class="copyright__content">&copy; Copyright <?= date( 'Y' ) ?> - Angelina Lorieux-Machova. Tous droits réservés</p>
-            </div>
-
+            <?php get_template_part( 'template-parts/components/copyrights' ); ?>
         </section>
     </footer>
 </div>

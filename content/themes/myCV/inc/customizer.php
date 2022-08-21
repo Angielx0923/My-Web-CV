@@ -68,7 +68,7 @@ function alm_customize_register( $wp_customize ) {
 
     // BACKGROUND IMG
     $wp_customize->add_setting(
-        'alm_bg_img', // ID
+        'alm_bg_img' // ID
     );
 
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'alm_bg_img', // ID
@@ -390,74 +390,6 @@ function alm_customize_register( $wp_customize ) {
         ]
     );
 
-    // BAC - TOP
-    $wp_customize->add_setting(
-        'alm_education_bac-top', // ID
-        [
-            'default' => 'BAC Professionnel<br>Commerce'
-        ]
-    );
-
-    $wp_customize->add_control(
-        'alm_education_bac-top', //ID
-        [
-            'section' => 'alm_education',
-            'label'   => 'Titre',
-            'type'    => 'textarea'
-        ]
-    );
-
-    // BAC - BOTTOM
-    $wp_customize->add_setting(
-        'alm_education_bac-bottom', // ID
-        [
-            'default' => 'Mention Bien'
-        ]
-    );
-
-    $wp_customize->add_control(
-        'alm_education_bac-bottom', //ID
-        [
-            'section' => 'alm_education',
-            'label'   => 'Détails',
-            'type'    => 'textarea'
-        ]
-    );
-
-    // EF - TOP
-    $wp_customize->add_setting(
-        'alm_education_ef-top', // ID
-        [
-            'default' => 'Formation linguistique à<br>l\'étranger (NYC-USA)'
-        ]
-    );
-
-    $wp_customize->add_control(
-        'alm_education_ef-top', //ID
-        [
-            'section' => 'alm_education',
-            'label'   => 'Titre',
-            'type'    => 'textarea'
-        ]
-    );
-
-    // EF - BOTTOM
-    $wp_customize->add_setting(
-        'alm_education_ef-bottom', // ID
-        [
-            'default' => '9 mois à EF New York<br>Anglais niveau C2'
-        ]
-    );
-
-    $wp_customize->add_control(
-        'alm_education_ef-bottom', //ID
-        [
-            'section' => 'alm_education',
-            'label'   => 'Détails',
-            'type'    => 'textarea'
-        ]
-    );
-
     // ESEC - TOP
     $wp_customize->add_setting(
         'alm_education_esec-top', // ID
@@ -559,6 +491,41 @@ function alm_customize_register( $wp_customize ) {
             'type'    => 'textarea'
         ]
     );
+
+    // JAVASCRIPT - TOP
+    $wp_customize->add_setting(
+        'alm_education_javascript-top', // ID
+        [
+            'default' => 'Certificat de formation<br>JavaScript'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_education_javascript-top', //ID
+        [
+            'section' => 'alm_education',
+            'label'   => 'Titre',
+            'type'    => 'textarea'
+        ]
+    );
+
+    // JAVASCRIPT - BOTTOM
+    $wp_customize->add_setting(
+        'alm_education_javascript-bottom', // ID
+        [
+            'default' => 'Believemy<br>&nbsp;'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_education_javascript-bottom', //ID
+        [
+            'section' => 'alm_education',
+            'label'   => 'Détails',
+            'type'    => 'textarea'
+        ]
+    );
+
 
 /*---------------------------------------------
               EXPERIENCE SECTION
@@ -842,6 +809,86 @@ function alm_customize_register( $wp_customize ) {
             'section' => 'alm_section_portfolio',
             'label'   => 'Afficher le bouton +',
             'type'    => 'checkbox'
+        ]
+    );
+
+/*---------------------------------------------
+                SECTIONS COPYRIGHTS
+---------------------------------------------*/
+
+    // COPYRIGHT
+    $wp_customize->add_section(
+        'alm_section_copyright',
+        [
+            'panel' => 'alm_theme_configuration',
+            'title' => 'Footer copyrights'
+        ]
+    );
+
+    $wp_customize->add_setting(
+        'alm_copyright',
+        [
+            'default' => "Tous droits réservés"
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_copyright',
+        [
+            'section' => 'alm_section_copyright',
+            'label'   => 'Copyright',
+            'type'    => 'textarea'
+        ]
+    );
+
+    // RECAPTCHA
+    $wp_customize->add_setting(
+        'alm_captcha',
+        [
+            'default' => "Site protégé par reCAPTCHA"
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_captcha',
+        [
+            'section' => 'alm_section_copyright',
+            'label'   => 'Captcha phrase',
+            'type'    => 'textarea'
+        ]
+    );
+
+     // RECAPTCHA - PRIVACY TEXT
+     $wp_customize->add_setting(
+        'alm_captcha_privacy',
+        [
+            'default' => "Confidentialité"
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_captcha_privacy',
+        [
+            'section' => 'alm_section_copyright',
+            'label'   => 'Captcha privacy',
+            'type'    => 'textarea'
+        ]
+    );
+
+    // RECAPTCHA - TERMS TEXT
+     $wp_customize->add_setting(
+        'alm_captcha_terms',
+        [
+            'default' => "Conditions"
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_captcha_terms',
+        [
+            'section' => 'alm_section_copyright',
+            'label'   => 'Captcha terms',
+            'type'    => 'textarea'
         ]
     );
 }
