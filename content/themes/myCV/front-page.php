@@ -166,7 +166,7 @@
                     
                         <!-- 2018 - 2019 / OCLOCK -->
 
-                        <li class="show education-list-item education-list-item--oclock">
+                        <li class="show education-list-item education-list-item--dashed">
                             <!-- YEAR -->
                             <div class="education-list-item__year-container education-list-item__year-container--left">
                                 <div class="education-list-item__dates-panel-container education-list-item__dates-panel-container--top">
