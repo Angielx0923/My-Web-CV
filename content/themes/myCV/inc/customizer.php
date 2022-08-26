@@ -389,6 +389,19 @@ function alm_customize_register( $wp_customize ) {
             'title' => 'Mes formations'
         ]
     );
+    // SHOW / HIDE SECTION
+    $wp_customize->add_setting(
+        'alm_education_btn_active' // ID
+    );
+
+    $wp_customize->add_control(
+        'alm_education_btn_active', //ID
+        [
+            'section' => 'alm_education',
+            'label'   => 'Afficher la section',
+            'type'    => 'checkbox'
+        ]
+    );
 
     // ESEC - TOP
     $wp_customize->add_setting(
@@ -536,6 +549,20 @@ function alm_customize_register( $wp_customize ) {
         [
             'panel' => 'alm_theme_configuration',
             'title' => 'Mon parcours'
+        ]
+    );
+
+    // SHOW / HIDE SECTION
+    $wp_customize->add_setting(
+        'alm_experience_btn_active' // ID
+    );
+
+    $wp_customize->add_control(
+        'alm_experience_btn_active', //ID
+        [
+            'section' => 'alm_experience',
+            'label'   => 'Afficher la section',
+            'type'    => 'checkbox'
         ]
     );
 

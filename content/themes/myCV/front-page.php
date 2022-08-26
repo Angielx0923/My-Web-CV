@@ -123,143 +123,151 @@
             </section>
 
         <!-- PART 3 - EDUCATION -->
-            <section data-anchor="section-part-education" class="section-part education" id="education">
+            <?php $alm_education_section_active = get_theme_mod( 'alm_education_btn_active', false ); 
+                if ($alm_education_section_active) :
+            ?> 
+                <section data-anchor="section-part-education" class="section-part education" id="education">
 
-                <div class="education__main-title-container">
-                    <h2 class="education__main-title titles-section"><?php echo get_theme_mod( 'alm_section_title-education' ); ?> <span class="colored-title"><?php echo get_theme_mod( 'alm_section_title-education-colored' ); ?></span></h2>
-                </div>
+                    <div class="education__main-title-container">
+                        <h2 class="education__main-title titles-section"><?php echo get_theme_mod( 'alm_section_title-education' ); ?> <span class="colored-title"><?php echo get_theme_mod( 'alm_section_title-education-colored' ); ?></span></h2>
+                    </div>
 
-                <div class="education__container">
+                    <div class="education__container">
 
-                    <!-- LIST -->
-                    <ul id="educationList" class="education-timeline">
+                        <!-- LIST -->
+                        <ul id="educationList" class="education-timeline">
 
-                        <!-- 2020 / JAVASCRIPT CERTIFICATION -->
-                        
-                        <li class="show education-list-item education-list-item--javascript">
-                            <!-- YEAR -->
-                            <div class="education-list-item__year-container">
-                                <div class="education-list-item__dates-panel-container education-list-item__dates-panel-container--top">
-                                    <div class="education-list-item__date-container education-list-item__date-container--top education-list-item__date-container--2015 education-list-item__date-container--diploma">
-                                        <p class="education-list-item__date-content education-list-item__date-content--diploma">2020</p>
+                            <!-- 2020 / JAVASCRIPT CERTIFICATION -->
+                            
+                            <li class="show education-list-item education-list-item--javascript">
+                                <!-- YEAR -->
+                                <div class="education-list-item__year-container">
+                                    <div class="education-list-item__dates-panel-container education-list-item__dates-panel-container--top">
+                                        <div class="education-list-item__date-container education-list-item__date-container--top education-list-item__date-container--2015 education-list-item__date-container--diploma">
+                                            <p class="education-list-item__date-content education-list-item__date-content--diploma">2020</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                             <!-- TEXT CONTAINER -->
-                             <div class="education-list-item__content-container">
-                                <!-- TOP -->
-                                <div class="education-list-item__text-panel-container education-list-item__text-panel-container--top">
-                                    <div class="education-list-item__content education-list-item__content--top education-list-item__content--top--diploma">
-                                        <p class="education-list-item__title"><?php echo get_theme_mod( 'alm_education_javascript-top' ); ?></p>
-                                    </div>
-                                    <!-- BOTTOM -->
-                                    <div class="education-list-item--bottom">
-                                        <div class="education-list-item__text-panel-container education-list-item__text-panel-container--bottom">
-                                            <div class="education-list-item__content education-list-item__content--bottom education-list-item__content--bottom--javascript education-list-item__content--bottom--diploma">
-                                                <p class="education-list-item__text"><?php echo get_theme_mod( 'alm_education_javascript-bottom' ); ?></p>
+                                <!-- TEXT CONTAINER -->
+                                <div class="education-list-item__content-container">
+                                    <!-- TOP -->
+                                    <div class="education-list-item__text-panel-container education-list-item__text-panel-container--top">
+                                        <div class="education-list-item__content education-list-item__content--top education-list-item__content--top--diploma">
+                                            <p class="education-list-item__title"><?php echo get_theme_mod( 'alm_education_javascript-top' ); ?></p>
+                                        </div>
+                                        <!-- BOTTOM -->
+                                        <div class="education-list-item--bottom">
+                                            <div class="education-list-item__text-panel-container education-list-item__text-panel-container--bottom">
+                                                <div class="education-list-item__content education-list-item__content--bottom education-list-item__content--bottom--javascript education-list-item__content--bottom--diploma">
+                                                    <p class="education-list-item__text"><?php echo get_theme_mod( 'alm_education_javascript-bottom' ); ?></p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                             </div>
-                        </li>
-                    
-                        <!-- 2018 - 2019 / OCLOCK -->
-
-                        <li class="show education-list-item education-list-item--dashed">
-                            <!-- YEAR -->
-                            <div class="education-list-item__year-container education-list-item__year-container--left">
-                                <div class="education-list-item__dates-panel-container education-list-item__dates-panel-container--top">
-                                    <div class="education-list-item__date-container education-list-item__date-container--top education-list-item__date-container--2019 education-list-item__date-container--formation">
-                                        <p class="education-list-item__date-content education-list-item__date-content--formation">2019</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="education-list-item__year-container education-list-item__year-container--right">
-                                <div class="education-list-item__dates-panel-container education-list-item__dates-panel-container--bottom">
-                                    <div class="education-list-item__date-container education-list-item__date-container--bottom education-list-item__date-container--2018 education-list-item__date-container--formation">
-                                        <p class="education-list-item__date-content education-list-item__date-content--formation">2018</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- TEXT CONTAINER -->
-                            <div class="education-list-item__content-container education-list-item__content-container--dashed">
-                                <!-- TOP -->
-                                <div class="education-list-item__text-panel-container education-list-item__text-panel-container--formation education-list-item__text-panel-container--top">
-                                    <div class="education-list-item__content education-list-item__content--top education-list-item__content--top--formation">
-                                        <p class="education-list-item__title"><?php echo get_theme_mod( 'alm_education_oclock-top' ); ?></p>
-                                    </div>
-                                </div>
-                                <!-- BOTTOM -->
-                                <div class="education-list-item--bottom">
-                                    <div class="education-list-item__text-panel-container education-list-item__text-panel-container--bottom">
-                                        <div class="education-list-item__content education-list-item__content--bottom education-list-item__content--bottom--formation">
-                                            <p class="education-list-item__text"><?php echo get_theme_mod( 'alm_education_oclock-bottom' ); ?> <strong><?php echo get_theme_mod( 'alm_education_oclock-bottom-tag' ); ?></strong> <br><?php echo get_theme_mod( 'alm_education_oclock-bottom-label' ); ?></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-
-                        <!-- 2015 / ESEC DIPLOMA EDITING -->
+                            </li>
                         
-                        <li class="show education-list-item education-list-item--esec">
-                           <!-- YEAR -->
-                            <div class="education-list-item__year-container">
-                                <div class="education-list-item__dates-panel-container education-list-item__dates-panel-container--top">
-                                    <div class="education-list-item__date-container education-list-item__date-container--top education-list-item__date-container--2015 education-list-item__date-container--diploma">
-                                        <p class="education-list-item__date-content education-list-item__date-content--diploma">2015</p>
-                                    </div>
-                                </div>
-                            </div>
-                             <!-- TEXT CONTAINER -->
-                            <div class="education-list-item__content-container">
-                                <!-- TOP -->
-                                <div class="education-list-item__text-panel-container education-list-item__text-panel-container--top">
-                                    <div class="education-list-item__content education-list-item__content--top education-list-item__content--top--diploma">
-                                        <p class="education-list-item__title"><?php echo get_theme_mod( 'alm_education_esec-top' ); ?></p>
-                                    </div>
-                                </div>
-                                <!-- BOTTOM -->
-                                <div class="education-list-item--bottom">
-                                    <div class="education-list-item__text-panel-container education-list-item__text-panel-container--bottom">
-                                        <div class="education-list-item__content education-list-item__content--bottom education-list-item__content--bottom--esec education-list-item__content--bottom--diploma">
-                                            <p class="education-list-item__text"><?php echo get_theme_mod( 'alm_education_esec-bottom' ); ?></p>
+                            <!-- 2018 - 2019 / OCLOCK -->
+
+                            <li class="show education-list-item education-list-item--dashed">
+                                <!-- YEAR -->
+                                <div class="education-list-item__year-container education-list-item__year-container--left">
+                                    <div class="education-list-item__dates-panel-container education-list-item__dates-panel-container--top">
+                                        <div class="education-list-item__date-container education-list-item__date-container--top education-list-item__date-container--2019 education-list-item__date-container--formation">
+                                            <p class="education-list-item__date-content education-list-item__date-content--formation">2019</p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
+                                <div class="education-list-item__year-container education-list-item__year-container--right">
+                                    <div class="education-list-item__dates-panel-container education-list-item__dates-panel-container--bottom">
+                                        <div class="education-list-item__date-container education-list-item__date-container--bottom education-list-item__date-container--2018 education-list-item__date-container--formation">
+                                            <p class="education-list-item__date-content education-list-item__date-content--formation">2018</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- TEXT CONTAINER -->
+                                <div class="education-list-item__content-container education-list-item__content-container--dashed">
+                                    <!-- TOP -->
+                                    <div class="education-list-item__text-panel-container education-list-item__text-panel-container--formation education-list-item__text-panel-container--top">
+                                        <div class="education-list-item__content education-list-item__content--top education-list-item__content--top--formation">
+                                            <p class="education-list-item__title"><?php echo get_theme_mod( 'alm_education_oclock-top' ); ?></p>
+                                        </div>
+                                    </div>
+                                    <!-- BOTTOM -->
+                                    <div class="education-list-item--bottom">
+                                        <div class="education-list-item__text-panel-container education-list-item__text-panel-container--bottom">
+                                            <div class="education-list-item__content education-list-item__content--bottom education-list-item__content--bottom--formation">
+                                                <p class="education-list-item__text"><?php echo get_theme_mod( 'alm_education_oclock-bottom' ); ?> <strong><?php echo get_theme_mod( 'alm_education_oclock-bottom-tag' ); ?></strong> <br><?php echo get_theme_mod( 'alm_education_oclock-bottom-label' ); ?></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
 
-                    </ul>
-                </div>
-            </section>
 
-        <!-- PART 4 - PROFESSIONNAL EXPERIENCE -->
-            <section data-anchor="section-part-formation" class="section-part formation" id="formation">
-                <h2 class="formation__main-title titles-section"><?php echo get_theme_mod( 'alm_section_title-experience' ); ?> <span class="colored-title"><?php echo get_theme_mod( 'alm_section_title-experience-colored' ); ?></span></h2>
-
-                <section class="formation-timeline">
-                    <div class="formation-timeline__container container">
-
-                        <!-- CURRENTLY -->
-                        <div class="formation-currently">
-                            <h4 class="show formation-currently__title"><?php echo get_theme_mod( 'alm_experience_now' ); ?></h4>
-                            <p class="show formation-currently__content"><?php echo get_theme_mod( 'alm_experience_content' ); ?></p>
-                            <img src="<?php echo wp_get_attachment_image_url( ALM_THEME_ARROW_HEAD ); ?>" alt="" class="formation-currently__icon-arrow icon">
-                        </div>
-
-                        <!-- LIST -->
-                        <?php get_template_part( 'template-parts/experience' ); ?>
+                            <!-- 2015 / ESEC DIPLOMA EDITING -->
                             
+                            <li class="show education-list-item education-list-item--esec">
+                            <!-- YEAR -->
+                                <div class="education-list-item__year-container">
+                                    <div class="education-list-item__dates-panel-container education-list-item__dates-panel-container--top">
+                                        <div class="education-list-item__date-container education-list-item__date-container--top education-list-item__date-container--2015 education-list-item__date-container--diploma">
+                                            <p class="education-list-item__date-content education-list-item__date-content--diploma">2015</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- TEXT CONTAINER -->
+                                <div class="education-list-item__content-container">
+                                    <!-- TOP -->
+                                    <div class="education-list-item__text-panel-container education-list-item__text-panel-container--top">
+                                        <div class="education-list-item__content education-list-item__content--top education-list-item__content--top--diploma">
+                                            <p class="education-list-item__title"><?php echo get_theme_mod( 'alm_education_esec-top' ); ?></p>
+                                        </div>
+                                    </div>
+                                    <!-- BOTTOM -->
+                                    <div class="education-list-item--bottom">
+                                        <div class="education-list-item__text-panel-container education-list-item__text-panel-container--bottom">
+                                            <div class="education-list-item__content education-list-item__content--bottom education-list-item__content--bottom--esec education-list-item__content--bottom--diploma">
+                                                <p class="education-list-item__text"><?php echo get_theme_mod( 'alm_education_esec-bottom' ); ?></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
 
-                        <div class="arrow-end-container">
-                            <div class="arrow-end-container__content"></div>
-                        </div>
+                        </ul>
                     </div>
                 </section>
-            </section>
+            <?php endif; ?>
+
+        <!-- PART 4 - PROFESSIONNAL EXPERIENCE -->
+            <?php $alm_experience_section_active = get_theme_mod( 'alm_experience_btn_active', false ); 
+                    if ($alm_experience_section_active) :
+            ?> 
+                <section data-anchor="section-part-formation" class="section-part formation" id="formation">
+                    <h2 class="formation__main-title titles-section"><?php echo get_theme_mod( 'alm_section_title-experience' ); ?> <span class="colored-title"><?php echo get_theme_mod( 'alm_section_title-experience-colored' ); ?></span></h2>
+
+                    <section class="formation-timeline">
+                        <div class="formation-timeline__container container">
+
+                            <!-- CURRENTLY -->
+                            <div class="formation-currently">
+                                <h4 class="show formation-currently__title"><?php echo get_theme_mod( 'alm_experience_now' ); ?></h4>
+                                <p class="show formation-currently__content"><?php echo get_theme_mod( 'alm_experience_content' ); ?></p>
+                                <img src="<?php echo wp_get_attachment_image_url( ALM_THEME_ARROW_HEAD ); ?>" alt="" class="formation-currently__icon-arrow icon">
+                            </div>
+
+                            <!-- LIST -->
+                            <?php get_template_part( 'template-parts/experience' ); ?>
+                                
+
+                            <div class="arrow-end-container">
+                                <div class="arrow-end-container__content"></div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            <?php endif; ?>
 
         <!-- PART 5 - PORTFOLIO -->
             <section data-anchor="section-part-portfolio" class="section-part portfolio" id="portfolio">

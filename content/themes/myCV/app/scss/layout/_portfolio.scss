@@ -1,7 +1,7 @@
 /*--------------- GLOBAL ---------------*/
 
 .portfolio {
-    background-color: $font-color-secondary;
+    background-color: $background-color-primary;
     position: relative;
     text-align: center;
     padding-bottom: 8rem;
@@ -50,6 +50,7 @@
     &__block {
         position: relative;
         width: 100%;
+        margin: 1rem;
         text-align: center;
         padding: 4rem;
         z-index: 0;
@@ -57,7 +58,7 @@
                 filter: grayscale(50%);
         background: {
             position: center;
-            size: 100%;
+            size: cover;
             repeat: no-repeat;
         }
         
@@ -66,7 +67,7 @@
         transition: all $duration-fast ease;
         
         @media (min-width: $breakpoint-sm) {
-            width: 50%;
+            width: 40%;
             -webkit-box-flex: 1;
                 -ms-flex-positive: 1;
                     flex-grow: 1;
@@ -93,6 +94,8 @@
                 -webkit-filter: grayscale(0);
                         filter: grayscale(0);
                 letter-spacing: 2px;
+                -webkit-box-shadow: 0px 18px 36px -6px rgba($font-color-secondary, .3);
+                box-shadow: 0px 18px 36px -6px rgba($font-color-secondary, .3);
                 
                 &::after {
                     -webkit-transition: all $duration-fast ease;
@@ -137,6 +140,9 @@
 
     &__info-link {
         position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         bottom: 0;
         letter-spacing: normal;
         background-color: $color-primary;
@@ -155,6 +161,7 @@
         @media (min-width: $breakpoint-sm) {
             height: 0;
             width: 100%;
+            overflow: hidden;
             left: 0;
             -webkit-transition: background-color $duration-fast ease;
             transition: background-color $duration-fast ease;
