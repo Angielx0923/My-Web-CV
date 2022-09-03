@@ -26,7 +26,7 @@
                             data-rellax-percentage=".8">
                                 <h1 class="section-part ID-container__my-name">Angelina Lorieux-Machova</h1>
                                 <p class="ID-container__job-title"><?php echo get_theme_mod( 'alm_slogan' ); ?></p>
-                                <a href="<?php the_permalink( ALM_PERMALINK_ARCHIVE ); ?>" class="ID-container__projects-link">Voir les projets</a>
+                                <a href="<?php the_permalink( ALM_PERMALINK_ARCHIVE ); ?>" class="ID-container__projects-link"><?php echo get_theme_mod( 'alm_projects_link' ); ?></a>
                             </div>
                             <!-- PROFIL PICTURE -->
                             <div class="section-part picture-container">

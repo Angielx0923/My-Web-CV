@@ -66,6 +66,23 @@ function alm_customize_register( $wp_customize ) {
         ]
     );
 
+    // SEE PROJECT LINK
+    $wp_customize->add_setting(
+        'alm_projects_link', // ID
+        [
+            'default' => 'Voir les projets'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_projects_link', //ID
+        [
+            'section' => 'alm_profile',
+            'label'   => 'Bouton vers la page projets',
+            'type'    => 'textarea'
+        ]
+    );
+
     // BACKGROUND IMG
     $wp_customize->add_setting(
         'alm_bg_img' // ID
