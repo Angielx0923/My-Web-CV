@@ -25,12 +25,17 @@
                     
                     <!-- INFORMATIONS PERSONNELLES -->
                     <address class="info-contact">
-                        <div class="info-contact-block">
-                            <!-- <img src="img/Icons/pin_mark.png" alt="pin icon" class="info-contact__icon icon"> -->
-                            <i class="info-contact__icon fa fa-map-marker" aria-hidden="true"></i>
-                            <p class="info-contact__title info-contact__localisation"><?php echo get_theme_mod( 'alm_section_title-location' ); ?><span class="double-dot">:</span></p>
-                            <p class="info-contact__content info-contact__city"><?php echo get_theme_mod( 'alm_section_location' ); ?></p>
-                        </div>
+
+                        <?php $alm_section_location_active = get_theme_mod( 'alm_section_location_active', false ); 
+                            if ( $alm_section_location_active ) :
+                        ?> 
+                            <div class="info-contact-block">
+                                <!-- <img src="img/Icons/pin_mark.png" alt="pin icon" class="info-contact__icon icon"> -->
+                                <i class="info-contact__icon fa fa-map-marker" aria-hidden="true"></i>
+                                <p class="info-contact__title info-contact__localisation"><?php echo get_theme_mod( 'alm_section_title-location' ); ?><span class="double-dot">:</span></p>
+                                <p class="info-contact__content info-contact__city"><?php echo get_theme_mod( 'alm_section_location' ); ?></p>
+                            </div>
+                        <?php endif; ?>
                         <!-- LINKEDIN -->
                         <div class="info-contact-block">
                             <a href="<?php echo esc_url(get_theme_mod( 'alm_section_linkedin' )); ?>" aria-label="LinkedIn" class="info-links__link info-links__link-linkedin">

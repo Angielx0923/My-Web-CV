@@ -792,6 +792,20 @@ function alm_customize_register( $wp_customize ) {
         ]
     );
 
+    // Show / hide location
+    $wp_customize->add_setting(
+        'alm_section_location_active' // ID
+    );
+
+    $wp_customize->add_control(
+        'alm_section_location_active', //ID
+        [
+            'section' => 'alm_sections_socialmedia',
+            'label'   => 'Afficher la localisation',
+            'type'    => 'checkbox'
+        ]
+    );
+
 /*---------------------------------------------
                     PORTFOLIO
 ---------------------------------------------*/
