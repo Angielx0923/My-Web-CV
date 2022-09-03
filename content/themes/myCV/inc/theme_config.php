@@ -16,3 +16,9 @@ define( 'ALM_THEME_HIRE_ME', 232 );
 // Download icon
 define( 'ALM_THEME_DOWNLOAD_ICON', 15 );
 
+/*---------------------------------------------
+          PERMALINKS OUT OF THE LOOP
+---------------------------------------------*/
+
+// Archive page containing all the projects
+define( 'ALM_PERMALINK_ARCHIVE', 239);

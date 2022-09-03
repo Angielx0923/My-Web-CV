@@ -1,3 +1,25 @@
+/*--------------- SEE ALL PROJECTS BTN ---------------*/
+
+.ID-container__projects-link {
+    color: $special-color;
+    border: 1px solid;
+    margin-top: 1rem;
+    font-size: 1rem;
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 10px;
+    text-shadow: none;
+    letter-spacing: normal;
+    transition: all ease $duration-fast;
+
+    &:hover {
+        background-color: $special-color;
+        color: $font-color-secondary;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+}
+
 .btn-download {
     padding: .5rem .5rem;    
     
