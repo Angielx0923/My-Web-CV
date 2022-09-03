@@ -46,13 +46,15 @@
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    max-width: 1150px;
+    margin: auto;
 
     &__block {
         position: relative;
         width: 100%;
         margin: 1rem;
         text-align: center;
-        padding: 4rem;
+        padding: 5rem;
         border-radius: 3rem;
         overflow: hidden;
         z-index: 0;
@@ -74,6 +76,10 @@
                 -ms-flex-positive: 1;
                     flex-grow: 1;
             padding: 5.4rem 2rem;
+
+            &:nth-child(3n) {
+                width: 100%;
+            }
         }
 
         @media (min-width: $breakpoint-lg) {
