@@ -178,15 +178,6 @@
             }
         }
 
-        .info-link__url {
-            display: none;
-
-            @media (min-width: $breakpoint-sm) {
-                display: block;
-                font-size: 1.1rem;
-            }
-        }
-
         .info-link__content {
             font-size: 1.1rem;
             width: -webkit-min-content;
@@ -205,18 +196,27 @@
                 }
             }
         }
+    }
 
-        .info-links__link {
+    .info-links__link {
 
-            @media (min-width: $breakpoint-sm) {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-align: baseline;
-                    -ms-flex-align: baseline;
-                        align-items: baseline;
-            }
-            
+        @media (min-width: $breakpoint-sm) {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: baseline;
+                -ms-flex-align: baseline;
+                    align-items: baseline;
+        }
+        
+    }
+
+    .info-link__url {
+        display: none;
+
+        @media (min-width: $breakpoint-sm) {
+            display: block;
+            font-size: 1.1rem;
         }
     }
 }
