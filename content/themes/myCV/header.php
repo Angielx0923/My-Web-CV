@@ -40,7 +40,7 @@
         <!-- HEADER -->
         <header class="header <?php if ( ! is_front_page() ) : echo $headerclass; endif; ?>" id="header">
              <!-- FIX for the back btn not working with z-index in the project-header -->
-            <a href="<?php if ( is_single() ) : echo the_permalink( ALM_PERMALINK_ARCHIVE ); else : echo home_url(); endif; ?>" id="backBtn" class="back-btn__container project-header__back-btn" <?php if ( is_front_page() || is_page( 'contact' ) ) : echo $opacity; endif; ?>>
+            <a href="<?php if ( is_single() || is_tax() ) : echo the_permalink( ALM_PERMALINK_ARCHIVE ); else : echo home_url(); endif; ?>" id="backBtn" class="back-btn__container project-header__back-btn" <?php if ( is_front_page() || is_page( 'contact' ) ) : echo $opacity; endif; ?>>
                 <i class="fa fa-angle-left" aria-hidden="true"></i>
                 <span class="project-header__back-btn__text"><?php echo get_theme_mod( 'alm_project_btn' ); ?></span>
             </a>
