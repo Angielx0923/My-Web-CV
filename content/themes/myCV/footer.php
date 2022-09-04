@@ -40,9 +40,9 @@
                         <div class="info-contact-block">
                             <a href="<?php echo esc_url(get_theme_mod( 'alm_section_linkedin' )); ?>" aria-label="LinkedIn" class="info-links__link info-links__link-linkedin">
                                 <i class="info-contact__icon fa fa-linkedin-square" aria-hidden="true"></i>
-                                <p class="info-contact__content info-contact__linkedin">LinkedIn - &nbsp;</p>
+                                <p class="info-contact__content info-contact__linkedin">LinkedIn</p>
                                 <!-- Faire disparaitre l'url pour la version mobile -->
-                                <p class="info-link__url">www.linkedin.com/in/a-lm/</p>
+                                <p class="info-link__url">&nbsp; - &nbsp;www.linkedin.com/in/a-lm/</p>
                             </a>
                         </div>
                         <!-- MAIL -->
@@ -59,9 +59,9 @@
                         <div class="info-link-block">
                             <a href="<?php echo esc_url(get_theme_mod( 'alm_section_github' )); ?>" aria-label="GitHub" class="info-links__link info-links__link-github">
                                 <i class="info-link__icon fa fa-github" aria-hidden="true"></i>
-                                <p class="info-link__content info-link__github">GitHub - </p>
+                                <p class="info-link__content info-link__github">GitHub</p>
                                 <!-- Faire disparaitre l'url pour la version mobile -->
-                                <p class="info-link__url">Angielx0923</p>
+                                <p class="info-link__url">- &nbsp;Angielx0923</p>
                             </a>
                         </div>
                         <!-- CV à télécharger - CHEMIN A REMPLIR -->
