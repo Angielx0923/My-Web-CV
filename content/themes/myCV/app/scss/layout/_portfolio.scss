@@ -185,12 +185,6 @@
 
         &__text {
             position: relative;
-            height: 0;
-            top: .9rem;
-
-            @media (max-width: $breakpoint-sm) {
-                top: .7rem;
-            }
         }
     }
 }

@@ -28,7 +28,7 @@ if ( have_posts() ) :
                         <p class="portfolio-container__content"><?php the_field( 'presentation' ); ?></p>
                     </a>
                     <a class="portfolio-container__info-link" id="infoBtn" href="<?php the_permalink(); ?>">
-                        <p class="portfolio-container__info-link__text"><?php the_field( 'info' ); ?></p>
+                        <?php the_field( 'info' ); ?>
                     </a>
                 </div>
                 
