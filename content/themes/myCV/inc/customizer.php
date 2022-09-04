@@ -49,6 +49,23 @@ function alm_customize_register( $wp_customize ) {
         ]
     );
 
+    // NAME
+    $wp_customize->add_setting(
+        'alm_myname', // ID
+        [
+            'default' => 'Angelina Lorieux-Machova'
+        ]
+    );
+
+    $wp_customize->add_control(
+        'alm_myname', //ID
+        [
+            'section' => 'alm_profile',
+            'label'   => 'Nom',
+            'type'    => 'textarea'
+        ]
+    );
+
     // SLOGAN
     $wp_customize->add_setting(
         'alm_slogan', // ID
